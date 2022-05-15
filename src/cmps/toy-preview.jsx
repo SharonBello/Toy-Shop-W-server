@@ -6,6 +6,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
+import Stack from '@mui/material/Stack';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import EditIcon from '@mui/icons-material/Edit';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+
 
 export function ToyPreview({ toy, onRemoveToy }) {
 
@@ -38,17 +45,22 @@ export function ToyPreview({ toy, onRemoveToy }) {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button onClick={() => onRemoveToy(toy._id)} size="small" color="primary">
-                        X
-                    </Button>
-                    <Link to={`/toy/edit/${toy._id}`}><Button size="small" color="primary">
-                        Edit
-                    </Button>
-                    </Link>
-                    <Link to={`/toy/${toy._id}`}><Button size="small" color="primary">
-                        Details
-                    </Button>
-                    </Link>
+                    <Stack direction="row" spacing={2}>
+                    <ButtonGroup color="secondary" aria-label="medium secondary button group">
+                        <Button onClick={() => onRemoveToy(toy._id)} variant="outlined" startIcon={<DeleteIcon />}>
+                            Delete
+                        </Button>
+
+                        <Link to={`/toy/edit/${toy._id}`}><Button variant="contained" startIcon={<EditIcon />}>
+                            Edit
+                        </Button>
+                        </Link>
+                        <Link to={`/toy/${toy._id}`}><Button size="small" color="primary">
+                            Details
+                        </Button>
+                        </Link>
+                        </ButtonGroup>
+                    </Stack>
                 </CardActions>
             </Card>
         </li>
