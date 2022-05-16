@@ -7,11 +7,12 @@ import { userService } from "../services/user.service.js"
 
 import { saveToy, loadToy, addToy, setSelected } from "../store/actions/toy.action.js"
 import defaultImage from '../assets/img/1.png'
+import {utilService} from '../services/util.service';
 
 class _ToyEdit extends React.Component {
 
     state = {
-        toy: toyService.getEmptyToy(),
+        toy: this.getEmptyToy(),
         user: userService.getLoggedinUser(),
         selectedOption: []
     }
@@ -60,6 +61,19 @@ class _ToyEdit extends React.Component {
             })
     }
 
+    getEmptyToy() {
+        return {
+            name: '',
+            price: 0,
+            labels: [],
+            createdAt: Date.now(),
+            review: 'Best ever',
+            inStock: true,
+            img: ''
+            // description: utilService.makeLorem()
+        }
+    }
+
     render() {
         const { toy, selectedOption } = this.state
         if (!toy) return <div>Loading...</div>
@@ -103,6 +117,7 @@ class _ToyEdit extends React.Component {
         )
     }
 }
+
 
 const mapStateToProps = (storeState) => {
     return {

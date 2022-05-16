@@ -15,7 +15,6 @@ export function loadToy() {
     }
 }
 
-
 export function removeToy(toyId) {
     return dispatch => {
         return toyService.remove(toyId)
