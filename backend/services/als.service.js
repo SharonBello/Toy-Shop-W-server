@@ -4,4 +4,3 @@ const asyncLocalStorage = new AsyncLocalStorage()
 
 // The AsyncLocalStorage singleton
 module.exports = asyncLocalStorage
-

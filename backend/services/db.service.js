@@ -9,7 +9,7 @@ module.exports = {
 // Database Name
 const dbName = 'store_DB'
 
-let dbConn = null
+var dbConn = null
 
 async function getCollection(collectionName) {
     try {

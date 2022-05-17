@@ -1,5 +1,6 @@
 const dbService = require('../../services/db.service')
 const logger = require('../../services/logger.service')
+const reviewService = require('../review/review.service')
 const ObjectId = require('mongodb').ObjectId
 
 async function query(filterBy) {
@@ -9,6 +10,7 @@ async function query(filterBy) {
 
         const collection = await dbService.getCollection('toy')
         let toys = await collection.find(criteria).toArray()
+        console.log('toy.service - line 13 - toys', toys)
         return toys
     } catch (err) {
         logger.error('cannot find toys', err)
