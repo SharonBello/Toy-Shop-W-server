@@ -18,6 +18,7 @@ export function toyReducer(state = initialState, action) {
 
     switch (action.type) {
         case 'SET_TOYS':
+            console.log('action.toys', action.toys)
             return { ...state, toys: action.toys }
         case 'ADD_TOY':
             toys = [action.toy, ...state.toys]
@@ -25,7 +26,7 @@ export function toyReducer(state = initialState, action) {
         case 'REMOVE_TOY':
             toys = state.toys.filter(toy => toy._id !== action.toyId)
             return { ...state, toys }
-        case 'SAVE_TOY':
+        case 'UPDATE_TOY':
             toys = state.toys.map(currToy =>
                 (currToy._id === action.toy._id) ? action.toy : currToy)
             return { ...state, toys }

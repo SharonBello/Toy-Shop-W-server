@@ -1,113 +1,125 @@
 import { toyService } from "../../services/toy.service.js";
 import { showSuccessMsg, showErrorMsg } from '../../services/event-bus.service.js'
 
-
-export function loadToy() {
-    try {
-        return async (dispatch, getState) => {
-            const filterBy = getState().toyModule.filterBy
-            const toys = await toyService.query(filterBy)
-                return dispatch({
-                    type: 'SET_TOYS',
-                    toys
-                })        
-        }
-    } catch(err) {
-        console.error('Error:', err)
-        showErrorMsg('Toy was not loaded')
+// Action Creators:
+//for action that we want them to refresh in second tab
+export function getActionRemoveToy(toyId) {
+    return {
+        type: 'REMOVE_TOY',
+        toyId
     }
-    
+}
+export function getActionAddToy(toy) {
+    return {
+        type: 'ADD_TOY',
+        toy
+    }
+}
+export function getActionUpdateToy(toy) {
+    return {
+        type: 'UPDATE_TOY',
+        toy
+    }
 }
 
-// export function loadToy() {
+var subscriber
 
-//     return (dispatch, getState) => {
-//         const filterBy = getState().toyModule.filterBy
-//         return toyService.query(filterBy).then((toys) => {
-//             dispatch({
-//                 type: 'SET_TOYS',
-//                 toys
-//             })
-//         })
-//     }
-// }
+export function loadToy() {
+    return async (dispatch, getState) => {
+        try {
+            const filterBy = getState().toyModule.filterBy
+            const toys = await toyService.query(filterBy)
+            dispatch({
+                type: 'SET_TOYS',
+                toys
+            })                    
+        } catch(err) {
+            console.error('Error:', err)
+            showErrorMsg('Toy was not loaded')
+        }
+        if (subscriber) toyService.unsubscribe(subscriber)
+        subscriber = (ev) => {
+            console.log('Got notified', ev.data)
+            dispatch(ev.data)
+        }
+        toyService.subscribe(subscriber)
+    }
+}
 
 
 export function removeToy(toyId) {
-    try{
     return async dispatch => {
+    try{
         await toyService.remove(toyId)
-        console.log('Deleted Successfully!');
-        return dispatch({
-                    type: 'REMOVE_TOY',
-                    toyId
-                })
-        // showSuccessMsg('Toy removed Succesfully!')
+        console.log('Deleted Successfully!')
+        dispatch(getActionRemoveToy(toyId))
+        showSuccessMsg('Toy removed Succesfully!')
+        } catch(err) {
+            console.error('Error:', err)
+            showErrorMsg('Toy was not removed')
         }
-    } catch(err) {
-        console.error('Error:', err)
-        showErrorMsg('Toy was not removed')
+        if (subscriber) toyService.unsubscribe(subscriber)
+            subscriber = (ev) => {
+            console.log('Got notified', ev.data)
+            dispatch(ev.data)
+        }
+        toyService.subscribe(subscriber)
     }
 }
 
 export function getById(toyId) {
-    return dispatch => {
-        return toyService.getById(toyId)
-            .then(toy => {
-                dispatch({
+    return async dispatch => {
+        try {
+        const toy = await toyService.getById(toyId)
+        dispatch({
                     type: 'GET_BY_ID',
                     toy
-                })
-            })
+                })        
+        } catch(err) {
+        console.error('Error:', err)
+        showErrorMsg('Toy was not loaded')
+        }
     }
 }
-
-// export function getById(toyId) {
-//     return dispatch => {
-//         return toyService.getById(toyId)
-//             .then(toy => {
-//                 dispatch({
-//                     type: 'GET_BY_ID',
-//                     toy
-//                 })
-//             })
-//     }
-// }
 
 export function saveToy(toy) {
-    return dispatch => {
-        return toyService.save(toy)
-            .then(savedToy => {
-                dispatch({
-                    type: 'SAVE_TOY',
-                    toy: savedToy
-                })
-                showSuccessMsg('Toy saved Succesfully!')
-            })
-            .catch(err => {
-                console.error('Error:', err)
-                showErrorMsg('Toy was not saved')
-            })
+    return async dispatch => {        
+        try {
+        const savedToy = await toyService.save(toy)
+        dispatch(getActionUpdateToy(toy))
+        showSuccessMsg('Toy saved Succesfully!')
+        } catch(err) {
+            console.error('Error:', err)
+            showErrorMsg('Toy was not saved')
+        }
+        if (subscriber) toyService.unsubscribe(subscriber)
+            subscriber = (ev) => {
+            console.log('Got notified', ev.data)
+            dispatch(ev.data)
+        }
+        toyService.subscribe(subscriber)
     }
 }
+
 
 export function addToy(toy) {
-    return dispatch => {
-        return toyService.save(toy)
-            .then(savedToy => {
-                dispatch({
-                    type: 'ADD_TOY',
-                    toy: savedToy
-                })
-                showSuccessMsg('Toy added Succesfully!')
-            })
-            .catch(err => {
-                console.error('Error:', err)
-                showErrorMsg('Toy was not added')
-            })
+    return async dispatch => {
+        try {
+            const savedToy = await toyService.save(toy)
+            dispatch(getActionAddToy(toy))
+            showSuccessMsg('Toy added Succesfully!')
+        } catch(err) {
+            console.error('Error:', err)
+            showErrorMsg('Toy was not added')
+        }
+        if (subscriber) toyService.unsubscribe(subscriber)
+        subscriber = (ev) => {
+            console.log('Got notified', ev.data)
+            dispatch(ev.data)
+        }
+        toyService.subscribe(subscriber)
     }
 }
-
 
 
 export function setFilter(filterBy) {

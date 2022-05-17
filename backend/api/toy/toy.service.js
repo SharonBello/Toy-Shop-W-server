@@ -11,15 +11,16 @@ async function query(filterBy) {
 
         const collection = await dbService.getCollection('toy')
 
-        let sortBy = filterBy.sortBy   
+        let sortBy = filterBy.sortBy 
+        console.log('sortBy',sortBy )
         let sortType = 1
         if(sortBy === 'recent') {
             sortBy = 'createdAt'
             sortType = -1
         }
-        let toys = await collection.find(criteria).sort({[sortBy]:  sortType}).toArray()
+        let toys = await collection.find(criteria).sort({[sortBy]:sortType}).toArray()
         // createdAt
-        console.log('toy.service - line 13 - toys', toys)
+        // console.log('toy.service - line 13 - toys', toys)
         return toys
     } catch (err) {
         logger.error('cannot find toys', err)

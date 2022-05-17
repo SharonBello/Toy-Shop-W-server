@@ -51,15 +51,24 @@ class _ToyEdit extends React.Component {
         ev.preventDefault()
     }
 
-    onSaveToy = (ev) => {
+    onSaveToy = async(ev) => {
         ev.preventDefault()
         if (!this.state.user) return
         const toyToSave = { ...this.state.toy }
-        this.props.addToy(toyToSave)
-            .then(() => {
-                this.onGoBack()
-            })
+        await this.props.addToy(toyToSave)
+        this.onGoBack()        
     }
+
+    // onSaveToy = (ev) => {
+    //     ev.preventDefault()
+    //     if (!this.state.user) return
+    //     const toyToSave = { ...this.state.toy }
+    //     this.props.addToy(toyToSave)
+    //         .then(() => {
+    //             this.onGoBack()
+    //         })
+    // }
+
 
     getEmptyToy() {
         return {

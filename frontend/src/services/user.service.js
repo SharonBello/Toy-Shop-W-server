@@ -37,34 +37,32 @@ function save(user) {
 //     })
 // }
 
-function login(credentials){
+async function login(credentials){
     console.log('credentials',credentials )
-    const url = BASE_URL +  'login'
-    return axios.post(url, credentials)
-    .then(res => res.data)
-    .then(user => {
+    try {
+        const url = BASE_URL +  'login'
+        let user = await axios.post(url, credentials)
+        user = user.data    
         console.log('user after axios', user)
         const miniUser = {username: user.username, isAdmin: user.isAdmin}
         sessionStorage.setItem('loggedinUser', JSON.stringify(miniUser))
         return user
-    })   
-    .catch(err => {
+    } catch(err) {
         console.error('Error:', err)
-    })
+    }
 }
 
 
-function signup(userInfo) {
+async function signup(userInfo) {
     // userInfo.balance = 1000
     // userInfo.prefs = { color: '#0000ff', bgColor: '#c1c1c1' }
     // userInfo.activities = []
 
-    return storageService.post(STORAGE_KEY, userInfo)
-        .then((user) => {
-            _handleLogin(user)
-            return user
-        })
+    const user = await storageService.post(STORAGE_KEY, userInfo)
+    _handleLogin(user)
+    return user        
 }
+
 // function updateBalance(diff) {
 
 //     const user = userService.getLoggedinUser()
@@ -75,11 +73,15 @@ function signup(userInfo) {
 //             return user.balance
 //         })
 // }
-function logout() {
-    const url = BASE_URL + 'logout'
-    return axios.post(url).then(() => {
+
+async function logout() {
+    try {
+        const url = BASE_URL + 'logout'
+        await axios.post(url)
         sessionStorage.removeItem('loggedinUser')
-    })
+    }  catch(err) {
+        console.error('Error:', err)
+    }
     // sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, null)
     // return Promise.resolve()
 }

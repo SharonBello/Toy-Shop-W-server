@@ -73,7 +73,7 @@ export class ToyPreview extends React.Component {
                     </CardActionArea>
                     <CardActions>
                         <Stack direction="row" spacing={2}>
-                            <ButtonGroup color="secondary" aria-label="medium secondary button group">
+                            <ButtonGroup  color="secondary" aria-label="medium secondary button group">
                                 <Button onClick={() => onRemoveToy(toy._id)} variant="outlined" startIcon={<DeleteIcon />}>
                                     Delete
                                 </Button>
