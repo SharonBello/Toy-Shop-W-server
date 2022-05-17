@@ -1,7 +1,11 @@
+import Axios from 'axios'
 import { storageService } from './async-storage.service.js'
 
 const STORAGE_KEY = 'userDB'
 const STORAGE_KEY_LOGGEDIN = 'loggedinUser'
+
+const BASE_URL =
+    process.env.NODE_ENV === 'production' ? '/api/auth/' : '//localhost:3030/api/auth/'
 
 export const userService = {
     login,
@@ -12,6 +16,11 @@ export const userService = {
     // addActivity
 }
 
+var axios = Axios.create({
+    withCredentials : true
+})
+
+
 window.us = userService
 
 function save(user) {
@@ -19,16 +28,36 @@ function save(user) {
     return storageService.put(STORAGE_KEY, user)
 }
 
-function login(credentials) {
-    return storageService.query(STORAGE_KEY).then(users => {
-        const user = users.find(user => user.username === credentials.username &&
-            user.password === credentials.password)
-            _handleLogin(user)
+// function login(credentials) {
+//     return storageService.query(STORAGE_KEY).then(users => {
+//         const user = users.find(user => user.username === credentials.username &&
+//             user.password === credentials.password)
+//             _handleLogin(user)
+//         return user
+//     })
+
+
+// }
+
+function login(credentials){
+    console.log('credentials',credentials )
+    const url = BASE_URL +  'login'
+    return axios.post(url, credentials)
+    .then(res => res.data)
+    .then(user => {
+        console.log('user after axios', user)
+        const miniUser = {username: user.username, isAdmin: user.isAdmin}
+        sessionStorage.setItem('loggedinUser', JSON.stringify(miniUser))
         return user
+    })   
+    .catch(err => {
+        console.error('Error:', err)
     })
 
-
+    
 }
+
+
 function signup(userInfo) {
     // userInfo.balance = 1000
     // userInfo.prefs = { color: '#0000ff', bgColor: '#c1c1c1' }
@@ -51,8 +80,12 @@ function signup(userInfo) {
 //         })
 // }
 function logout() {
-    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, null)
-    return Promise.resolve()
+    const url = BASE_URL + 'logout'
+    return axios.post(url).then(() => {
+        sessionStorage.removeItem('loggedinUser')
+    })
+    // sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, null)
+    // return Promise.resolve()
 }
 
 function getLoggedinUser() {

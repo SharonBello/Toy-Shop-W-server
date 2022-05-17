@@ -16,22 +16,39 @@ export function loadToy() {
 }
 
 export function removeToy(toyId) {
-    return dispatch => {
-        return toyService.remove(toyId)
-            .then(() => {
-                console.log('Deleted Successfully!');
-                dispatch({
+    try{
+    return async dispatch => {
+        await toyService.remove(toyId)
+        console.log('Deleted Successfully!');
+        return dispatch({
                     type: 'REMOVE_TOY',
                     toyId
                 })
-                showSuccessMsg('Toy removed Succesfully!')
-            })
-            .catch(err => {
-                console.error('Error:', err)
-                showErrorMsg('Toy was not removed')
-            })
+        // showSuccessMsg('Toy removed Succesfully!')
+        }
+    } catch(err) {
+        console.error('Error:', err)
+        showErrorMsg('Toy was not removed')
     }
 }
+
+// export function removeToy(toyId) {
+//     return dispatch => {
+//         return toyService.remove(toyId)
+//             .then(() => {
+//                 console.log('Deleted Successfully!');
+//                 dispatch({
+//                     type: 'REMOVE_TOY',
+//                     toyId
+//                 })
+//                 showSuccessMsg('Toy removed Succesfully!')
+//             })
+//             .catch(err => {
+//                 console.error('Error:', err)
+//                 showErrorMsg('Toy was not removed')
+//             })
+//     }
+// }
 
 export function getById(toyId) {
     return dispatch => {

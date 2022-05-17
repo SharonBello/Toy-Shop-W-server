@@ -43,9 +43,10 @@ async function add(toy) {
     // TODO - add toy. description with make lorem
     try {
         const collection = await dbService.getCollection('toy')
-        const addedToy = await collection.insertOne(toy)
-        addedToy = addedToy.ops.pop()
-        return addedToy
+        // const addedToy = await collection.insertOne(toy)
+        await collection.insertOne(toy)
+        // addedToy = addedToy.ops.pop()
+        return toy
     } catch (err) {
         logger.error('cannot insert toy', err)
         throw err
