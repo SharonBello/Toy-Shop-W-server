@@ -10,9 +10,14 @@ async function query(filterBy) {
         // const criteria = {}
 
         const collection = await dbService.getCollection('toy')
-        const sortBy = filterBy.sortBy
-        
-        let toys = await collection.find(criteria).sort({sortBy: 1}).toArray()
+
+        let sortBy = filterBy.sortBy   
+        let sortType = 1
+        if(sortBy === 'recent') {
+            sortBy = 'createdAt'
+            sortType = -1
+        }
+        let toys = await collection.find(criteria).sort({[sortBy]:  sortType}).toArray()
         // createdAt
         console.log('toy.service - line 13 - toys', toys)
         return toys
@@ -35,12 +40,15 @@ function _buildCriteria(filterBy) {
             }
         ]
     }
-    // if (filterBy.labels) {
-    //     criteria.labels = { $in:{ labels: filterBy.labels }}
-    // }
+    if (filterBy.labels.length) {
+        const labels = filterBy.labels.split(',')
+        criteria.labels = {$all: labels}
+    }
+
     if (filterBy.inStock) {
         criteria.inStock =  JSON.parse(filterBy.inStock)
     }
+
     // const PAGE_SIZE = 3
     // if (filterBy.pageIdx !== undefined) {
     //     const startIdx = +filterBy.pageIdx * PAGE_SIZE
