@@ -611,9 +611,179 @@
 17.5.2022, 16:54:24 - DEBUG - Getting Toys 
 17.5.2022, 16:54:29 - DEBUG - Getting Toys 
 17.5.2022, 16:54:33 - DEBUG - Getting Toys 
+<<<<<<< HEAD
 >>>>>>> 7ecba3872aa528d57fb3cf4ffc8beb6389de9619
 17.5.2022, 17:10:13 - INFO - Server is running on port: 3030 
 17.5.2022, 17:10:14 - INFO - user logged out (userId: 62826667d1e6dc2589461573)
 17.5.2022, 17:10:22 - DEBUG - auth.service - login with username: muki 
 17.5.2022, 17:10:22 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":"true","username":"muki","fullname":"muki muki"} 
 17.5.2022, 17:10:27 - DEBUG - Getting Toys 
+=======
+17.5.2022, 16:59:26 - INFO - Server is running on port: 3030 
+17.5.2022, 16:59:40 - DEBUG - auth.service - login with username: muki 
+17.5.2022, 16:59:40 - INFO - User login:  | {"_id":"6282958732a36c17e311f8cc","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+17.5.2022, 16:59:44 - INFO - user logged out (userId: 6282958732a36c17e311f8cc)
+17.5.2022, 17:15:18 - INFO - Server is running on port: 3030 
+17.5.2022, 17:15:34 - DEBUG - auth.service - login with username: muki 
+17.5.2022, 17:15:34 - INFO - User login:  | {"_id":"6282958732a36c17e311f8cc","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+17.5.2022, 17:15:37 - DEBUG - Getting Toys 
+17.5.2022, 17:16:08 - INFO - Server is running on port: 3030 
+17.5.2022, 17:16:27 - INFO - Server is running on port: 3030 
+17.5.2022, 17:16:33 - DEBUG - Getting Toys 
+17.5.2022, 17:16:42 - DEBUG - Getting Toys 
+17.5.2022, 17:16:42 - DEBUG - Getting Toys 
+17.5.2022, 17:16:43 - DEBUG - Getting Toys 
+17.5.2022, 17:16:43 - DEBUG - Getting Toys 
+17.5.2022, 17:16:43 - DEBUG - Getting Toys 
+17.5.2022, 17:17:44 - INFO - Server is running on port: 3030 
+17.5.2022, 17:17:50 - DEBUG - Getting Toys 
+17.5.2022, 17:18:18 - DEBUG - Getting Toys 
+17.5.2022, 17:18:18 - DEBUG - Getting Toys 
+17.5.2022, 17:18:18 - DEBUG - Getting Toys 
+17.5.2022, 17:18:19 - DEBUG - Getting Toys 
+17.5.2022, 17:18:19 - DEBUG - Getting Toys 
+17.5.2022, 17:19:31 - DEBUG - Getting Toys 
+17.5.2022, 17:19:37 - DEBUG - Getting Toys 
+17.5.2022, 17:19:39 - DEBUG - Getting Toys 
+17.5.2022, 17:19:39 - DEBUG - Getting Toys 
+17.5.2022, 17:19:40 - DEBUG - Getting Toys 
+17.5.2022, 17:19:40 - DEBUG - Getting Toys 
+17.5.2022, 17:19:40 - DEBUG - Getting Toys 
+17.5.2022, 17:21:17 - DEBUG - Getting Toys 
+17.5.2022, 17:21:22 - DEBUG - Getting Toys 
+17.5.2022, 17:21:28 - DEBUG - Getting Toys 
+17.5.2022, 17:21:29 - DEBUG - Getting Toys 
+17.5.2022, 17:21:29 - DEBUG - Getting Toys 
+17.5.2022, 17:22:03 - DEBUG - Getting Toys 
+17.5.2022, 17:22:13 - DEBUG - Getting Toys 
+17.5.2022, 17:22:15 - DEBUG - Getting Toys 
+17.5.2022, 17:22:15 - DEBUG - Getting Toys 
+17.5.2022, 17:22:15 - DEBUG - Getting Toys 
+17.5.2022, 17:25:37 - DEBUG - Getting Toys 
+17.5.2022, 17:25:48 - DEBUG - Getting Toys 
+17.5.2022, 17:25:54 - DEBUG - Getting Toys 
+17.5.2022, 17:27:18 - INFO - Server is running on port: 3030 
+17.5.2022, 17:27:22 - INFO - Server is running on port: 3030 
+17.5.2022, 17:27:25 - DEBUG - Getting Toys 
+17.5.2022, 17:27:26 - DEBUG - Getting Toys 
+17.5.2022, 17:28:01 - INFO - Server is running on port: 3030 
+17.5.2022, 17:28:05 - DEBUG - Getting Toys 
+17.5.2022, 17:28:06 - DEBUG - Getting Toys 
+17.5.2022, 17:28:50 - INFO - Server is running on port: 3030 
+17.5.2022, 17:28:55 - DEBUG - Getting Toys 
+17.5.2022, 17:28:55 - DEBUG - Getting Toys 
+17.5.2022, 17:30:28 - INFO - Server is running on port: 3030 
+17.5.2022, 17:30:34 - DEBUG - Getting Toys 
+17.5.2022, 17:30:42 - DEBUG - Getting Toys 
+17.5.2022, 17:30:43 - DEBUG - Getting Toys 
+17.5.2022, 17:30:43 - DEBUG - Getting Toys 
+17.5.2022, 17:30:44 - DEBUG - Getting Toys 
+17.5.2022, 17:30:44 - DEBUG - Getting Toys 
+17.5.2022, 17:30:47 - DEBUG - Getting Toys 
+17.5.2022, 17:30:47 - DEBUG - Getting Toys 
+17.5.2022, 17:30:47 - DEBUG - Getting Toys 
+17.5.2022, 17:30:48 - DEBUG - Getting Toys 
+17.5.2022, 17:30:48 - DEBUG - Getting Toys 
+17.5.2022, 17:31:28 - INFO - Server is running on port: 3030 
+17.5.2022, 17:31:32 - DEBUG - Getting Toys 
+17.5.2022, 17:31:35 - DEBUG - Getting Toys 
+17.5.2022, 17:31:35 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:31:35 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:31:35 - DEBUG - Getting Toys 
+17.5.2022, 17:31:35 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:31:35 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:31:35 - DEBUG - Getting Toys 
+17.5.2022, 17:31:35 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:31:35 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:32:20 - DEBUG - Getting Toys 
+17.5.2022, 17:32:26 - DEBUG - Getting Toys 
+17.5.2022, 17:32:26 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:32:26 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:32:26 - DEBUG - Getting Toys 
+17.5.2022, 17:32:26 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:32:26 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:32:26 - DEBUG - Getting Toys 
+17.5.2022, 17:32:26 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:32:26 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:32:26 - DEBUG - Getting Toys 
+17.5.2022, 17:32:26 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:32:26 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:32:27 - DEBUG - Getting Toys 
+17.5.2022, 17:32:27 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:32:27 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+17.5.2022, 17:32:53 - INFO - Server is running on port: 3030 
+17.5.2022, 17:32:59 - DEBUG - Getting Toys 
+17.5.2022, 17:33:01 - DEBUG - Getting Toys 
+17.5.2022, 17:33:01 - DEBUG - Getting Toys 
+17.5.2022, 17:33:01 - DEBUG - Getting Toys 
+17.5.2022, 17:33:01 - DEBUG - Getting Toys 
+17.5.2022, 17:33:02 - DEBUG - Getting Toys 
+17.5.2022, 17:37:05 - INFO - Server is running on port: 3030 
+17.5.2022, 17:37:10 - DEBUG - Getting Toys 
+17.5.2022, 17:38:06 - INFO - Server is running on port: 3030 
+17.5.2022, 17:38:12 - DEBUG - Getting Toys 
+17.5.2022, 17:38:47 - DEBUG - Getting Toys 
+17.5.2022, 17:39:57 - INFO - Server is running on port: 3030 
+17.5.2022, 17:41:31 - INFO - Server is running on port: 3030 
+17.5.2022, 17:41:40 - DEBUG - Getting Toys 
+17.5.2022, 17:41:42 - DEBUG - Getting Toys 
+17.5.2022, 17:41:42 - ERROR - cannot find toys | MongoError: unknown operator: $inc 
+17.5.2022, 17:41:42 - ERROR - Failed to get toys | MongoError: unknown operator: $inc 
+17.5.2022, 17:42:19 - INFO - Server is running on port: 3030 
+17.5.2022, 17:42:23 - DEBUG - Getting Toys 
+17.5.2022, 17:42:26 - DEBUG - Getting Toys 
+17.5.2022, 17:42:26 - ERROR - cannot find toys | MongoError: $in needs an array 
+17.5.2022, 17:42:26 - ERROR - Failed to get toys | MongoError: $in needs an array 
+17.5.2022, 17:44:52 - INFO - Server is running on port: 3030 
+17.5.2022, 17:45:14 - DEBUG - Getting Toys 
+17.5.2022, 17:45:23 - DEBUG - Getting Toys 
+17.5.2022, 17:45:57 - INFO - Server is running on port: 3030 
+17.5.2022, 17:46:00 - DEBUG - Getting Toys 
+17.5.2022, 17:46:38 - INFO - Server is running on port: 3030 
+17.5.2022, 17:46:41 - DEBUG - Getting Toys 
+17.5.2022, 17:47:04 - INFO - Server is running on port: 3030 
+17.5.2022, 17:47:08 - DEBUG - Getting Toys 
+17.5.2022, 17:47:17 - DEBUG - Getting Toys 
+17.5.2022, 17:47:22 - DEBUG - Getting Toys 
+17.5.2022, 17:50:44 - INFO - Server is running on port: 3030 
+17.5.2022, 17:51:01 - INFO - Server is running on port: 3030 
+17.5.2022, 17:51:07 - DEBUG - Getting Toys 
+17.5.2022, 17:51:12 - DEBUG - Getting Toys 
+17.5.2022, 17:51:57 - DEBUG - Getting Toys 
+17.5.2022, 17:52:16 - DEBUG - Getting Toys 
+17.5.2022, 17:52:56 - INFO - Server is running on port: 3030 
+17.5.2022, 17:53:00 - DEBUG - Getting Toys 
+17.5.2022, 17:53:00 - ERROR - Failed to get toys | TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'NativeTopology'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'topology' closes the circle 
+17.5.2022, 17:53:07 - INFO - Server is running on port: 3030 
+17.5.2022, 17:53:50 - INFO - Server is running on port: 3030 
+17.5.2022, 17:53:54 - DEBUG - Getting Toys 
+17.5.2022, 17:54:28 - INFO - Server is running on port: 3030 
+17.5.2022, 17:54:31 - DEBUG - Getting Toys 
+17.5.2022, 17:58:23 - INFO - Server is running on port: 3030 
+17.5.2022, 17:58:31 - DEBUG - Getting Toys 
+17.5.2022, 17:58:31 - ERROR - cannot find toys | TypeError: collection.find(...).toArray(...).sort is not a function 
+17.5.2022, 17:58:31 - ERROR - Failed to get toys | TypeError: collection.find(...).toArray(...).sort is not a function 
+17.5.2022, 17:58:38 - INFO - Server is running on port: 3030 
+17.5.2022, 17:58:51 - INFO - Server is running on port: 3030 
+17.5.2022, 17:58:55 - DEBUG - Getting Toys 
+17.5.2022, 17:58:59 - DEBUG - Getting Toys 
+17.5.2022, 17:59:00 - DEBUG - Getting Toys 
+17.5.2022, 18:02:29 - INFO - Server is running on port: 3030 
+17.5.2022, 18:02:33 - DEBUG - Getting Toys 
+17.5.2022, 18:02:36 - DEBUG - Getting Toys 
+17.5.2022, 18:02:37 - DEBUG - Getting Toys 
+17.5.2022, 18:02:37 - DEBUG - Getting Toys 
+17.5.2022, 18:02:37 - DEBUG - Getting Toys 
+17.5.2022, 18:02:37 - DEBUG - Getting Toys 
+17.5.2022, 18:02:39 - DEBUG - Getting Toys 
+17.5.2022, 18:02:39 - DEBUG - Getting Toys 
+17.5.2022, 18:02:39 - DEBUG - Getting Toys 
+17.5.2022, 18:02:39 - DEBUG - Getting Toys 
+17.5.2022, 18:02:40 - DEBUG - Getting Toys 
+17.5.2022, 18:02:43 - DEBUG - Getting Toys 
+17.5.2022, 18:02:45 - DEBUG - Getting Toys 
+>>>>>>> 1a6939a75e73fef929f5de396614242f809ec93c

@@ -4,12 +4,16 @@ const reviewService = require('../review/review.service')
 const ObjectId = require('mongodb').ObjectId
 
 async function query(filterBy) {
+    console.log('filterBy in toy service query', filterBy)
     try {
-        // TODO const criteria = _buildCriteria(filterBy)
-        const criteria = {}
+        const criteria = _buildCriteria(filterBy)
+        // const criteria = {}
 
         const collection = await dbService.getCollection('toy')
-        let toys = await collection.find(criteria).toArray()
+        const sortBy = filterBy.sortBy
+        
+        let toys = await collection.find(criteria).sort({sortBy: 1}).toArray()
+        // createdAt
         console.log('toy.service - line 13 - toys', toys)
         return toys
     } catch (err) {
@@ -17,6 +21,40 @@ async function query(filterBy) {
         throw err
     }
 }
+
+
+function _buildCriteria(filterBy) {
+    // console.log('filterBy in toy service line 23',filterBy )
+    let criteria = {}
+    if (filterBy.txt) {
+        const txtCriteria = { $regex: filterBy.txt, $options: 'i' }
+        console.log('txtCriteria', txtCriteria)
+        criteria.$or = [
+            {
+                name: txtCriteria
+            }
+        ]
+    }
+    // if (filterBy.labels) {
+    //     criteria.labels = { $in:{ labels: filterBy.labels }}
+    // }
+    if (filterBy.inStock) {
+        criteria.inStock =  JSON.parse(filterBy.inStock)
+    }
+    // const PAGE_SIZE = 3
+    // if (filterBy.pageIdx !== undefined) {
+    //     const startIdx = +filterBy.pageIdx * PAGE_SIZE
+    //     // if (startIdx > toys.length - 1) return Promise.reject()
+    //     toys = toys.slice(startIdx, startIdx + PAGE_SIZE)
+    // }
+
+    console.log('criteria', criteria, 'sortBy',filterBy.sortBy)
+
+    return criteria
+}
+
+
+
 
 async function getById(toyId) {
     try {

@@ -6,10 +6,10 @@ const initialState = {
     selectedOption: null,
     filterBy: {
         txt: '',
-        inStock: '',
+        inStock: true,
         labels: [],
         pageIdx: 0,
-        sortBy: null
+        sortBy: 'name'
     }
 }
 

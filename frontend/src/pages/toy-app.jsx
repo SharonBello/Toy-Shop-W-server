@@ -60,6 +60,7 @@ class _ToyApp extends React.Component {
         let { filterBy } = this.props
         if (field === 'labels') value = [target.value]
         filterBy = { ...filterBy, [field]: value }
+        console.log('filterBy', filterBy)
         this.props.setFilter(filterBy)
     }
 

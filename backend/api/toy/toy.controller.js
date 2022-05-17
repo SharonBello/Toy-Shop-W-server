@@ -6,6 +6,7 @@ async function getToys(req, res) {
   try {
     logger.debug('Getting Toys')
     var queryParams = req.query;
+    console.log('queryParams',queryParams )
     const toys = await toyService.query(queryParams)
     res.json(toys);
   } catch (err) {
