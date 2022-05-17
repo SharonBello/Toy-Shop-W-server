@@ -6,6 +6,7 @@ const asyncLocalStorage = require('../../services/als.service')
 async function query(filterBy = {}) {
     try {
         const criteria = _buildCriteria(filterBy)
+        
         const collection = await dbService.getCollection('review')
         // const reviews = await collection.find(criteria).toArray()
         var reviews = await collection.aggregate([
@@ -71,15 +72,20 @@ async function remove(reviewId) {
 
 
 async function add(review) {
+    console.log('critria query', review)
     try {
         const reviewToAdd = {
-            byUserId: ObjectId(review.byUserId),
-            aboutUserId: ObjectId(review.aboutUserId),
-            txt: review.txt
+            userId: ObjectId(review.userId),
+            toyId: ObjectId(review.toyId),
+            content: review.content
         }
+        console.log('review to add in function!:', reviewToAdd)
         const collection = await dbService.getCollection('review')
-        await collection.insertOne(reviewToAdd)
+        
+        const something = await collection.insertOne(reviewToAdd)
+        console.log('something!!!:', something)
         return reviewToAdd;
+
     } catch (err) {
         logger.error('cannot insert review', err)
         throw err

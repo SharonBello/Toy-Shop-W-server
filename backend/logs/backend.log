@@ -492,6 +492,23 @@
 17/05/2022, 15:10:28 - INFO - Server is running on port: 3030
 17/05/2022, 15:11:28 - INFO - Server is running on port: 3030
 17/05/2022, 15:11:39 - INFO - Server is running on port: 3030
+<<<<<<< HEAD
+17.5.2022, 15:16:21 - INFO - Server is running on port: 3030
+17.5.2022, 15:18:35 - INFO - Req was made
+17.5.2022, 15:18:35 - DEBUG - Getting Toys
+17.5.2022, 15:18:45 - DEBUG - auth.service - login with username: muki
+17.5.2022, 15:18:45 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":"true","username":"muki","fullname":"muki muki"}
+17.5.2022, 15:19:07 - INFO - from toy.controller - addToy(req, res) | {"name":"blabla","price":1,"labels":["art"],"createdAt":1652789938175,"review":"Best ever","inStock":true,"img":""}
+17.5.2022, 15:19:07 - INFO - from toy.controller - addToy(req, res) | {"name":"blabla","price":1,"labels":["art"],"createdAt":1652789938175,"review":"Best ever","inStock":true,"img":"","_id":"628392bbc732ec4e3835eed7"}
+17.5.2022, 15:19:07 - INFO - Req was made
+17.5.2022, 15:19:07 - DEBUG - Getting Toys
+17.5.2022, 15:32:40 - INFO - Req was made
+17.5.2022, 15:32:40 - DEBUG - Getting Toys
+17.5.2022, 15:32:42 - INFO - user logged out
+17.5.2022, 15:32:43 - INFO - user logged out
+17.5.2022, 15:32:55 - DEBUG - auth.service - login with username: muki
+17.5.2022, 15:32:55 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":"true","username":"muki","fullname":"muki muki"}
+=======
 >>>>>>> 8607829569f644671061e81b0c3e822c48f3fe00
 17/05/2022, 15:42:05 - INFO - Server is running on port: 3030
 17/05/2022, 15:48:03 - INFO - Server is running on port: 3030
@@ -594,6 +611,14 @@
 17.5.2022, 16:54:24 - DEBUG - Getting Toys 
 17.5.2022, 16:54:29 - DEBUG - Getting Toys 
 17.5.2022, 16:54:33 - DEBUG - Getting Toys 
+<<<<<<< HEAD
+>>>>>>> 7ecba3872aa528d57fb3cf4ffc8beb6389de9619
+17.5.2022, 17:10:13 - INFO - Server is running on port: 3030 
+17.5.2022, 17:10:14 - INFO - user logged out (userId: 62826667d1e6dc2589461573)
+17.5.2022, 17:10:22 - DEBUG - auth.service - login with username: muki 
+17.5.2022, 17:10:22 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+17.5.2022, 17:10:27 - DEBUG - Getting Toys 
+=======
 17.5.2022, 16:59:26 - INFO - Server is running on port: 3030 
 17.5.2022, 16:59:40 - DEBUG - auth.service - login with username: muki 
 17.5.2022, 16:59:40 - INFO - User login:  | {"_id":"6282958732a36c17e311f8cc","isAdmin":"true","username":"muki","fullname":"muki muki"} 
@@ -761,6 +786,9 @@
 17.5.2022, 18:02:40 - DEBUG - Getting Toys 
 17.5.2022, 18:02:43 - DEBUG - Getting Toys 
 17.5.2022, 18:02:45 - DEBUG - Getting Toys 
+<<<<<<< HEAD
+>>>>>>> 1a6939a75e73fef929f5de396614242f809ec93c
+=======
 17.5.2022, 18:10:53 - DEBUG - Getting Toys 
 17.5.2022, 18:11:38 - DEBUG - Getting Toys 
 17.5.2022, 18:12:37 - INFO - Server is running on port: 3030 
@@ -839,6 +867,7 @@
 17.5.2022, 18:43:17 - DEBUG - Getting Toys 
 17.5.2022, 18:43:28 - DEBUG - Getting Toys 
 17.5.2022, 18:43:38 - INFO - Server is running on port: 3030 
+<<<<<<< HEAD
 17.5.2022, 18:48:05 - DEBUG - Getting Toys 
 17.5.2022, 18:48:16 - DEBUG - Getting Toys 
 17.5.2022, 18:48:25 - DEBUG - Getting Toys 
@@ -1064,3 +1093,36 @@
 17.5.2022, 23:49:47 - INFO - user logged out (userId: 6282958732a36c17e311f8cc)
 17.5.2022, 23:49:54 - DEBUG - auth.service - login with username: muki 
 17.5.2022, 23:49:55 - INFO - User login:  | {"_id":"6282958732a36c17e311f8cc","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+=======
+>>>>>>> 75b7fb89b6b8456d21e599d8678a889171c1e705
+17.5.2022, 21:26:56 - INFO - Server is running on port: 3030 
+17.5.2022, 21:33:08 - INFO - Server is running on port: 3030 
+17.5.2022, 21:36:04 - DEBUG - Getting Toys 
+17.5.2022, 21:36:14 - DEBUG - Getting Toys 
+17.5.2022, 21:36:22 - DEBUG - auth.service - login with username: muki 
+17.5.2022, 21:36:22 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+17.5.2022, 21:59:32 - INFO - Server is running on port: 3030 
+17.5.2022, 22:02:15 - INFO - Server is running on port: 3030 
+17.5.2022, 22:02:29 - INFO - Server is running on port: 3030 
+17.5.2022, 22:35:24 - DEBUG - Getting Toys 
+17.5.2022, 22:35:33 - DEBUG - Getting Toys 
+17.5.2022, 22:35:46 - DEBUG - Getting Toys 
+17.5.2022, 22:37:23 - DEBUG - Getting Toys 
+17.5.2022, 22:37:32 - DEBUG - Getting Toys 
+17.5.2022, 23:07:20 - INFO - Server is running on port: 3030 
+17.5.2022, 23:11:01 - DEBUG - Getting Toys 
+17.5.2022, 23:27:16 - INFO - Server is running on port: 3030 
+17.5.2022, 23:27:20 - INFO - Server is running on port: 3030 
+17.5.2022, 23:30:35 - INFO - Server is running on port: 3030 
+17.5.2022, 23:33:18 - INFO - Server is running on port: 3030 
+17.5.2022, 23:33:37 - INFO - Server is running on port: 3030 
+17.5.2022, 23:39:34 - DEBUG - Getting Toys 
+17.5.2022, 23:45:24 - INFO - Server is running on port: 3030 
+17.5.2022, 23:46:38 - INFO - Server is running on port: 3030 
+17.5.2022, 23:46:58 - INFO - Server is running on port: 3030 
+17.5.2022, 23:48:10 - DEBUG - Getting Toys 
+>>>>>>> 308c3a026dcf8e42b50245c110f6b72e30fd4038
+17.5.2022, 23:52:37 - INFO - Server is running on port: 3030 
+17.5.2022, 23:59:37 - DEBUG - auth.service - login with username: muki 
+17.5.2022, 23:59:37 - INFO - User login:  | {"_id":"6282958732a36c17e311f8cc","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+17.5.2022, 23:59:41 - DEBUG - Getting Toys 

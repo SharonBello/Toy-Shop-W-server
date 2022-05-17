@@ -3,7 +3,7 @@ import  Axios  from "axios"
 
 const BASE_URL = process.env.NODE_ENV === 'production'
     ? '/api/'
-    : '//localhost:3030/api/api'
+    : '//localhost:3030/api/'
 
 var axios = Axios.create({
     withCredentials: true
@@ -11,9 +11,11 @@ var axios = Axios.create({
 
 export const httpService = {
     get(endpoint, data) {
+        console.log('DATA BEFORE SEND',data)
         return ajax(endpoint, 'GET', data)
     },
     post(endpoint, data) {
+        console.log('endPoint + data',endpoint, data )
         return ajax(endpoint, 'POST', data)
     },
     pup(endpoint, data) {
@@ -26,10 +28,12 @@ export const httpService = {
 
 async function ajax(endpoint, method = 'GET', data = null) {
     try {
+        console.log('res in http.service:', `${BASE_URL}${endpoint}`)
         const res = await axios({
             url: `${BASE_URL}${endpoint}`,
+            method,
             data,
-            params: (metog === 'GET') ? data : null
+            params: (method === 'GET') ? data : null
         })
         return res.data
     } catch (err) {

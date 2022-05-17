@@ -10,7 +10,7 @@ const BASE_URL =
 export const userService = {
     login,
     logout,
-    signup,
+    // signup,
     getLoggedinUser,
     save,
     // addActivity
@@ -112,6 +112,4 @@ function _handleLogin(user) {
 //     activities: [{txt: 'Added a Toy', at: 1523873242735}]
 // })
 
-// userService.login({username: 'miki', password: 'miki'})
-
-
+// userService.login({username: 'miki', password: 'miki'}

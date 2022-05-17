@@ -6,6 +6,7 @@ import { userService } from "../services/user.service.js"
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 
 import { removeToy, getById } from "../store/actions/toy.action.js"
+import { ReviewAdd } from "./review-add.jsx"
 
 class _ToyDetails extends React.Component {
 
@@ -39,8 +40,9 @@ class _ToyDetails extends React.Component {
                 <p>In stock: <span>{(toy.inStock) ? 'Yes' : 'No'}</span></p>
                 <p>Price: <span>{toy.price}</span></p>
                 <p>Labels: <span key={toy.labels.map((label, idx) => idx)}>{toy.labels.map((label, idx) => {
-                    return (idx === toy.labels.length - 1) ? label.value : label + ', '
+                    return (idx === toy.labels.length - 1) ? label : label + ', '
                 })}</span></p>
+                <ReviewAdd toy={toy}/>
                 <p>Reviews: <span>{toy.review}</span></p>
                 <div>
                     <button onClick={() => this.onRemoveToy(toy._id)}>x</button>
