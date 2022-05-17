@@ -2,14 +2,14 @@ const authService = require('./auth.service')
 const logger = require('../../services/logger.service')
 
 async function login(req, res) {
-    console.log('shfjkldhakn.', req.body)
+    
     const { username, password } = req.body
-    console.log('shfjkldhakn.', req.body)
+    
     try {
         const user = await authService.login(username, password)
-        console.log('from auth. control line 10 - user', user)
+        
         const loginToken = authService.getLoginToken(user)
-        console.log('from auth. control line 11 - loginToken', loginToken)
+        
         logger.info('User login: ', user)
         res.cookie('loginToken', loginToken)
 
