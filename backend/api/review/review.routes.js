@@ -6,7 +6,7 @@ const router = express.Router()
 
 // middleware that is specific to this router
 // router.use(requireAuth)
-
+console.log('IN ROUTING REVIEW' )
 router.get('/', log, getReviews)
 router.post('/',  log, requireAuth, addReview)
 router.delete('/:id',  requireAuth, deleteReview)

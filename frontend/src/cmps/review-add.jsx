@@ -1,10 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
+import {addReview} from '../store/actions/review.action.js'
 
 export class _ReviewAdd extends React.Component{
     state = {
         review: {
-            userId: '',
+            // userId: '',
             toyId: '',
             content: '',
         }
@@ -14,11 +15,16 @@ export class _ReviewAdd extends React.Component{
         let userId = ''
         if (user) userId = user._id
         const toyId = toy._id
-        this.setState(prevState => ({ ...prevState, review: { ...prevState.review, userId, toyId } }))
+        this.setState(prevState => ({ ...prevState, review: { ...prevState.review, toyId } }))
     }
 
     handleChange = ({target}) => {
         this.setState((prevState) => ({...prevState, review: {...prevState.review, content: target.value}}))
+    }
+
+    onAddReview = (review) => {
+        this.props.addReview(review)
+        console.log('review-add.jsx onAddReview:', review)
     }
 
     render(){
@@ -28,7 +34,7 @@ export class _ReviewAdd extends React.Component{
             <section className="add-review">
                 {(user) ? 
                 <form className="add-review-form"
-                    onSubmit={(ev) => {ev.preventDefault(); onAddReview(review)}}>
+                    onSubmit={(ev) => {ev.preventDefault(); this.onAddReview(review)}}>
                     <textarea 
                         id="content"
                         name="content"
@@ -46,12 +52,13 @@ export class _ReviewAdd extends React.Component{
 const mapStateToProps = (storeState) => {
     return {
         toys: storeState.toyModule.toys,
-        user: storeState.userModule.user
+        user: storeState.userModule.user,
+        review: storeState.reviewModule.reviews
     }
 }
 
 const mapDispatchToProps = {
-
+    addReview,
 }
 
 export const ReviewAdd = connect(
