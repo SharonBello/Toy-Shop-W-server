@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import axios from 'axios'
+=======
+import Axios from 'axios'
+>>>>>>> 73dbd73d830cb1383d67ffd723e38c7fe6709b3c
 import { storageService } from './async-storage.service.js'
 
 const STORAGE_KEY = 'userDB'
 const STORAGE_KEY_LOGGEDIN = 'loggedinUser'
+
+const BASE_URL =
+    process.env.NODE_ENV === 'production' ? '/api/auth/' : '//localhost:3030/api/auth/'
 
 export const userService = {
     login,
@@ -12,6 +19,11 @@ export const userService = {
     save,
     // addActivity
 }
+
+var axios = Axios.create({
+    withCredentials : true
+})
+
 
 window.us = userService
 
@@ -27,6 +39,7 @@ function save(user) {
 //             _handleLogin(user)
 //         return user
 //     })
+<<<<<<< HEAD
 
 
 // }
@@ -40,6 +53,28 @@ function login(credentials){
         sessionStorage.setItem('loggedinUser', JSON.stringify(miniUser))
         return user
     })   
+=======
+
+
+// }
+
+function login(credentials){
+    console.log('credentials',credentials )
+    const url = BASE_URL +  'login'
+    return axios.post(url, credentials)
+    .then(res => res.data)
+    .then(user => {
+        console.log('user after axios', user)
+        const miniUser = {username: user.username, isAdmin: user.isAdmin}
+        sessionStorage.setItem('loggedinUser', JSON.stringify(miniUser))
+        return user
+    })   
+    .catch(err => {
+        console.error('Error:', err)
+    })
+
+    
+>>>>>>> 73dbd73d830cb1383d67ffd723e38c7fe6709b3c
 }
 
 
@@ -65,8 +100,12 @@ function signup(userInfo) {
 //         })
 // }
 function logout() {
-    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, null)
-    return Promise.resolve()
+    const url = BASE_URL + 'logout'
+    return axios.post(url).then(() => {
+        sessionStorage.removeItem('loggedinUser')
+    })
+    // sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, null)
+    // return Promise.resolve()
 }
 
 function getLoggedinUser() {

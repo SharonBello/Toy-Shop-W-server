@@ -88,6 +88,7 @@ function save(toy) {
 }
 
 function remove(toyId) {
+    console.log('toyId', toyId)
     const idx = gToys.findIndex(currToy => currToy._id === toyId)
     gToys.splice(idx, 1)
     return _saveToysToFile()

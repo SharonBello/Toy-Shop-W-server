@@ -32,7 +32,7 @@ export class ToyPreview extends React.Component {
     
     render() {
     const { toy, onRemoveToy } = this.props
-    console.log('toy',toy )
+    // console.log('toy',toy )
 
         // const Rating = styled(Rating)({
         //     '& .MuiRating-iconFilled': {
