@@ -1,4 +1,4 @@
-import axios from 'axios'
+import Axios from 'axios'
 
 // const STORAGE_KEY = 'toy'
 // const BASE_URL = '/api/toy/'
@@ -16,9 +16,9 @@ const BASE_URL =
         ? '/api/toy/'
         : 'http://localhost:3030/api/toy/'
 
-// var axios = Axios.create({
-//     withCredentials: true,
-// })
+var axios = Axios.create({
+    withCredentials: true,
+})
 
 function getAllToys() {
     query()
