@@ -1,8 +1,10 @@
 import React from "react"
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
+import { userService } from "../services/user.service.js"
+import { login } from '../store/actions/user.action.js'
 
-export class Login extends React.Component {
+export class _Login extends React.Component {
     state = {
         credentials: {
             username: '',
@@ -36,8 +38,9 @@ export class Login extends React.Component {
     onLogin = (ev = null) => {
         if (!this.state.credentials.username || !this.state.credentials.password) return;
         if (ev) ev.preventDefault();
-        this.props.onLogin(this.state.credentials);
-
+        this.props.login(this.state.credentials);
+        console.log('this.state.credentials',this.state.credentials )
+        // userService.login(this.state.credentials)
         this.clearState()
         this.props.onHandleCloseDialog(ev)
     }
@@ -76,3 +79,20 @@ export class Login extends React.Component {
         )
     }
 }
+
+
+const mapStateToProps = (storeState) => {
+    return {
+        // user: storeState.userModule.user,
+        // toys: storeState.toyModule.toys,
+    }
+}
+
+const mapDispatchToProps = {
+    login,
+}
+
+export const Login = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(_Login)

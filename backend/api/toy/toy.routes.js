@@ -14,6 +14,7 @@ router.post('/', addToy)
 router.post('/:id', requireAuth, addReview)
 router.put('/:id', updateToy)
 // router.put('/:id', requireAuth, requireAdmin, updateToy)
-router.delete('/:id', requireAuth, requireAdmin, removeToy)
+router.delete('/:id', removeToy)
+// router.delete('/:id', requireAuth, requireAdmin, removeToy)
 
 module.exports = router
