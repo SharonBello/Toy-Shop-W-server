@@ -124,6 +124,16 @@
         }
     }
 
+    .user-greet {
+        color: white;
+        font-size: 1em;
+
+        &span {
+            color: pink;
+            font-size: 1em;
+        }
+    }
+
     .login-page {
         display: flex;
         flex-direction: row;

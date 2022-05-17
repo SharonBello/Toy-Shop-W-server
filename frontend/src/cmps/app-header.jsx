@@ -79,6 +79,7 @@ class _AppHeader extends React.Component {
                     </div>
 
                     <div className="login-btn-container">
+                        {user && <p className="user-greet">Hello: <span>{user.username}</span></p>}
                         <button onClick={() => this.onOpenModal()}><AccountCircleIcon /></button>
                         {isModalOpen && <Dialog open={true} >
                         {!user && <LoginSignup onLogin={this.onLogin} onSignup={this.onSignup} onCloseModal={this.onCloseModal}/>}</Dialog>} 

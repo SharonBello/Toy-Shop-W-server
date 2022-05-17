@@ -35,8 +35,6 @@ function save(user) {
 //             _handleLogin(user)
 //         return user
 //     })
-
-
 // }
 
 function login(credentials){
@@ -53,28 +51,6 @@ function login(credentials){
     .catch(err => {
         console.error('Error:', err)
     })
-
-    
-}
-
-
-function signup(userInfo) {
-    // userInfo.balance = 1000
-    // userInfo.prefs = { color: '#0000ff', bgColor: '#c1c1c1' }
-    // userInfo.activities = []
-
-    return storageService.post(STORAGE_KEY, userInfo)
-        .then((user) => {
-            _handleLogin(user)
-            return user
-        })
-}
-// function updateBalance(diff) {
-
-//     const user = userService.getLoggedinUser()
-//     user.balance += diff
-//     return storageService.put(STORAGE_KEY, user)
-//         .then((user) => {
 //             sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
 //             return user.balance
 //         })
@@ -115,5 +91,3 @@ function _handleLogin(user) {
 // })
 
 // userService.login({username: 'miki', password: 'miki'})
-
-
