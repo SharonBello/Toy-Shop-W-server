@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import axios from 'axios'
-=======
 import Axios from 'axios'
->>>>>>> 73dbd73d830cb1383d67ffd723e38c7fe6709b3c
 import { storageService } from './async-storage.service.js'
 
 const STORAGE_KEY = 'userDB'
@@ -39,21 +35,6 @@ function save(user) {
 //             _handleLogin(user)
 //         return user
 //     })
-<<<<<<< HEAD
-
-
-// }
-
-function login(credentials){
-    console.log('credentials',credentials )
-    return axios.post('/api/login', credentials)
-    .then(res => res.data)
-    .then(user => {
-        const miniUser = {username: user.username, isAdmin: user.isAdmin}
-        sessionStorage.setItem('loggedinUser', JSON.stringify(miniUser))
-        return user
-    })   
-=======
 
 
 // }
@@ -74,7 +55,6 @@ function login(credentials){
     })
 
     
->>>>>>> 73dbd73d830cb1383d67ffd723e38c7fe6709b3c
 }
 
 

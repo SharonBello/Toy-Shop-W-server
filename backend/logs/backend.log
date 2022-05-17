@@ -478,3 +478,18 @@
 17/05/2022, 15:10:28 - INFO - Server is running on port: 3030
 17/05/2022, 15:11:28 - INFO - Server is running on port: 3030
 17/05/2022, 15:11:39 - INFO - Server is running on port: 3030
+17.5.2022, 15:16:21 - INFO - Server is running on port: 3030
+17.5.2022, 15:18:35 - INFO - Req was made
+17.5.2022, 15:18:35 - DEBUG - Getting Toys
+17.5.2022, 15:18:45 - DEBUG - auth.service - login with username: muki
+17.5.2022, 15:18:45 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":"true","username":"muki","fullname":"muki muki"}
+17.5.2022, 15:19:07 - INFO - from toy.controller - addToy(req, res) | {"name":"blabla","price":1,"labels":["art"],"createdAt":1652789938175,"review":"Best ever","inStock":true,"img":""}
+17.5.2022, 15:19:07 - INFO - from toy.controller - addToy(req, res) | {"name":"blabla","price":1,"labels":["art"],"createdAt":1652789938175,"review":"Best ever","inStock":true,"img":"","_id":"628392bbc732ec4e3835eed7"}
+17.5.2022, 15:19:07 - INFO - Req was made
+17.5.2022, 15:19:07 - DEBUG - Getting Toys
+17.5.2022, 15:32:40 - INFO - Req was made
+17.5.2022, 15:32:40 - DEBUG - Getting Toys
+17.5.2022, 15:32:42 - INFO - user logged out
+17.5.2022, 15:32:43 - INFO - user logged out
+17.5.2022, 15:32:55 - DEBUG - auth.service - login with username: muki
+17.5.2022, 15:32:55 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":"true","username":"muki","fullname":"muki muki"}
