@@ -612,3 +612,8 @@
 17.5.2022, 16:54:29 - DEBUG - Getting Toys 
 17.5.2022, 16:54:33 - DEBUG - Getting Toys 
 >>>>>>> 7ecba3872aa528d57fb3cf4ffc8beb6389de9619
+17.5.2022, 17:10:13 - INFO - Server is running on port: 3030 
+17.5.2022, 17:10:14 - INFO - user logged out (userId: 62826667d1e6dc2589461573)
+17.5.2022, 17:10:22 - DEBUG - auth.service - login with username: muki 
+17.5.2022, 17:10:22 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+17.5.2022, 17:10:27 - DEBUG - Getting Toys 

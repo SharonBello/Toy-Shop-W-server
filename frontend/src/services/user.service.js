@@ -10,7 +10,7 @@ const BASE_URL =
 export const userService = {
     login,
     logout,
-    signup,
+    // signup,
     getLoggedinUser,
     save,
     // addActivity
@@ -50,7 +50,7 @@ function login(credentials){
     })   
     .catch(err => {
         console.error('Error:', err)
-    })
+    })}
 //             sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
 //             return user.balance
 //         })
@@ -90,4 +90,4 @@ function _handleLogin(user) {
 //     activities: [{txt: 'Added a Toy', at: 1523873242735}]
 // })
 
-// userService.login({username: 'miki', password: 'miki'})
+// userService.login({username: 'miki', password: 'miki'}
