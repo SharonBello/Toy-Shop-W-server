@@ -3,17 +3,35 @@ import { showSuccessMsg, showErrorMsg } from '../../services/event-bus.service.j
 
 
 export function loadToy() {
-
-    return (dispatch, getState) => {
-        const filterBy = getState().toyModule.filterBy
-        return toyService.query(filterBy).then((toys) => {
-            dispatch({
-                type: 'SET_TOYS',
-                toys
-            })
-        })
+    try {
+        return async (dispatch, getState) => {
+            const filterBy = getState().toyModule.filterBy
+            const toys = await toyService.query(filterBy)
+                return dispatch({
+                    type: 'SET_TOYS',
+                    toys
+                })        
+        }
+    } catch(err) {
+        console.error('Error:', err)
+        showErrorMsg('Toy was not loaded')
     }
+    
 }
+
+// export function loadToy() {
+
+//     return (dispatch, getState) => {
+//         const filterBy = getState().toyModule.filterBy
+//         return toyService.query(filterBy).then((toys) => {
+//             dispatch({
+//                 type: 'SET_TOYS',
+//                 toys
+//             })
+//         })
+//     }
+// }
+
 
 export function removeToy(toyId) {
     try{
@@ -32,24 +50,6 @@ export function removeToy(toyId) {
     }
 }
 
-// export function removeToy(toyId) {
-//     return dispatch => {
-//         return toyService.remove(toyId)
-//             .then(() => {
-//                 console.log('Deleted Successfully!');
-//                 dispatch({
-//                     type: 'REMOVE_TOY',
-//                     toyId
-//                 })
-//                 showSuccessMsg('Toy removed Succesfully!')
-//             })
-//             .catch(err => {
-//                 console.error('Error:', err)
-//                 showErrorMsg('Toy was not removed')
-//             })
-//     }
-// }
-
 export function getById(toyId) {
     return dispatch => {
         return toyService.getById(toyId)
@@ -61,6 +61,18 @@ export function getById(toyId) {
             })
     }
 }
+
+// export function getById(toyId) {
+//     return dispatch => {
+//         return toyService.getById(toyId)
+//             .then(toy => {
+//                 dispatch({
+//                     type: 'GET_BY_ID',
+//                     toy
+//                 })
+//             })
+//     }
+// }
 
 export function saveToy(toy) {
     return dispatch => {

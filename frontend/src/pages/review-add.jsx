@@ -17,6 +17,30 @@ export class _ReviewAdd extends React.Component{
         this.setState(prevState => ({ ...prevState, review: { ...prevState.review, userId, toyId } }))
     }
 
+    handleChange = ({target}) => {
+        this.setState((prevState) => ({...prevState, review: {...prevState.review, content: target.value}}))
+    }
+
+    render(){
+        const {user} = this.props
+        const {review} = this.state
+        return(
+            <section className="add-review">
+                {(user) ? 
+                <form className="add-review-form"
+                    onSubmit={(ev) => {ev.preventDefault(); onAddReview(review)}}>
+                    <textarea 
+                        id="content"
+                        name="content"
+                        rows={7}
+                        value={review.content}
+                        onChange={this.handleChange}
+                    /> 
+                    <button>Send</button>
+                    </form> : <h2>Plaese login to comment</h2>}
+            </section>
+        )
+    }
 }
 
 const mapStateToProps = (storeState) => {

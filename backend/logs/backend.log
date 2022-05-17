@@ -786,4 +786,85 @@
 17.5.2022, 18:02:40 - DEBUG - Getting Toys 
 17.5.2022, 18:02:43 - DEBUG - Getting Toys 
 17.5.2022, 18:02:45 - DEBUG - Getting Toys 
+<<<<<<< HEAD
 >>>>>>> 1a6939a75e73fef929f5de396614242f809ec93c
+=======
+17.5.2022, 18:10:53 - DEBUG - Getting Toys 
+17.5.2022, 18:11:38 - DEBUG - Getting Toys 
+17.5.2022, 18:12:37 - INFO - Server is running on port: 3030 
+17.5.2022, 18:14:37 - INFO - Server is running on port: 3030 
+17.5.2022, 18:14:43 - DEBUG - Getting Toys 
+17.5.2022, 18:14:53 - INFO - Server is running on port: 3030 
+17.5.2022, 18:14:55 - DEBUG - Getting Toys 
+17.5.2022, 18:15:01 - DEBUG - Getting Toys 
+17.5.2022, 18:21:14 - INFO - Server is running on port: 3030 
+17.5.2022, 18:21:20 - DEBUG - Getting Toys 
+17.5.2022, 18:21:22 - DEBUG - Getting Toys 
+17.5.2022, 18:21:22 - ERROR - cannot find toys | MongoError: $all needs an array 
+17.5.2022, 18:21:22 - ERROR - Failed to get toys | MongoError: $all needs an array 
+17.5.2022, 18:22:25 - INFO - Server is running on port: 3030 
+17.5.2022, 18:22:28 - DEBUG - Getting Toys 
+17.5.2022, 18:22:31 - DEBUG - Getting Toys 
+17.5.2022, 18:23:00 - DEBUG - Getting Toys 
+17.5.2022, 18:23:02 - DEBUG - Getting Toys 
+17.5.2022, 18:23:48 - DEBUG - Getting Toys 
+17.5.2022, 18:23:51 - DEBUG - Getting Toys 
+17.5.2022, 18:23:54 - DEBUG - Getting Toys 
+17.5.2022, 18:23:58 - DEBUG - Getting Toys 
+17.5.2022, 18:24:02 - DEBUG - Getting Toys 
+17.5.2022, 18:24:05 - DEBUG - Getting Toys 
+17.5.2022, 18:24:11 - DEBUG - Getting Toys 
+17.5.2022, 18:24:15 - DEBUG - Getting Toys 
+17.5.2022, 18:24:17 - DEBUG - Getting Toys 
+17.5.2022, 18:24:23 - DEBUG - Getting Toys 
+17.5.2022, 18:24:33 - DEBUG - Getting Toys 
+17.5.2022, 18:24:39 - DEBUG - Getting Toys 
+17.5.2022, 18:26:03 - INFO - Server is running on port: 3030 
+17.5.2022, 18:26:07 - DEBUG - Getting Toys 
+17.5.2022, 18:26:10 - DEBUG - Getting Toys 
+17.5.2022, 18:26:12 - DEBUG - Getting Toys 
+17.5.2022, 18:26:33 - DEBUG - Getting Toys 
+17.5.2022, 18:27:01 - DEBUG - Getting Toys 
+17.5.2022, 18:27:03 - DEBUG - Getting Toys 
+17.5.2022, 18:27:04 - DEBUG - Getting Toys 
+17.5.2022, 18:27:07 - DEBUG - Getting Toys 
+17.5.2022, 18:29:10 - INFO - Server is running on port: 3030 
+17.5.2022, 18:29:15 - DEBUG - Getting Toys 
+17.5.2022, 18:29:19 - DEBUG - Getting Toys 
+17.5.2022, 18:29:19 - ERROR - cannot find toys | MongoError: $all needs an array 
+17.5.2022, 18:29:19 - ERROR - Failed to get toys | MongoError: $all needs an array 
+17.5.2022, 18:30:18 - INFO - Server is running on port: 3030 
+17.5.2022, 18:30:21 - DEBUG - Getting Toys 
+17.5.2022, 18:30:23 - DEBUG - Getting Toys 
+17.5.2022, 18:30:40 - DEBUG - Getting Toys 
+17.5.2022, 18:30:46 - DEBUG - Getting Toys 
+17.5.2022, 18:30:48 - DEBUG - Getting Toys 
+17.5.2022, 18:30:50 - DEBUG - Getting Toys 
+17.5.2022, 18:30:55 - DEBUG - Getting Toys 
+17.5.2022, 18:30:58 - DEBUG - Getting Toys 
+17.5.2022, 18:31:00 - DEBUG - Getting Toys 
+17.5.2022, 18:31:03 - DEBUG - Getting Toys 
+17.5.2022, 18:31:15 - DEBUG - Getting Toys 
+17.5.2022, 18:38:34 - INFO - Server is running on port: 3030 
+17.5.2022, 18:38:42 - DEBUG - Getting Toys 
+17.5.2022, 18:39:03 - INFO - Server is running on port: 3030 
+17.5.2022, 18:40:14 - INFO - Server is running on port: 3030 
+17.5.2022, 18:40:19 - DEBUG - Getting Toys 
+17.5.2022, 18:40:21 - DEBUG - Getting Toys 
+17.5.2022, 18:40:58 - INFO - Server is running on port: 3030 
+17.5.2022, 18:41:01 - DEBUG - Getting Toys 
+17.5.2022, 18:41:03 - DEBUG - Getting Toys 
+17.5.2022, 18:41:03 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+17.5.2022, 18:41:03 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+17.5.2022, 18:41:27 - INFO - Server is running on port: 3030 
+17.5.2022, 18:41:30 - DEBUG - Getting Toys 
+17.5.2022, 18:41:34 - DEBUG - Getting Toys 
+17.5.2022, 18:41:57 - INFO - from toy.controller - addToy(req, res) | {"name":"new one to check creatAt","price":100,"labels":["baby"],"createdAt":1652802100643,"review":"Best ever","inStock":true,"img":""} 
+17.5.2022, 18:41:57 - INFO - from toy.controller - addToy(req, res) | {"name":"new one to check creatAt","price":100,"labels":["baby"],"createdAt":1652802100643,"review":"Best ever","inStock":true,"img":"","_id":"6283c245a5b8cc2f1c74c54d"} 
+17.5.2022, 18:41:57 - DEBUG - Getting Toys 
+17.5.2022, 18:43:11 - INFO - Server is running on port: 3030 
+17.5.2022, 18:43:15 - DEBUG - Getting Toys 
+17.5.2022, 18:43:17 - DEBUG - Getting Toys 
+17.5.2022, 18:43:28 - DEBUG - Getting Toys 
+17.5.2022, 18:43:38 - INFO - Server is running on port: 3030 
+>>>>>>> 75b7fb89b6b8456d21e599d8678a889171c1e705
