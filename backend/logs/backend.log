@@ -388,3 +388,20 @@
 16.5.2022, 21:38:42 - ERROR - Failed to add toy | {}
 16.5.2022, 21:38:42 - INFO - Req was made
 16.5.2022, 21:38:42 - DEBUG - Getting Toys
+16.5.2022, 22:05:05 - INFO - Server is running on port: 3030
+16.5.2022, 22:05:39 - INFO - Server is running on port: 3030
+16.5.2022, 22:05:55 - INFO - from toy.controller - addToy(req, res) | {"name":"fgd","price":5443,"labels":["art"],"createdAt":1652727948405,"review":"Best ever","inStock":true,"img":""}
+16.5.2022, 22:05:55 - INFO - from toy.controller - addToy(req, res) | {"name":"fgd","price":5443,"labels":["art"],"createdAt":1652727948405,"review":"Best ever","inStock":true,"img":"","_id":"6282a0930075df36c4bd6e89"}
+16.5.2022, 22:05:55 - INFO - Req was made
+16.5.2022, 22:05:55 - DEBUG - Getting Toys
+16.5.2022, 22:16:13 - INFO - Server is running on port: 3030
+16.5.2022, 22:16:43 - INFO - Server is running on port: 3030
+16.5.2022, 22:38:24 - INFO - Req was made
+16.5.2022, 22:38:24 - DEBUG - Getting Toys
+16.5.2022, 22:41:02 - INFO - Req was made
+16.5.2022, 22:41:02 - DEBUG - Getting Toys
+16.5.2022, 22:49:02 - INFO - Server is running on port: 3030
+16.5.2022, 22:49:17 - INFO - Req was made
+16.5.2022, 22:49:17 - DEBUG - Getting Toys
+16.5.2022, 22:53:32 - INFO - Server is running on port: 3030
+16.5.2022, 22:53:41 - INFO - Server is running on port: 3030
