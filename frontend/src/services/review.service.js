@@ -15,8 +15,9 @@ export const reviewService = {
 
 
 function query(filterBy) {
-  var queryStr = (!filterBy) ? '' : `?name=${filterBy.name}&sort=anaAref`
-
+  // var queryStr = (!filterBy) ? '' : `?name=${filterBy.name}&sort=anaAref`
+  var queryStr = (!filterBy) ? '' : `?${filterBy.byToyId}`
+  console.log('queryStr', queryStr)
   return httpService.get(`review${queryStr}`)
   // return storageService.query('review')
 }

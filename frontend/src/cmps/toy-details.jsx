@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom'
 import { toyService } from "../services/toy.service.js"
 import { userService } from "../services/user.service.js"
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
-
+import {loadReviews, removeReview } from '../store/actions/review.action.js'
 import { removeToy, getById } from "../store/actions/toy.action.js"
-import { ReviewAdd } from "./review-add.jsx"
+import { ReviewAdd, } from "./review-add.jsx"
+import {ReviewList} from '../cmps/review-list.jsx'
 
 class _ToyDetails extends React.Component {
 
@@ -17,6 +18,8 @@ class _ToyDetails extends React.Component {
     componentDidMount() {
         const { toyId } = this.props.match.params
         if (toyId) this.props.getById(toyId)
+
+        this.props.loadReviews({byToyId:toyId})
     }
 
     onRemoveToy = (toyId) => {
@@ -25,13 +28,17 @@ class _ToyDetails extends React.Component {
 
     }
 
+    onRemoveReview = async reviewId => {
+        await this.props.removeReview(reviewId)
+    }
+
     onGoBack = () => {
         this.props.history.push('/toy')
     }
 
 
     render() {
-        const { toy } = this.props
+        const { toy, reviews, user } = this.props
         if (!toy) return <div>Loading toy...</div>
         return (
             <section className='toy-details'>
@@ -44,6 +51,7 @@ class _ToyDetails extends React.Component {
                 })}</span></p>
                 <ReviewAdd toy={toy}/>
                 <p>Reviews: <span>{toy.review}</span></p>
+                <ReviewList toy={toy} reviews={reviews} onRemoveReview={this.onRemoveReview} user={user}/> 
                 <div>
                     <button onClick={() => this.onRemoveToy(toy._id)}>x</button>
                     <Link to={`/toy/edit/${toy._id}`}><button>Edit</button></Link>
@@ -60,13 +68,16 @@ const mapStateToProps = (storeState) => {
     return {
         user: storeState.userModule.user,
         toys: storeState.toyModule.toys,
-        toy: storeState.toyModule.toy
+        toy: storeState.toyModule.toy,
+        reviews: storeState.reviewModule.reviews
     }
 }
 
 const mapDispatchToProps = {
     removeToy,
     getById,
+    loadReviews,
+    removeReview
 }
 
 export const ToyDetails = connect(mapStateToProps, mapDispatchToProps
