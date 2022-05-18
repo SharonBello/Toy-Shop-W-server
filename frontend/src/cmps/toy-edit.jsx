@@ -106,8 +106,9 @@ class _ToyEdit extends React.Component {
                     <input type="text" name="name" value={toy.name} id="toy-name" onChange={this.onHandleChange} required />
 
                     <label htmlFor="toy-ctg"><h3>Price:</h3></label>
-                    <input autoComplete="false" name="price" type="text"
-                        id='toy-price' onChange={this.onHandleChange} placeholder={toy.price} onClick={(ev) => ev.target.value = ''} />
+                    <input autoComplete="false" name="price" type="number"
+                        id='toy-price' onChange={this.onHandleChange} value={toy.price} onClick={(ev) => ev.target.value = ''} />
+                        {/* id='toy-price' onChange={this.onHandleChange} placeholder={toy.price} onClick={(ev) => ev.target.value = ''} /> */}
 
                     <label htmlFor="toy-lbl"><h3>Labels:</h3></label>
                     <Select

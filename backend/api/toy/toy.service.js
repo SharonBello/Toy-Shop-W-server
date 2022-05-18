@@ -18,7 +18,7 @@ async function query(filterBy) {
             sortBy = 'createdAt'
             sortType = -1
         }
-        let toys = await collection.find(criteria).sort({[sortBy]:sortType}).toArray()
+        let toys = await collection.find(criteria).sort({[sortBy]:sortType}).skip(10).toArray()
         // createdAt
         // console.log('toy.service - line 13 - toys', toys)
         return toys
@@ -115,6 +115,7 @@ async function addUserReview(toy, review) {
 }
 
 async function update(toy) {
+    
     try {
         let id = ObjectId(toy._id)
         delete toy._id

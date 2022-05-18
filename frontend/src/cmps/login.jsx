@@ -37,8 +37,8 @@ export class _Login extends React.Component {
 
     onLogin = (ev = null) => {
         if (!this.state.credentials.username || !this.state.credentials.password) return;
-        if (ev) ev.preventDefault();
-        this.props.login(this.state.credentials);
+        if (ev) ev.preventDefault()
+        this.props.login(this.state.credentials)
         console.log('this.state.credentials',this.state.credentials )
         // userService.login(this.state.credentials)
         this.clearState()
