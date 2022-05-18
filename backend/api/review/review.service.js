@@ -54,7 +54,6 @@ async function query(filterBy = {}) {
         logger.error('cannot find reviews', err)
         throw err
     }
-
 }
 
 async function remove(reviewId) {
@@ -72,7 +71,6 @@ async function remove(reviewId) {
         throw err
     }
 }
-
 
 async function add(review) {
     console.log('critria query', review)
