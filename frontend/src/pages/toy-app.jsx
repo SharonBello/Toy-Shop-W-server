@@ -17,6 +17,8 @@ class _ToyApp extends React.Component {
             labels: []
         },
     }
+
+    
     componentDidMount() {
         this.props.loadToy()
     }

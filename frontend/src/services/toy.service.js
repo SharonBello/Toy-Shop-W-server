@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { getActionRemoveToy, getActionAddToy, getActionUpdateToy } from '../store/actions/toy.action.js'
+import { httpService } from './http.service.js'
 
 // const STORAGE_KEY = 'toy'
 // const BASE_URL = '/api/toy/'
@@ -40,11 +41,15 @@ async function query(filterBy){
 }
 
 function getById(toyId) {
-    return axios.get(BASE_URL + toyId).then(res => res.data)
+    // return axios.get(BASE_URL + toyId).then(res => res.data)
+    const toy = httpService.get(`toy/${toyId}`)
+    return toy
 }
 
 async function remove(toyId) {
-    await axios.delete(BASE_URL + toyId)
+    
+    // await axios.delete(BASE_URL + toyId)
+    await httpService.delete(`toy/${toyId}`)
     toyChannel.postMessage(getActionRemoveToy(toyId))
     return toyId
 }
@@ -54,6 +59,7 @@ async function save(toy) {
     var savedToy
     if (toy._id) {
         console.log('BASE_URL + toy._id',BASE_URL + toy._id )
+        // savedToy = await httpService.put(`toy/${toy._id}`,toy)
         savedToy = await axios.put(BASE_URL + toy._id, toy)
         savedToy = savedToy.data
         toyChannel.postMessage(getActionUpdateToy(savedToy))
