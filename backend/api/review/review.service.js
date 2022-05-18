@@ -8,10 +8,24 @@ async function query(filterBy = {}) {
         const criteria = _buildCriteria(filterBy)
         
         const collection = await dbService.getCollection('review')
+        console.log('QUERY LINE 8', collection)
+
         // const reviews = await collection.find(criteria).toArray()
         var reviews = await collection.aggregate([
             {
                 $match: criteria
+            },
+            {
+                $lookup:
+                {
+                    localField: 'toyId',
+                    from: 'review',
+                    foreignField: 'toyId',
+                    as: 'reviews'
+                }
+            },
+            {
+                $unwind: '$reviews'
             },
             {
                 $lookup:
@@ -24,28 +38,17 @@ async function query(filterBy = {}) {
             },
             {
                 $unwind: '$byUser'
-            },
-            {
-                $lookup:
-                {
-                    localField: 'aboutUserId',
-                    from: 'user',
-                    foreignField: '_id',
-                    as: 'aboutUser'
-                }
-            },
-            {
-                $unwind: '$aboutUser'
             }
         ]).toArray()
         reviews = reviews.map(review => {
+            console.log('review 42:',review )
+            review.reviews = { toyId: review.reviews.toyId, content: review.reviews.content }
             review.byUser = { _id: review.byUser._id, fullname: review.byUser.fullname }
-            review.aboutUser = { _id: review.aboutUser._id, fullname: review.aboutUser.fullname }
+            delete review.reviews
             delete review.byUserId
-            delete review.aboutUserId
             return review
         })
-
+        console.log('reviews 49:', reviews)
         return reviews
     } catch (err) {
         logger.error('cannot find reviews', err)
@@ -75,8 +78,8 @@ async function add(review) {
     console.log('critria query', review)
     try {
         const reviewToAdd = {
-            userId: ObjectId(review.userId),
-            toyId: ObjectId(review.toyId),
+            byUserId: review.byUserId,
+            toyId: review.toyId,
             content: review.content
         }
         console.log('review to add in function!:', reviewToAdd)
@@ -94,7 +97,7 @@ async function add(review) {
 
 function _buildCriteria(filterBy) {
     const criteria = {}
-    if (filterBy.byUserId) criteria.byUserId = filterBy.byUserId
+    if (filterBy.byToyId) criteria.byToyId = filterBy.byToyId
     return criteria
 }
 
