@@ -80,6 +80,7 @@ function save(toy) {
         gToys[idx].img = toy.img
         gToys[idx].inStock = toy.inStock
         gToys[idx].labels = toy.labels
+        gToys[idx].rating = toy.rating
     } else {
         toy._id = utilService.makeId()
         gToys.unshift(toy)
@@ -103,7 +104,8 @@ function getEmptyToy() {
         createdAt: Date.now(),
         review: 'Best ever',
         inStock: true,
-        img: ''
+        img: '',
+        rating: 0
     }
 }
 

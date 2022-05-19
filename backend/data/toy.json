@@ -8,7 +8,8 @@
     "createdAt": 1652641506449,
     "review": "Best ever",
     "inStock": true,
-    "img": ""
+    "img": "",
+    "rating": 0
   },
   {
     "name": "Disney Toy Story Buzz Plush",
@@ -20,7 +21,8 @@
     "createdAt": 1542107359454,
     "inStock": true,
     "img": "",
-    "review": "Best ever"
+    "review": "Best ever",
+    "rating": 0
   },
   {
     "name": "Thomas & Friends",
@@ -32,7 +34,8 @@
     "createdAt": 1542107359454,
     "inStock": true,
     "img": "",
-    "review": "Best ever"
+    "review": "Best ever",
+    "rating": 0
   },
   {
     "name": "Lego Gear Bots",
@@ -43,7 +46,8 @@
     "createdAt": 1542107359454,
     "inStock": true,
     "img": "",
-    "review": "Best ever"
+    "review": "Best ever",
+    "rating": 0
   },
   {
     "name": "Spectrum Flip Kite",
@@ -54,7 +58,8 @@
     "createdAt": 1652076934504,
     "inStock": true,
     "img": "",
-    "review": "Best ever"
+    "review": "Best ever",
+    "rating": 0
   },
   {
     "name": "Jungle Escape Puzzle",
@@ -66,7 +71,8 @@
     "createdAt": 1652201769123,
     "inStock": true,
     "img": "",
-    "review": "Best ever"
+    "review": "Best ever",
+    "rating": 0
   },
   {
     "name": "Coming soon...",
@@ -77,6 +83,7 @@
     "createdAt": 1652201769133,
     "inStock": false,
     "img": "",
-    "review": "Best ever"
+    "review": "Best ever",
+    "rating": 0
   }
 ]

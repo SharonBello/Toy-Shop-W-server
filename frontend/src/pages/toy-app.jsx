@@ -78,6 +78,10 @@ class _ToyApp extends React.Component {
         this.setState(prevState => ({...prevState, filter: { ...this.state.filter, labels }}), () => this.props.setFilter(filterBy))
     }
 
+    handleRatingChange = (toy) => {
+        console.log("handleRatingChange");
+        toyService.saveUserRating(toy)
+    }
 
 
     render() {
@@ -88,7 +92,7 @@ class _ToyApp extends React.Component {
 
                 <ToyFilter filterBy={filterBy} onHandleChange={this.onHandleChange} onChangePage={this.onChangePage} handleChangeLabels={this.handleChangeLabels} labels={this.state.filter.labels} />
                 <Link to="/toy/edit"><button className="toy-btn-add tooltip"><span className="tooltiptext">{(!user) ? 'Need to login' : ''}</span>Add Toy 📋</button></Link>
-                {(!toys) ? <h1>Loading</h1> : <ToyList toys={toys} onRemoveToy={this.onRemoveToy} />}
+                {(!toys) ? <h1>Loading</h1> : <ToyList toys={toys} onRemoveToy={this.onRemoveToy} handleRatingChange={this.handleRatingChange}/>}
 
             </section>
         )

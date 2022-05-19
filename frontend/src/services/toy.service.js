@@ -13,7 +13,8 @@ export const toyService = {
     remove,
     getAllToys,
     subscribe,
-    unsubscribe
+    unsubscribe,
+    saveUserRating
 }
 
 const BASE_URL =
@@ -78,4 +79,9 @@ function subscribe(listener) {
 
 function unsubscribe(listener) {
     toyChannel.removeEventListener('message', listener)
+}
+
+async function saveUserRating(toy) {
+    const savedToy = await axios.put(BASE_URL + toy._id, toy)
+    console.log(savedToy)
 }

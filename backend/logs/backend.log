@@ -1,0 +1,68 @@
+19.5.2022, 10:13:36 - DEBUG - Getting Toys 
+19.5.2022, 10:13:43 - DEBUG - Getting Toys 
+19.5.2022, 10:13:52 - DEBUG - auth.service - login with username: muki 
+19.5.2022, 10:13:52 - INFO - User login:  | {"_id":"62825d7504b6cac8e03fecd6","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+19.5.2022, 10:14:03 - DEBUG - Getting Toys 
+19.5.2022, 10:14:08 - DEBUG - Getting Toys 
+19.5.2022, 10:14:10 - DEBUG - Getting Toys 
+19.5.2022, 11:44:53 - DEBUG - Getting Toys 
+19.5.2022, 11:50:25 - DEBUG - Getting Toys 
+19.5.2022, 11:51:54 - DEBUG - Getting Toys 
+19.5.2022, 12:13:21 - DEBUG - auth.service - login with username: muki 
+19.5.2022, 12:13:21 - INFO - User login:  | {"_id":"62825d7504b6cac8e03fecd6","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+19.5.2022, 12:13:26 - DEBUG - Getting Toys 
+19.5.2022, 12:13:52 - DEBUG - Getting Toys 
+19.5.2022, 12:42:22 - DEBUG - Getting Toys 
+19.5.2022, 12:42:26 - DEBUG - Getting Toys 
+19.5.2022, 12:48:30 - INFO - Server is running on port: 3030 
+19.5.2022, 12:48:45 - INFO - Server is running on port: 3030 
+19.5.2022, 12:48:49 - INFO - Server is running on port: 3030 
+19.5.2022, 12:48:52 - INFO - Server is running on port: 3030 
+19.5.2022, 12:48:53 - INFO - Server is running on port: 3030 
+19.5.2022, 12:48:56 - INFO - Server is running on port: 3030 
+19.5.2022, 12:48:57 - INFO - Server is running on port: 3030 
+19.5.2022, 12:48:58 - INFO - Server is running on port: 3030 
+19.5.2022, 12:48:59 - INFO - Server is running on port: 3030 
+19.5.2022, 13:00:13 - DEBUG - Getting Toys 
+19.5.2022, 13:02:01 - INFO - Server is running on port: 3030 
+19.5.2022, 13:02:08 - DEBUG - Getting Toys 
+19.5.2022, 13:06:55 - INFO - Server is running on port: 3030 
+19.5.2022, 13:07:01 - DEBUG - Getting Toys 
+19.5.2022, 13:07:41 - DEBUG - Getting Toys 
+19.5.2022, 13:07:52 - DEBUG - auth.service - login with username: muki 
+19.5.2022, 13:07:52 - INFO - User login:  | {"_id":"62825d7504b6cac8e03fecd6","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+19.5.2022, 13:09:15 - DEBUG - Getting Toys 
+19.5.2022, 13:09:32 - INFO - Server is running on port: 3030 
+19.5.2022, 13:09:39 - DEBUG - Getting Toys 
+19.5.2022, 13:09:42 - DEBUG - Getting Toys 
+19.5.2022, 13:09:52 - DEBUG - Getting Toys 
+19.5.2022, 13:11:27 - INFO - Server is running on port: 3030 
+19.5.2022, 13:11:35 - DEBUG - Getting Toys 
+19.5.2022, 13:12:30 - INFO - Server is running on port: 3030 
+19.5.2022, 13:12:43 - DEBUG - Getting Toys 
+19.5.2022, 13:15:08 - INFO - Server is running on port: 3030 
+19.5.2022, 13:15:12 - INFO - Server is running on port: 3030 
+19.5.2022, 13:15:21 - DEBUG - Getting Toys 
+19.5.2022, 13:17:06 - INFO - Server is running on port: 3030 
+19.5.2022, 13:17:17 - INFO - Server is running on port: 3030 
+19.5.2022, 13:22:58 - INFO - Server is running on port: 3030 
+19.5.2022, 13:23:12 - INFO - Server is running on port: 3030 
+19.5.2022, 13:23:21 - INFO - Server is running on port: 3030 
+19.5.2022, 13:23:23 - INFO - Server is running on port: 3030 
+19.5.2022, 13:24:25 - DEBUG - auth.service - login with username: muki 
+19.5.2022, 13:24:26 - INFO - User login:  | {"_id":"62825d7504b6cac8e03fecd6","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+19.5.2022, 13:24:29 - DEBUG - Getting Toys 
+19.5.2022, 13:25:57 - INFO - Server is running on port: 3030 
+19.5.2022, 13:26:42 - INFO - Server is running on port: 3030 
+19.5.2022, 13:26:47 - INFO - Server is running on port: 3030 
+19.5.2022, 13:26:54 - INFO - Server is running on port: 3030 
+19.5.2022, 13:27:02 - INFO - Server is running on port: 3030 
+19.5.2022, 13:27:04 - INFO - Server is running on port: 3030 
+19.5.2022, 13:27:06 - INFO - Server is running on port: 3030 
+19.5.2022, 13:27:08 - INFO - Server is running on port: 3030 
+19.5.2022, 13:28:03 - DEBUG - Getting Toys 
+19.5.2022, 13:30:42 - INFO - Server is running on port: 3030 
+19.5.2022, 13:32:24 - INFO - Server is running on port: 3030 
+19.5.2022, 13:32:26 - INFO - Server is running on port: 3030 
+19.5.2022, 13:32:56 - INFO - Server is running on port: 3030 
+19.5.2022, 13:33:35 - INFO - Server is running on port: 3030 
