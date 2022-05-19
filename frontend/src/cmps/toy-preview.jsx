@@ -19,7 +19,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 
 export class ToyPreview extends React.Component {
-   
+
     state = {
         value: 0
     }
@@ -27,12 +27,12 @@ export class ToyPreview extends React.Component {
     // function(event: React.SyntheticEvent, value: number | null) => void
 
     setValue = (newValue) => {
-        this.setState({value: newValue})
+        this.setState({ value: newValue })
     }
-    
+
     render() {
-    const { toy, onRemoveToy } = this.props
-    // console.log('toy',toy )
+        const { toy, onRemoveToy } = this.props
+        // console.log('toy',toy )
 
         // const Rating = styled(Rating)({
         //     '& .MuiRating-iconFilled': {
@@ -73,7 +73,7 @@ export class ToyPreview extends React.Component {
                     </CardActionArea>
                     <CardActions>
                         <Stack direction="row" spacing={2}>
-                            <ButtonGroup  color="secondary" aria-label="medium secondary button group">
+                            <ButtonGroup color="secondary" aria-label="medium secondary button group">
                                 <Button onClick={() => onRemoveToy(toy._id)} variant="outlined" startIcon={<DeleteIcon />}>
                                     Delete
                                 </Button>
@@ -82,6 +82,8 @@ export class ToyPreview extends React.Component {
                                     Edit
                                 </Button>
                                 </Link>
+                            </ButtonGroup>
+                            <ButtonGroup color="secondary" aria-label="medium secondary button group">
                                 <Link to={`/toy/${toy._id}`}><Button size="small" color="primary">
                                     Details
                                 </Button>
