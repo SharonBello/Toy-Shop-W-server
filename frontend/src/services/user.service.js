@@ -44,8 +44,7 @@ async function login(credentials){
         let user = await axios.post(url, credentials)
         user = user.data    
         console.log('user after axios', user)
-        const miniUser = {username: user.username, isAdmin: user.isAdmin}
-        sessionStorage.setItem('loggedinUser', JSON.stringify(miniUser))
+        _handleLogin(user)
         return user
     } catch(err) {
         console.error('Error:', err)
@@ -57,7 +56,7 @@ async function signup(userInfo) {
     // userInfo.balance = 1000
     // userInfo.prefs = { color: '#0000ff', bgColor: '#c1c1c1' }
     // userInfo.activities = []
-
+    
     const user = await storageService.post(STORAGE_KEY, userInfo)
     _handleLogin(user)
     return user        
@@ -91,7 +90,8 @@ function getLoggedinUser() {
 }
 
 function _handleLogin(user) {
-    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
+    const miniUser = {username: user.username, isAdmin: user.isAdmin, _id: user._id}
+    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(miniUser))
 }
 
 // function (activity) {

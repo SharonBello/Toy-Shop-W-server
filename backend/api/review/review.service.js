@@ -8,7 +8,6 @@ async function query(filterBy = {}) {
         const criteria = _buildCriteria(filterBy)
         
         const collection = await dbService.getCollection('review')
-        console.log('QUERY LINE 8', collection)
 
         // const reviews = await collection.find(criteria).toArray()
         var reviews = await collection.aggregate([
@@ -19,41 +18,42 @@ async function query(filterBy = {}) {
                 $lookup:
                 {
                     localField: 'toyId',
-                    from: 'review',
-                    foreignField: 'toyId',
-                    as: 'reviews'
+                    from: 'toy',
+                    foreignField: '_id',
+                    as: 'toy'
                 }
             },
             {
-                $unwind: '$reviews'
+                $unwind: '$toy'
             },
             {
                 $lookup:
-                {
-                    localField: 'byUserId',
+                {//How to name the field in our filter
+                    localField: 'userId',
                     from: 'user',
-                    foreignField: '_id',
-                    as: 'byUser'
+                    foreignField: '_id',//the name of the db field
+                    as: 'user'
                 }
             },
             {
-                $unwind: '$byUser'
+                $unwind: '$user'
             }
         ]).toArray()
         reviews = reviews.map(review => {
-            console.log('review 42:',review )
-            review.reviews = { toyId: review.reviews.toyId, content: review.reviews.content }
-            review.byUser = { _id: review.byUser._id, fullname: review.byUser.fullname }
-            delete review.reviews
-            delete review.byUserId
+            
+            review.toy = { _id: review.toy._id, name: review.toy.name }
+            review.user = { _id: review.user._id, fullname: review.user.fullname }
+            delete review.toyId
+            delete review.userId
             return review
         })
-        console.log('reviews 49:', reviews)
+        console.log('reviews 49: @@@@@@@@@@@@@@@@@@@@@@@@@@@', reviews)
         return reviews
     } catch (err) {
         logger.error('cannot find reviews', err)
         throw err
     }
+
 }
 
 async function remove(reviewId) {
@@ -72,19 +72,20 @@ async function remove(reviewId) {
     }
 }
 
+
 async function add(review) {
-    console.log('critria query', review)
+    
     try {
         const reviewToAdd = {
-            byUserId: review.byUserId,
-            toyId: review.toyId,
+            userId: ObjectId(review.userId),
+            toyId: ObjectId(review.toyId),
             content: review.content
         }
-        console.log('review to add in function!:', reviewToAdd)
+        
         const collection = await dbService.getCollection('review')
         
-        const something = await collection.insertOne(reviewToAdd)
-        console.log('something!!!:', something)
+        await collection.insertOne(reviewToAdd)
+        
         return reviewToAdd;
 
     } catch (err) {
@@ -95,7 +96,10 @@ async function add(review) {
 
 function _buildCriteria(filterBy) {
     const criteria = {}
-    if (filterBy.byToyId) criteria.byToyId = filterBy.byToyId
+    // if (filterBy.byToyId) criteria.toyId = ObjectId(filterBy.byToyId)
+    
+    if (filterBy.byUserId) criteria.userId = ObjectId(filterBy.byUserId)
+    if (filterBy.byToyId) criteria.toyId = ObjectId(filterBy.byToyId)
     return criteria
 }
 

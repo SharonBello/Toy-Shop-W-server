@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField'
 // import { userService } from "../services/user.service.js"
 import { login } from '../store/actions/user.action.js'
 
-export const _Login = () => {
+export const Login = (props) => {
 
     const [credentials, setCredentials] = useState({
         username: '',
@@ -15,6 +15,7 @@ export const _Login = () => {
     const [isSignup, setIsSignup] = useState(false)
     const {user} = useSelector((storeState) => storeState.userModule)
     const {toys} = useSelector((storeState) => storeState.toyModule.toys)
+    const dispatch = useDispatch()
 
     // state = {
     //     credentials: {
@@ -49,7 +50,7 @@ export const _Login = () => {
     const onLogin = (ev = null) => {
         if (!credentials.username || !credentials.password) return;
         if (ev) ev.preventDefault()
-        dispatch(login(this.state.credentials))
+        dispatch(login(credentials))
         console.log('this.state.credentials',credentials )
         // userService.login(this.state.credentials)
         dispatch(clearState())
@@ -67,7 +68,7 @@ export const _Login = () => {
                         variant="filled"
                         required
                         value={username}
-                        onChange={(ev) => this.handleChange(ev, 'username')}
+                        onChange={(ev) => handleChange(ev, 'username')}
                     />
                     <TextField
                         label="Password"
@@ -75,13 +76,13 @@ export const _Login = () => {
                         type="password"
                         required
                         value={password}
-                        onChange={(ev) => this.handleChange(ev, 'password')}
+                        onChange={(ev) => handleChange(ev, 'password')}
                     />
                     <div>
-                        <Button onClick={this.onLogin} type="submit" variant="contained" color="primary" >
+                        <Button onClick={onLogin} type="submit" variant="contained" color="primary" >
                             SignIn
                         </Button>
-                        <Button variant="contained" onClick={this.props.onHandleCloseDialog}>
+                        <Button variant="contained" onClick={props.onHandleCloseDialog}>
                             Cancel
                         </Button>
                     </div>
