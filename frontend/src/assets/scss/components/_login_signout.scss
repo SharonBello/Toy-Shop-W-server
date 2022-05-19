@@ -1,0 +1,11 @@
+.login-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    align-items: center;
+
+    .login-btn {
+        width: 30px;
+        height: 30px;
+    }
+}

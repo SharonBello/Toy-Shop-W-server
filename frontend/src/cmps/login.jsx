@@ -1,20 +1,32 @@
 import React from "react"
+import { useSelector, useDispatch } from 'react-redux'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
-import { userService } from "../services/user.service.js"
+// import { userService } from "../services/user.service.js"
 import { login } from '../store/actions/user.action.js'
 
-export class _Login extends React.Component {
-    state = {
-        credentials: {
-            username: '',
-            password: '',
-            fullname: ''
-        },
-        isSignup: false,
-    }
+export const Login = (props) => {
 
-    clearState = () => {
+    const [credentials, setCredentials] = useState({
+        username: '',
+        password: '',
+        fullname: ''
+    })
+    const [isSignup, setIsSignup] = useState(false)
+    const {user} = useSelector((storeState) => storeState.userModule)
+    const {toys} = useSelector((storeState) => storeState.toyModule.toys)
+    const dispatch = useDispatch()
+
+    // state = {
+    //     credentials: {
+    //         username: '',
+    //         password: '',
+    //         fullname: ''
+    //     },
+    //     isSignup: false,
+    // }
+
+    const clearState = () => {
         const clearTemplate = {
             credentials: {
                 username: '',
@@ -23,31 +35,31 @@ export class _Login extends React.Component {
             },
             isSignup: false,
         }
-        this.setState({ clearTemplate })
+        setState({ clearTemplate })
     }
 
-    handleChange = (ev, fieldName) => {
+    const handleChange = (ev, fieldName) => {
         const value = ev.target.value;
         if (fieldName === 'username') {
-            this.setState({ credentials: { ...this.state.credentials, username: value } });
+            setState({ credentials: { ...credentials, username: value } });
         } else if (fieldName === 'password') {
-            this.setState({ credentials: { ...this.state.credentials, password: value } });
+            setState({ credentials: { ...credentials, password: value } });
         }
     }
 
-    onLogin = (ev = null) => {
-        if (!this.state.credentials.username || !this.state.credentials.password) return;
-        if (ev) ev.preventDefault();
-        this.props.login(this.state.credentials);
-        console.log('this.state.credentials',this.state.credentials )
+    const onLogin = (ev = null) => {
+        if (!credentials.username || !credentials.password) return;
+        if (ev) ev.preventDefault()
+        dispatch(login(credentials))
+        console.log('this.state.credentials',credentials )
         // userService.login(this.state.credentials)
-        this.clearState()
-        this.props.onHandleCloseDialog(ev)
+        dispatch(clearState())
+        dispatch(onHandleCloseDialog(ev))
     }
 
-    render() {
-        const { username, password } = this.state.credentials;
-        const { isSignup } = this.state;
+    
+        // const { username, password } = this.state.credentials;
+        // const { isSignup } = this.state;
         return (
             <div className="login-page">
                 {!isSignup && <form>
@@ -56,7 +68,7 @@ export class _Login extends React.Component {
                         variant="filled"
                         required
                         value={username}
-                        onChange={(ev) => this.handleChange(ev, 'username')}
+                        onChange={(ev) => handleChange(ev, 'username')}
                     />
                     <TextField
                         label="Password"
@@ -64,13 +76,13 @@ export class _Login extends React.Component {
                         type="password"
                         required
                         value={password}
-                        onChange={(ev) => this.handleChange(ev, 'password')}
+                        onChange={(ev) => handleChange(ev, 'password')}
                     />
                     <div>
-                        <Button onClick={this.onLogin} type="submit" variant="contained" color="primary" >
+                        <Button onClick={onLogin} type="submit" variant="contained" color="primary" >
                             SignIn
                         </Button>
-                        <Button variant="contained" onClick={this.props.onHandleCloseDialog}>
+                        <Button variant="contained" onClick={props.onHandleCloseDialog}>
                             Cancel
                         </Button>
                     </div>
@@ -78,21 +90,21 @@ export class _Login extends React.Component {
             </div>
         )
     }
-}
 
 
-const mapStateToProps = (storeState) => {
-    return {
-        // user: storeState.userModule.user,
-        // toys: storeState.toyModule.toys,
-    }
-}
 
-const mapDispatchToProps = {
-    login,
-}
+// const mapStateToProps = (storeState) => {
+//     return {
+//         // user: storeState.userModule.user,
+//         // toys: storeState.toyModule.toys,
+//     }
+// }
 
-export const Login = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(_Login)
+// const mapDispatchToProps = {
+//     login,
+// }
+
+// export const Login = connect(
+//     mapStateToProps,
+//     mapDispatchToProps
+// )(_Login)

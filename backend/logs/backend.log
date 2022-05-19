@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 16/05/2022, 16:31:48 - INFO - Server is running on port: 3030
 16/05/2022, 16:40:06 - INFO - Req was made
@@ -1291,3 +1292,7 @@
 19.5.2022, 18:39:04 - INFO - User login:  | {"_id":"62826667d1e6dc2589461572","isAdmin":false,"username":"miki","fullname":"miki miki"} 
 19.5.2022, 18:39:29 - DEBUG - Getting Toys 
 19.5.2022, 19:30:50 - INFO - Server is running on port: 3030 
+=======
+19.5.2022, 19:22:18 - INFO - Server is running on port: 3030 
+>>>>>>> 3dc10778e1b9d11653e9832ad36342d20abf3a27
+19.5.2022, 19:31:52 - INFO - Server is running on port: 3030 

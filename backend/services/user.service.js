@@ -20,17 +20,14 @@ function save(user) {
 }
 
 function login(credentials) {
-    console.log('credentials', credentials)
     return storageService.query(STORAGE_KEY).then(users => {
         const user = users.find(user => user.username === credentials.username &&
             user.password === credentials.password)
-            console.log('user', user)
             _handleLogin(user)
         return user
     })
-
-
 }
+
 function signup(userInfo) {
     // userInfo.balance = 1000
     // userInfo.prefs = { color: '#0000ff', bgColor: '#c1c1c1' }
@@ -52,6 +49,7 @@ function signup(userInfo) {
 //             return user.balance
 //         })
 // }
+
 function logout() {
     sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, null)
     return Promise.resolve()

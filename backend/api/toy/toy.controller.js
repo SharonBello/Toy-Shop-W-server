@@ -4,10 +4,10 @@ const logger = require('../../services/logger.service')
 // GET LIST
 async function getToys(req, res) {
   try {
-    logger.debug('Getting Toys')
+    logger.debug('Trying tog et toys')
     var queryParams = req.query;
-    // console.log('queryParams',queryParams )
     const toys = await toyService.query(queryParams)
+    logger.debug('toy.controller 11 toys', toys)
     res.json(toys);
   } catch (err) {
     logger.error('Failed to get toys', err)
@@ -66,11 +66,26 @@ async function updateToy(req, res) {
   }
 }
 
+async function updateToyRate(req, res) {
+  try {
+    const toy = req.body;
+    const rating = req.body;
+    console.log('toy.controller 75 - toy',toy )
+    // console.log('toy.controller 75 - rating', rating ) 
+    const updatedRate = await toyService.updateUserRating(toy, rating)
+    console.log('toy.controller 75 - updatedRate',updatedRate )
+    res.json(updatedRate)
+  } catch (err) {
+    logger.error('Failed to update toy', err)
+    res.status(500).send({ err: 'Failed to update toy' })
+  }
+}
+
 // DELETE (Remove toy)
 async function removeToy(req, res) {
+  
   try {
     const toyId = req.params.id;
-    console.log('toyId', toyId )
     const removedId = await toyService.remove(toyId)
     res.send(removedId)
   } catch (err) {
@@ -85,5 +100,6 @@ module.exports = {
   addToy,
   addReview,
   updateToy,
+  updateToyRate,
   removeToy
 }

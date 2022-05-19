@@ -7,15 +7,11 @@ async function login(req, res) {
     
     try {
         const user = await authService.login(username, password)
-        console.log('user in auth controller', user)
         const loginToken = authService.getLoginToken(user)
-        // console.log('loginToken',loginToken )
         logger.info('User login: ', user)
         res.cookie('loginToken', loginToken)
-
         res.json(user)
     } catch (err) {
-        console.log('in catch auto controller row 18')
         logger.error('Failed to Login ' + err)
         res.status(401).send({ err: 'Failed to Login' })
     }

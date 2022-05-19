@@ -17,6 +17,8 @@ class _ToyApp extends React.Component {
             labels: []
         },
     }
+
+    
     componentDidMount() {
         this.props.loadToy()
     }
@@ -31,25 +33,31 @@ class _ToyApp extends React.Component {
         this.props.removeToy(toyId)
     }
 
-    pageDown = () => {
-        let { filterBy } = this.props
-        if (+filterBy.pageIdx < 1) return
-        filterBy = { ...filterBy, pageIdx: +filterBy.pageIdx - 1 }
-        this.props.setFilter(filterBy)
-    }
+    // pageDown = () => {
+    //     let { filterBy } = this.props
+    //     if (+filterBy.pageIdx < 1) return
+    //     console.log('filterBy.pageIdx', filterBy.pageIdx)
+    //     filterBy = { ...filterBy, pageIdx: +filterBy.pageIdx - 1 }
+    //     this.props.setFilter(filterBy)
+    // }
 
-    pageUp = () => {
-        let { toys, filterBy } = this.props
-        if (toys.length === 0) return
-        filterBy = { ...filterBy, pageIdx: +filterBy.pageIdx + 1 }
-        this.props.setFilter(filterBy)
-    }
+    // pageUp = () => {
+    //     let { toys, filterBy } = this.props
+    //     console.log('toys', toys)
+    //     if (toys.length === 0) return
+    //     filterBy = { ...filterBy, pageIdx: +filterBy.pageIdx + 1 }
+    //     console.log('filterBy.pageIdx',filterBy.pageIdx)
+    //     this.props.setFilter(filterBy)
+    // }
 
-    onChangePage = (diff) => {
+    onChangePage = async (diff) => {
         let { filterBy } = this.props
-        const numOfPages = toyService.getNumOfPages()
+        const numOfPages = await toyService.getNumOfPages()
+        
         const pageIdx = +filterBy.pageIdx + diff
         if (pageIdx < 0 || pageIdx >= numOfPages) return
+        console.log('pageIdx',pageIdx )
+        console.log('numOfPages',numOfPages )
         filterBy = { ...filterBy, pageIdx }
         this.props.setFilter(filterBy)
     }
@@ -60,7 +68,6 @@ class _ToyApp extends React.Component {
         let { filterBy } = this.props
         if (field === 'labels') value = [target.value]
         filterBy = { ...filterBy, [field]: value }
-        console.log('filterBy', filterBy)
         this.props.setFilter(filterBy)
     }
 
@@ -76,6 +83,10 @@ class _ToyApp extends React.Component {
         this.setState(prevState => ({...prevState, filter: { ...this.state.filter, labels }}), () => this.props.setFilter(filterBy))
     }
 
+    handleRatingChange = (toy) => {
+        console.log("handleRatingChange");
+        toyService.saveUserRating(toy)
+    }
 
 
     render() {
@@ -86,7 +97,7 @@ class _ToyApp extends React.Component {
 
                 <ToyFilter filterBy={filterBy} onHandleChange={this.onHandleChange} onChangePage={this.onChangePage} handleChangeLabels={this.handleChangeLabels} labels={this.state.filter.labels} />
                 <Link to="/toy/edit"><button className="toy-btn-add tooltip"><span className="tooltiptext">{(!user) ? 'Need to login' : ''}</span>Add Toy 📋</button></Link>
-                {(!toys) ? <h1>Loading</h1> : <ToyList toys={toys} onRemoveToy={this.onRemoveToy} />}
+                {(!toys) ? <h1>Loading</h1> : <ToyList toys={toys} onRemoveToy={this.onRemoveToy} handleRatingChange={this.handleRatingChange} username={user.username}/>}
 
             </section>
         )
