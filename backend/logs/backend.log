@@ -1741,3 +1741,54 @@
 19.5.2022, 16:42:58 - INFO - from toy.controller - addToy(req, res) | {"name":"3333","price":10,"labels":["art"],"createdAt":1652967772346,"review":"Best ever","inStock":true,"img":"","_id":"6286496207c2116c04477179"} 
 19.5.2022, 16:42:58 - DEBUG - Getting Toys 
 19.5.2022, 16:43:45 - INFO - Server is running on port: 3030 
+19.5.2022, 16:45:57 - INFO - user logged out 
+19.5.2022, 16:46:03 - DEBUG - auth.service - login with username: ziki 
+19.5.2022, 16:46:03 - INFO - User login:  | {"_id":"6282958732a36c17e311f8d0","isAdmin":"false","username":"ziki","fullname":"ziki ziki"} 
+19.5.2022, 16:51:15 - DEBUG - Getting Toys 
+19.5.2022, 16:53:33 - INFO - Server is running on port: 3030 
+19.5.2022, 16:53:40 - DEBUG - Getting Toys 
+19.5.2022, 16:56:53 - DEBUG - Getting Toys 
+19.5.2022, 16:57:04 - INFO - from toy.controller - addToy(req, res) | {"name":"Talking Doll","price":10,"labels":["box game"],"createdAt":1652968616900,"review":"Best ever","inStock":true,"img":""} 
+19.5.2022, 16:57:04 - INFO - from toy.controller - addToy(req, res) | {"name":"Talking Doll","price":10,"labels":["box game"],"createdAt":1652968616900,"review":"Best ever","inStock":true,"img":"","_id":"62864cb0c5c0325380852723"} 
+19.5.2022, 16:57:04 - DEBUG - Getting Toys 
+19.5.2022, 16:57:51 - INFO - Server is running on port: 3030 
+19.5.2022, 16:57:56 - DEBUG - Getting Toys 
+19.5.2022, 16:58:00 - WARN - ziki zikiattempted to perform admin action 
+19.5.2022, 16:59:16 - WARN - ziki zikiattempted to perform admin action 
+19.5.2022, 16:59:16 - DEBUG - Getting Toys 
+19.5.2022, 16:59:19 - INFO - user logged out 
+19.5.2022, 16:59:26 - DEBUG - auth.service - login with username: muki 
+19.5.2022, 16:59:26 - INFO - User login:  | {"_id":"6282958732a36c17e311f8cc","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+19.5.2022, 16:59:40 - INFO - from toy.controller - addToy(req, res) | {"name":"ddd","price":100,"labels":["box game"],"createdAt":1652968770382,"review":"Best ever","inStock":true,"img":""} 
+19.5.2022, 16:59:40 - INFO - from toy.controller - addToy(req, res) | {"name":"ddd","price":100,"labels":["box game"],"createdAt":1652968770382,"review":"Best ever","inStock":true,"img":"","_id":"62864d4ccdb35f5ceca42653"} 
+19.5.2022, 16:59:40 - DEBUG - Getting Toys 
+19.5.2022, 16:59:43 - DEBUG - Getting Toys 
+19.5.2022, 17:00:04 - INFO - from toy.controller - addToy(req, res) | {"name":"where is the DB","price":100,"labels":["art"],"createdAt":1652968794736,"review":"Best ever","inStock":true,"img":""} 
+19.5.2022, 17:00:04 - INFO - from toy.controller - addToy(req, res) | {"name":"where is the DB","price":100,"labels":["art"],"createdAt":1652968794736,"review":"Best ever","inStock":true,"img":"","_id":"62864d64cdb35f5ceca42654"} 
+19.5.2022, 17:00:05 - DEBUG - Getting Toys 
+19.5.2022, 17:01:13 - DEBUG - Getting Toys 
+19.5.2022, 17:01:18 - INFO - user logged out 
+19.5.2022, 17:01:26 - DEBUG - auth.service - login with username: muki 
+19.5.2022, 17:01:26 - INFO - User login:  | {"_id":"6282958732a36c17e311f8cc","isAdmin":true,"username":"muki","fullname":"muki muki"} 
+19.5.2022, 17:01:33 - DEBUG - Getting Toys 
+19.5.2022, 17:01:48 - INFO - Server is running on port: 3030 
+19.5.2022, 17:01:53 - DEBUG - Getting Toys 
+19.5.2022, 17:01:54 - INFO - user logged out 
+19.5.2022, 17:02:00 - DEBUG - auth.service - login with username: ziki 
+19.5.2022, 17:02:00 - INFO - User login:  | {"_id":"6282958732a36c17e311f8d0","isAdmin":false,"username":"ziki","fullname":"ziki ziki"} 
+19.5.2022, 17:02:05 - DEBUG - Getting Toys 
+19.5.2022, 17:02:06 - WARN - ziki zikiattempted to perform admin action 
+19.5.2022, 17:02:28 - INFO - Server is running on port: 3030 
+19.5.2022, 17:03:47 - WARN - ziki zikiattempted to perform admin action 
+19.5.2022, 17:05:30 - DEBUG - Getting Toys 
+19.5.2022, 17:05:34 - DEBUG - Getting Toys 
+19.5.2022, 17:05:36 - WARN - ziki zikiattempted to perform admin action 
+19.5.2022, 17:06:15 - INFO - Server is running on port: 3030 
+19.5.2022, 17:06:35 - DEBUG - Getting Toys 
+19.5.2022, 17:06:37 - WARN - ziki zikiattempted to perform admin action 
+19.5.2022, 17:09:53 - DEBUG - Getting Toys 
+19.5.2022, 17:10:26 - DEBUG - Getting Toys 
+19.5.2022, 17:10:41 - WARN - ziki zikiattempted to perform admin action 
+19.5.2022, 17:10:41 - DEBUG - Getting Toys 
+19.5.2022, 17:11:00 - WARN - ziki zikiattempted to perform admin action 
+19.5.2022, 17:11:00 - DEBUG - Getting Toys 

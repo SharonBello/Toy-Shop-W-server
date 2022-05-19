@@ -35,7 +35,8 @@ export function loadToy() {
             })                
         } catch(err) {
             console.error('Error:', err)
-            showErrorMsg('Toy was not loaded')
+            // showErrorMsg('Toy was not loaded')
+            showErrorMsg(err.response.data)
         }
         if (subscriber) toyService.unsubscribe(subscriber)
         subscriber = (ev) => {
@@ -55,8 +56,9 @@ export function removeToy(toyId) {
         dispatch(getActionRemoveToy(toyId))
         showSuccessMsg('Toy removed Succesfully!')
         } catch(err) {
-            console.error('Error:', err)
-            showErrorMsg('Toy was not removed')
+            console.error('Error:', err)            
+            showErrorMsg(err.response.data)
+            // showErrorMsg('Toy was not removed')
         }
         if (subscriber) toyService.unsubscribe(subscriber)
             subscriber = (ev) => {
@@ -77,7 +79,8 @@ export function getById(toyId) {
                 })        
         } catch(err) {
         console.error('Error:', err)
-        showErrorMsg('Toy was not loaded')
+        // showErrorMsg('Toy was not loaded')
+        showErrorMsg(err.response.data)
         }
     }
 }
@@ -90,7 +93,8 @@ export function saveToy(toy) {
         showSuccessMsg('Toy saved Succesfully!')
         } catch(err) {
             console.error('Error:', err)
-            showErrorMsg('Toy was not saved')
+            // showErrorMsg('Toy was not saved')
+            showErrorMsg(err.response.data)
         }
         if (subscriber) toyService.unsubscribe(subscriber)
             subscriber = (ev) => {
@@ -110,7 +114,8 @@ export function addToy(toy) {
             showSuccessMsg('Toy added Succesfully!')
         } catch(err) {
             console.error('Error:', err)
-            showErrorMsg('Toy was not added')
+            // showErrorMsg('Toy was not added')
+            showErrorMsg(err.response.data)
         }
         if (subscriber) toyService.unsubscribe(subscriber)
         subscriber = (ev) => {
