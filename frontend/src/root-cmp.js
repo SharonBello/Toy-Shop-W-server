@@ -8,7 +8,8 @@ import routes from "./routes"
 
 function _App(props) {
   return (
-    <div id="app" className="main-layout">
+    <div id="app" className="with-new-header">
+        <div className="center-container">
       <AppHeader /> 
         <main className="main-content-container">
           <Switch>
@@ -19,6 +20,7 @@ function _App(props) {
         </main>
      
       <AppFooter />
+    </div>
     </div>
   )
 }

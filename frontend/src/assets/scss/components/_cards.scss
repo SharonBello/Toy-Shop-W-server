@@ -27,9 +27,9 @@
         }
 
         .toy-preview-btn {
-            border: 1px solid $clr7;
+            // border: 1px solid $clr7;
             border-radius: rem(5px);
-            color: $clr6;
+            color: $txt-clr3;
             cursor: pointer;
             // font-family: baloo;
             // font-size: 12px;
@@ -38,8 +38,8 @@
 }
 
 .toy-btn-add {
-    border: 1px solid $clr7;
+    // border: 1px solid $clr7;
     border-radius: rem(5px);
-    color: $clr6;
+    color: $txt-clr2;
     cursor: pointer;
 }
