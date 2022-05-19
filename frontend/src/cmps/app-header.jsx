@@ -43,6 +43,8 @@ class _AppHeader extends React.Component {
     }
 
     onOpenModal = () => {
+        // console.log('user',this.props.user )
+        if(this.props.user) return
         this.setState({ isModalOpen: true }, () => {
             console.log('onOpenModal - isModalOpen', this.state.isModalOpen)
         })
@@ -77,21 +79,22 @@ class _AppHeader extends React.Component {
                         <input type="text" className="input-search" placeholder="Search" value={searchTerm} onChange={this.onHandleChange}></input>
                         <button className="main-header-search" ><Search /></button>
                     </div>
-
-                    <div className="login-btn-container">
+                    <div className="login-container"> 
                         {user && <p className="user-greet">Hello: <span>{user.username}</span></p>}
-                        <button onClick={() => this.onOpenModal()}><AccountCircleIcon /></button>
-                        {isModalOpen && <Dialog open={true} >
-                        {!user && <LoginSignup onLogin={this.onLogin} onSignup={this.onSignup} onCloseModal={this.onCloseModal}/>}</Dialog>} 
-                    </div>
+                        <div className="login-btn-container">
+                            <button onClick={() => this.onOpenModal()} className="login-btn"><AccountCircleIcon /></button>
+                            {isModalOpen && <Dialog open={true} >
+                            {!user && <LoginSignup onLogin={this.onLogin} onSignup={this.onSignup} onCloseModal={this.onCloseModal}/>}</Dialog>} 
+                        </div>
 
-                    <div className="signup-btn-container">
-                        <button>
-                        <i className="fa-solid fa-user-plus"></i></button>
-                    </div>
-                    <div className="logout-btn-container">
-                        <button className="user-logout" onClick={() => this.onLogout()}><LogoutIcon /></button>                        
-                    </div>
+                        <div className="signup-btn-container ">
+                            <button className="login-btn">
+                            <i className="fa-solid fa-user-plus"></i></button>
+                        </div>
+                        <div className="logout-btn-container">
+                            <button className="user-logout login-btn" onClick={() => this.onLogout()}><LogoutIcon /></button>                        
+                        </div>
+                        </div>        
                 </section>
                 <i className="fa-solid fa-user-plus"></i>
                 <div className="header-title">

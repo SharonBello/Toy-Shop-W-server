@@ -6,7 +6,6 @@ async function getToys(req, res) {
   try {
     logger.debug('Getting Toys')
     var queryParams = req.query;
-    // console.log('queryParams',queryParams )
     const toys = await toyService.query(queryParams)
     res.json(toys);
   } catch (err) {
@@ -70,7 +69,6 @@ async function updateToy(req, res) {
 async function removeToy(req, res) {
   try {
     const toyId = req.params.id;
-    console.log('toyId', toyId )
     const removedId = await toyService.remove(toyId)
     res.send(removedId)
   } catch (err) {

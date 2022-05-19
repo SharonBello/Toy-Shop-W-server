@@ -1232,3 +1232,449 @@
 >>>>>>> fa7ea1035dccba894024cadb19da7851d2b2da34
 >>>>>>> 12916bb062037fc560a437bb654e8410372f1afc
 19.5.2022, 0:09:23 - INFO - Server is running on port: 3030 
+19.5.2022, 10:31:45 - INFO - from toy.controller - addToy(req, res) | {"name":"גגג","price":10,"labels":["box game"],"createdAt":1652945499135,"review":"Best ever","inStock":true,"img":""} 
+19.5.2022, 10:31:45 - INFO - from toy.controller - addToy(req, res) | {"name":"גגג","price":10,"labels":["box game"],"createdAt":1652945499135,"review":"Best ever","inStock":true,"img":"","_id":"6285f2619438af6e30eca207"} 
+19.5.2022, 10:31:45 - DEBUG - Getting Toys 
+19.5.2022, 10:32:21 - INFO - Server is running on port: 3030 
+19.5.2022, 10:32:29 - DEBUG - Getting Toys 
+19.5.2022, 10:34:12 - DEBUG - Getting Toys 
+19.5.2022, 10:34:17 - DEBUG - Getting Toys 
+19.5.2022, 10:34:23 - INFO - from toy.controller - addToy(req, res) | {"name":"Talking Doll","price":10,"labels":["box game"],"createdAt":1652945658382,"review":"Best ever","inStock":true,"img":""} 
+19.5.2022, 10:34:23 - INFO - from toy.controller - addToy(req, res) | {"name":"Talking Doll","price":10,"labels":["box game"],"createdAt":1652945658382,"review":"Best ever","inStock":true,"img":"","_id":"6285f2ffa0ec613d0cb6da77"} 
+19.5.2022, 10:34:24 - DEBUG - Getting Toys 
+19.5.2022, 10:50:53 - DEBUG - Getting Toys 
+19.5.2022, 11:07:29 - DEBUG - Getting Toys 
+19.5.2022, 11:07:51 - DEBUG - Getting Toys 
+19.5.2022, 11:12:31 - DEBUG - Getting Toys 
+19.5.2022, 11:12:35 - DEBUG - Getting Toys 
+19.5.2022, 11:12:54 - DEBUG - Getting Toys 
+19.5.2022, 11:17:06 - DEBUG - Getting Toys 
+19.5.2022, 11:17:10 - DEBUG - Getting Toys 
+19.5.2022, 11:17:13 - DEBUG - Getting Toys 
+19.5.2022, 11:21:07 - DEBUG - Getting Toys 
+19.5.2022, 11:21:48 - DEBUG - Getting Toys 
+19.5.2022, 11:21:52 - DEBUG - Getting Toys 
+19.5.2022, 11:21:53 - DEBUG - Getting Toys 
+19.5.2022, 11:21:54 - DEBUG - Getting Toys 
+19.5.2022, 11:21:54 - DEBUG - Getting Toys 
+19.5.2022, 11:21:55 - DEBUG - Getting Toys 
+19.5.2022, 11:21:58 - DEBUG - Getting Toys 
+19.5.2022, 11:22:01 - DEBUG - Getting Toys 
+19.5.2022, 11:22:10 - DEBUG - Getting Toys 
+19.5.2022, 11:22:12 - DEBUG - Getting Toys 
+19.5.2022, 11:22:13 - DEBUG - Getting Toys 
+19.5.2022, 11:22:13 - DEBUG - Getting Toys 
+19.5.2022, 11:22:15 - DEBUG - Getting Toys 
+19.5.2022, 11:22:16 - DEBUG - Getting Toys 
+19.5.2022, 11:22:17 - DEBUG - Getting Toys 
+19.5.2022, 11:25:19 - DEBUG - Getting Toys 
+19.5.2022, 11:25:21 - DEBUG - Getting Toys 
+19.5.2022, 11:25:22 - DEBUG - Getting Toys 
+19.5.2022, 11:25:22 - DEBUG - Getting Toys 
+19.5.2022, 11:25:24 - DEBUG - Getting Toys 
+19.5.2022, 11:25:29 - DEBUG - Getting Toys 
+19.5.2022, 11:25:31 - DEBUG - Getting Toys 
+19.5.2022, 11:25:35 - DEBUG - Getting Toys 
+19.5.2022, 11:25:40 - DEBUG - Getting Toys 
+19.5.2022, 11:25:43 - DEBUG - Getting Toys 
+19.5.2022, 11:25:48 - DEBUG - Getting Toys 
+19.5.2022, 11:25:54 - DEBUG - Getting Toys 
+19.5.2022, 11:25:57 - DEBUG - Getting Toys 
+19.5.2022, 11:26:58 - DEBUG - Getting Toys 
+19.5.2022, 11:27:07 - DEBUG - Getting Toys 
+19.5.2022, 11:27:14 - DEBUG - Getting Toys 
+19.5.2022, 11:27:22 - DEBUG - Getting Toys 
+19.5.2022, 11:29:35 - DEBUG - Getting Toys 
+19.5.2022, 11:29:37 - DEBUG - Getting Toys 
+19.5.2022, 11:29:47 - DEBUG - Getting Toys 
+19.5.2022, 11:29:48 - DEBUG - Getting Toys 
+19.5.2022, 11:29:48 - DEBUG - Getting Toys 
+19.5.2022, 11:30:39 - DEBUG - Getting Toys 
+19.5.2022, 11:30:52 - DEBUG - Getting Toys 
+19.5.2022, 11:31:40 - INFO - Server is running on port: 3030 
+19.5.2022, 11:31:47 - DEBUG - Getting Toys 
+19.5.2022, 11:31:48 - DEBUG - Getting Toys 
+19.5.2022, 11:35:15 - INFO - Server is running on port: 3030 
+19.5.2022, 11:35:19 - DEBUG - Getting Toys 
+19.5.2022, 11:35:21 - DEBUG - Getting Toys 
+19.5.2022, 11:35:21 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:35:21 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:35:22 - DEBUG - Getting Toys 
+19.5.2022, 11:35:22 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:35:22 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:35:22 - DEBUG - Getting Toys 
+19.5.2022, 11:35:22 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:35:22 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:36:08 - INFO - Server is running on port: 3030 
+19.5.2022, 11:36:16 - INFO - Server is running on port: 3030 
+19.5.2022, 11:36:17 - DEBUG - Getting Toys 
+19.5.2022, 11:36:17 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:36:17 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:36:17 - DEBUG - Getting Toys 
+19.5.2022, 11:36:17 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:36:17 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:36:17 - DEBUG - Getting Toys 
+19.5.2022, 11:36:18 - DEBUG - Getting Toys 
+19.5.2022, 11:36:18 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:36:18 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:36:19 - DEBUG - Getting Toys 
+19.5.2022, 11:36:19 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:36:19 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:36:19 - DEBUG - Getting Toys 
+19.5.2022, 11:36:19 - ERROR - cannot find toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:36:19 - ERROR - Failed to get toys | TypeError: Assignment to constant variable. 
+19.5.2022, 11:36:44 - INFO - Server is running on port: 3030 
+19.5.2022, 11:36:47 - DEBUG - Getting Toys 
+19.5.2022, 11:36:48 - DEBUG - Getting Toys 
+19.5.2022, 11:38:05 - INFO - Server is running on port: 3030 
+19.5.2022, 11:38:21 - INFO - Server is running on port: 3030 
+19.5.2022, 11:38:26 - DEBUG - Getting Toys 
+19.5.2022, 11:38:30 - DEBUG - Getting Toys 
+19.5.2022, 11:38:31 - DEBUG - Getting Toys 
+19.5.2022, 11:38:32 - DEBUG - Getting Toys 
+19.5.2022, 11:38:43 - DEBUG - Getting Toys 
+19.5.2022, 11:38:48 - DEBUG - Getting Toys 
+19.5.2022, 11:38:51 - DEBUG - Getting Toys 
+19.5.2022, 11:38:56 - DEBUG - Getting Toys 
+19.5.2022, 11:39:01 - DEBUG - Getting Toys 
+19.5.2022, 11:39:10 - DEBUG - Getting Toys 
+19.5.2022, 11:39:39 - DEBUG - Getting Toys 
+19.5.2022, 11:40:47 - INFO - Server is running on port: 3030 
+19.5.2022, 11:40:53 - DEBUG - Getting Toys 
+19.5.2022, 11:41:32 - DEBUG - Getting Toys 
+19.5.2022, 11:41:33 - DEBUG - Getting Toys 
+19.5.2022, 11:42:14 - INFO - Server is running on port: 3030 
+19.5.2022, 11:43:14 - INFO - Server is running on port: 3030 
+19.5.2022, 11:43:44 - DEBUG - Getting Toys 
+19.5.2022, 11:43:46 - DEBUG - Getting Toys 
+19.5.2022, 11:45:35 - DEBUG - Getting Toys 
+19.5.2022, 11:45:36 - DEBUG - Getting Toys 
+19.5.2022, 11:45:43 - DEBUG - Getting Toys 
+19.5.2022, 11:46:58 - DEBUG - Getting Toys 
+19.5.2022, 11:48:28 - DEBUG - Getting Toys 
+19.5.2022, 11:48:46 - DEBUG - Getting Toys 
+19.5.2022, 11:48:47 - DEBUG - Getting Toys 
+19.5.2022, 11:48:54 - DEBUG - Getting Toys 
+19.5.2022, 11:48:54 - DEBUG - Getting Toys 
+19.5.2022, 11:49:58 - DEBUG - Getting Toys 
+19.5.2022, 11:49:59 - DEBUG - Getting Toys 
+19.5.2022, 11:50:05 - DEBUG - Getting Toys 
+19.5.2022, 11:50:05 - DEBUG - Getting Toys 
+19.5.2022, 11:50:42 - DEBUG - Getting Toys 
+19.5.2022, 11:50:44 - DEBUG - Getting Toys 
+19.5.2022, 11:50:47 - DEBUG - Getting Toys 
+19.5.2022, 11:50:48 - DEBUG - Getting Toys 
+19.5.2022, 11:51:35 - DEBUG - Getting Toys 
+19.5.2022, 11:51:37 - DEBUG - Getting Toys 
+19.5.2022, 11:51:40 - DEBUG - Getting Toys 
+19.5.2022, 11:51:40 - DEBUG - Getting Toys 
+19.5.2022, 11:52:45 - DEBUG - Getting Toys 
+19.5.2022, 11:53:23 - DEBUG - Getting Toys 
+19.5.2022, 11:53:29 - DEBUG - Getting Toys 
+19.5.2022, 11:53:29 - DEBUG - Getting Toys 
+19.5.2022, 11:58:08 - DEBUG - Getting Toys 
+19.5.2022, 11:58:08 - DEBUG - Getting Toys 
+19.5.2022, 12:00:49 - DEBUG - Getting Toys 
+19.5.2022, 12:01:52 - DEBUG - Getting Toys 
+19.5.2022, 12:01:59 - DEBUG - Getting Toys 
+19.5.2022, 12:02:02 - DEBUG - Getting Toys 
+19.5.2022, 12:02:04 - DEBUG - Getting Toys 
+19.5.2022, 12:02:04 - DEBUG - Getting Toys 
+19.5.2022, 12:07:29 - DEBUG - Getting Toys 
+19.5.2022, 12:07:37 - DEBUG - Getting Toys 
+19.5.2022, 12:07:40 - DEBUG - Getting Toys 
+19.5.2022, 12:07:40 - DEBUG - Getting Toys 
+19.5.2022, 12:08:17 - DEBUG - Getting Toys 
+19.5.2022, 12:08:49 - DEBUG - Getting Toys 
+19.5.2022, 12:08:52 - DEBUG - Getting Toys 
+19.5.2022, 12:08:54 - DEBUG - Getting Toys 
+19.5.2022, 12:08:54 - DEBUG - Getting Toys 
+19.5.2022, 12:13:04 - DEBUG - Getting Toys 
+19.5.2022, 12:13:13 - DEBUG - Getting Toys 
+19.5.2022, 12:13:13 - DEBUG - Getting Toys 
+19.5.2022, 12:14:26 - DEBUG - Getting Toys 
+19.5.2022, 12:14:37 - DEBUG - Getting Toys 
+19.5.2022, 12:14:39 - DEBUG - Getting Toys 
+19.5.2022, 12:14:39 - DEBUG - Getting Toys 
+19.5.2022, 12:18:47 - DEBUG - Getting Toys 
+19.5.2022, 12:18:48 - DEBUG - Getting Toys 
+19.5.2022, 12:18:50 - DEBUG - Getting Toys 
+19.5.2022, 12:18:50 - DEBUG - Getting Toys 
+19.5.2022, 12:19:49 - DEBUG - Getting Toys 
+19.5.2022, 12:28:59 - INFO - Server is running on port: 3030 
+19.5.2022, 12:29:10 - DEBUG - Getting Toys 
+19.5.2022, 12:29:12 - DEBUG - Getting Toys 
+19.5.2022, 12:29:32 - DEBUG - Getting Toys 
+19.5.2022, 12:29:48 - DEBUG - Getting Toys 
+19.5.2022, 12:31:07 - INFO - Server is running on port: 3030 
+19.5.2022, 12:31:15 - DEBUG - Getting Toys 
+19.5.2022, 12:31:19 - DEBUG - Getting Toys 
+19.5.2022, 12:31:38 - INFO - Server is running on port: 3030 
+19.5.2022, 12:31:41 - DEBUG - Getting Toys 
+19.5.2022, 12:31:56 - DEBUG - Getting Toys 
+19.5.2022, 12:33:02 - INFO - Server is running on port: 3030 
+19.5.2022, 12:33:09 - DEBUG - Getting Toys 
+19.5.2022, 12:33:12 - DEBUG - Getting Toys 
+19.5.2022, 12:33:12 - DEBUG - Getting Toys 
+19.5.2022, 12:33:22 - DEBUG - Getting Toys 
+19.5.2022, 12:33:22 - DEBUG - Getting Toys 
+19.5.2022, 12:33:25 - DEBUG - Getting Toys 
+19.5.2022, 12:33:46 - INFO - Server is running on port: 3030 
+19.5.2022, 12:33:49 - DEBUG - Getting Toys 
+19.5.2022, 12:34:01 - DEBUG - Getting Toys 
+19.5.2022, 12:34:04 - DEBUG - Getting Toys 
+19.5.2022, 12:34:07 - DEBUG - Getting Toys 
+19.5.2022, 12:36:01 - INFO - Server is running on port: 3030 
+19.5.2022, 12:37:13 - INFO - Server is running on port: 3030 
+19.5.2022, 12:37:19 - DEBUG - Getting Toys 
+19.5.2022, 12:37:23 - DEBUG - Getting Toys 
+19.5.2022, 12:38:12 - DEBUG - Getting Toys 
+19.5.2022, 12:38:13 - DEBUG - Getting Toys 
+19.5.2022, 12:39:48 - INFO - Server is running on port: 3030 
+19.5.2022, 12:39:50 - INFO - Server is running on port: 3030 
+19.5.2022, 12:42:42 - DEBUG - Getting Toys 
+19.5.2022, 12:42:48 - DEBUG - Getting Toys 
+19.5.2022, 12:43:11 - DEBUG - Getting Toys 
+19.5.2022, 12:43:14 - DEBUG - Getting Toys 
+19.5.2022, 12:43:14 - DEBUG - Getting Toys 
+19.5.2022, 12:44:05 - DEBUG - Getting Toys 
+19.5.2022, 12:44:06 - DEBUG - Getting Toys 
+19.5.2022, 12:44:08 - DEBUG - Getting Toys 
+19.5.2022, 12:44:13 - DEBUG - Getting Toys 
+19.5.2022, 12:44:14 - DEBUG - Getting Toys 
+19.5.2022, 12:44:24 - DEBUG - Getting Toys 
+19.5.2022, 12:44:32 - DEBUG - Getting Toys 
+19.5.2022, 12:44:44 - DEBUG - Getting Toys 
+19.5.2022, 12:44:44 - DEBUG - Getting Toys 
+19.5.2022, 12:45:32 - DEBUG - Getting Toys 
+19.5.2022, 12:45:40 - DEBUG - Getting Toys 
+19.5.2022, 12:45:45 - DEBUG - Getting Toys 
+19.5.2022, 12:45:47 - DEBUG - Getting Toys 
+19.5.2022, 12:45:48 - DEBUG - Getting Toys 
+19.5.2022, 12:47:26 - DEBUG - Getting Toys 
+19.5.2022, 12:47:38 - DEBUG - Getting Toys 
+19.5.2022, 12:48:10 - DEBUG - Getting Toys 
+19.5.2022, 12:48:18 - DEBUG - Getting Toys 
+19.5.2022, 12:48:18 - DEBUG - Getting Toys 
+19.5.2022, 12:49:02 - DEBUG - Getting Toys 
+19.5.2022, 12:49:56 - DEBUG - Getting Toys 
+19.5.2022, 12:49:58 - DEBUG - Getting Toys 
+19.5.2022, 12:50:05 - DEBUG - Getting Toys 
+19.5.2022, 12:50:55 - DEBUG - Getting Toys 
+19.5.2022, 12:50:56 - DEBUG - Getting Toys 
+19.5.2022, 12:50:59 - DEBUG - Getting Toys 
+19.5.2022, 12:50:59 - DEBUG - Getting Toys 
+19.5.2022, 12:51:12 - DEBUG - Getting Toys 
+19.5.2022, 12:51:20 - DEBUG - Getting Toys 
+19.5.2022, 12:51:25 - DEBUG - Getting Toys 
+19.5.2022, 12:51:28 - DEBUG - Getting Toys 
+19.5.2022, 12:51:52 - DEBUG - Getting Toys 
+19.5.2022, 12:52:03 - DEBUG - Getting Toys 
+19.5.2022, 12:55:27 - DEBUG - Getting Toys 
+19.5.2022, 12:55:41 - DEBUG - Getting Toys 
+19.5.2022, 12:56:04 - DEBUG - Getting Toys 
+19.5.2022, 12:59:50 - DEBUG - Getting Toys 
+19.5.2022, 12:59:55 - DEBUG - Getting Toys 
+19.5.2022, 12:59:59 - DEBUG - Getting Toys 
+19.5.2022, 13:00:07 - DEBUG - Getting Toys 
+19.5.2022, 13:01:39 - DEBUG - Getting Toys 
+19.5.2022, 13:01:40 - DEBUG - Getting Toys 
+19.5.2022, 13:02:06 - DEBUG - Getting Toys 
+19.5.2022, 13:02:08 - DEBUG - Getting Toys 
+19.5.2022, 13:02:18 - DEBUG - Getting Toys 
+19.5.2022, 13:03:40 - DEBUG - Getting Toys 
+19.5.2022, 13:06:25 - INFO - from toy.controller - addToy(req, res) | {"name":"new toys","price":25.33,"labels":["art"],"createdAt":1652954773283,"review":"Best ever","inStock":true,"img":""} 
+19.5.2022, 13:06:25 - INFO - from toy.controller - addToy(req, res) | {"name":"new toys","price":25.33,"labels":["art"],"createdAt":1652954773283,"review":"Best ever","inStock":true,"img":"","_id":"628616a16b5f926398ad0499"} 
+19.5.2022, 13:06:25 - DEBUG - Getting Toys 
+19.5.2022, 13:07:19 - INFO - Server is running on port: 3030 
+19.5.2022, 13:07:45 - INFO - Server is running on port: 3030 
+19.5.2022, 13:08:00 - INFO - Server is running on port: 3030 
+19.5.2022, 13:08:11 - DEBUG - Getting Toys 
+19.5.2022, 13:08:33 - INFO - from toy.controller - addToy(req, res) | {"name":"the best ever train","price":255.93,"labels":["art"],"createdAt":1652954899010,"review":"Best ever","inStock":true,"img":""} 
+19.5.2022, 13:08:33 - INFO - from toy.controller - addToy(req, res) | {"name":"the best ever train","price":255.93,"labels":["art"],"createdAt":1652954899010,"review":"Best ever","inStock":true,"img":"","_id":"62861721bfe1ee3bb4375967"} 
+19.5.2022, 13:08:33 - DEBUG - Getting Toys 
+19.5.2022, 13:08:51 - DEBUG - Getting Toys 
+19.5.2022, 13:08:55 - DEBUG - Getting Toys 
+19.5.2022, 13:09:10 - DEBUG - Getting Toys 
+19.5.2022, 13:32:58 - DEBUG - Getting Toys 
+19.5.2022, 13:33:14 - DEBUG - Getting Toys 
+19.5.2022, 13:33:15 - DEBUG - Getting Toys 
+19.5.2022, 13:33:58 - DEBUG - Getting Toys 
+19.5.2022, 13:33:59 - DEBUG - Getting Toys 
+19.5.2022, 13:34:02 - DEBUG - Getting Toys 
+19.5.2022, 13:38:16 - DEBUG - Getting Toys 
+19.5.2022, 13:38:20 - DEBUG - Getting Toys 
+19.5.2022, 13:38:25 - DEBUG - Getting Toys 
+19.5.2022, 13:38:41 - DEBUG - Getting Toys 
+19.5.2022, 13:40:30 - DEBUG - Getting Toys 
+19.5.2022, 13:40:32 - DEBUG - Getting Toys 
+19.5.2022, 13:40:34 - DEBUG - Getting Toys 
+19.5.2022, 13:43:43 - DEBUG - Getting Toys 
+19.5.2022, 13:44:03 - DEBUG - Getting Toys 
+19.5.2022, 13:46:20 - DEBUG - Getting Toys 
+19.5.2022, 13:46:22 - DEBUG - Getting Toys 
+19.5.2022, 13:46:57 - DEBUG - Getting Toys 
+19.5.2022, 13:47:03 - DEBUG - Getting Toys 
+19.5.2022, 13:47:04 - DEBUG - Getting Toys 
+19.5.2022, 13:47:04 - ERROR - cannot find toys | MongoError: FieldPath cannot be constructed with empty string 
+19.5.2022, 13:47:04 - ERROR - Failed to get toys | MongoError: FieldPath cannot be constructed with empty string 
+19.5.2022, 13:48:28 - DEBUG - Getting Toys 
+19.5.2022, 13:48:32 - DEBUG - Getting Toys 
+19.5.2022, 13:48:38 - DEBUG - Getting Toys 
+19.5.2022, 13:48:40 - DEBUG - Getting Toys 
+19.5.2022, 13:48:43 - DEBUG - Getting Toys 
+19.5.2022, 13:48:44 - DEBUG - Getting Toys 
+19.5.2022, 13:48:45 - DEBUG - Getting Toys 
+19.5.2022, 13:49:38 - DEBUG - Getting Toys 
+19.5.2022, 13:50:49 - DEBUG - Getting Toys 
+19.5.2022, 13:50:53 - DEBUG - Getting Toys 
+19.5.2022, 13:50:55 - DEBUG - Getting Toys 
+19.5.2022, 13:50:55 - DEBUG - Getting Toys 
+19.5.2022, 13:50:58 - DEBUG - Getting Toys 
+19.5.2022, 13:50:58 - DEBUG - Getting Toys 
+19.5.2022, 13:51:00 - DEBUG - Getting Toys 
+19.5.2022, 13:51:00 - DEBUG - Getting Toys 
+19.5.2022, 13:51:03 - DEBUG - Getting Toys 
+19.5.2022, 13:51:03 - DEBUG - Getting Toys 
+19.5.2022, 13:51:16 - DEBUG - Getting Toys 
+19.5.2022, 13:51:16 - DEBUG - Getting Toys 
+19.5.2022, 13:51:16 - DEBUG - Getting Toys 
+19.5.2022, 13:51:16 - DEBUG - Getting Toys 
+19.5.2022, 13:51:17 - DEBUG - Getting Toys 
+19.5.2022, 13:51:17 - DEBUG - Getting Toys 
+19.5.2022, 13:51:17 - DEBUG - Getting Toys 
+19.5.2022, 13:51:17 - DEBUG - Getting Toys 
+19.5.2022, 13:51:18 - DEBUG - Getting Toys 
+19.5.2022, 13:51:19 - DEBUG - Getting Toys 
+19.5.2022, 13:51:26 - DEBUG - Getting Toys 
+19.5.2022, 13:51:26 - DEBUG - Getting Toys 
+19.5.2022, 13:51:27 - DEBUG - Getting Toys 
+19.5.2022, 13:51:27 - DEBUG - Getting Toys 
+19.5.2022, 13:51:27 - DEBUG - Getting Toys 
+19.5.2022, 13:51:27 - DEBUG - Getting Toys 
+19.5.2022, 13:51:28 - DEBUG - Getting Toys 
+19.5.2022, 13:51:28 - DEBUG - Getting Toys 
+19.5.2022, 13:51:29 - DEBUG - Getting Toys 
+19.5.2022, 13:51:29 - DEBUG - Getting Toys 
+19.5.2022, 13:51:29 - DEBUG - Getting Toys 
+19.5.2022, 13:51:29 - DEBUG - Getting Toys 
+19.5.2022, 13:51:29 - DEBUG - Getting Toys 
+19.5.2022, 13:51:29 - DEBUG - Getting Toys 
+19.5.2022, 13:51:29 - DEBUG - Getting Toys 
+19.5.2022, 13:51:29 - DEBUG - Getting Toys 
+19.5.2022, 13:51:29 - DEBUG - Getting Toys 
+19.5.2022, 13:51:29 - DEBUG - Getting Toys 
+19.5.2022, 14:01:27 - DEBUG - Getting Toys 
+19.5.2022, 14:01:34 - DEBUG - Getting Toys 
+19.5.2022, 14:01:36 - DEBUG - Getting Toys 
+19.5.2022, 14:01:36 - DEBUG - Getting Toys 
+19.5.2022, 14:01:38 - DEBUG - Getting Toys 
+19.5.2022, 14:01:38 - DEBUG - Getting Toys 
+19.5.2022, 14:02:34 - DEBUG - Getting Toys 
+19.5.2022, 14:02:38 - DEBUG - Getting Toys 
+19.5.2022, 14:02:39 - DEBUG - Getting Toys 
+19.5.2022, 14:02:40 - DEBUG - Getting Toys 
+19.5.2022, 14:02:56 - DEBUG - Getting Toys 
+19.5.2022, 14:02:58 - DEBUG - Getting Toys 
+19.5.2022, 14:03:00 - DEBUG - Getting Toys 
+19.5.2022, 14:03:00 - DEBUG - Getting Toys 
+19.5.2022, 14:03:22 - DEBUG - Getting Toys 
+19.5.2022, 14:03:22 - DEBUG - Getting Toys 
+19.5.2022, 14:08:52 - DEBUG - Getting Toys 
+19.5.2022, 14:08:55 - DEBUG - Getting Toys 
+19.5.2022, 14:08:55 - DEBUG - Getting Toys 
+19.5.2022, 14:09:00 - DEBUG - Getting Toys 
+19.5.2022, 14:09:00 - DEBUG - Getting Toys 
+19.5.2022, 14:09:03 - DEBUG - Getting Toys 
+19.5.2022, 14:09:03 - DEBUG - Getting Toys 
+19.5.2022, 14:10:35 - DEBUG - Getting Toys 
+19.5.2022, 14:10:39 - DEBUG - Getting Toys 
+19.5.2022, 14:10:42 - DEBUG - Getting Toys 
+19.5.2022, 14:10:42 - DEBUG - Getting Toys 
+19.5.2022, 14:11:43 - DEBUG - Getting Toys 
+19.5.2022, 14:11:45 - DEBUG - Getting Toys 
+19.5.2022, 14:11:47 - DEBUG - Getting Toys 
+19.5.2022, 14:11:47 - DEBUG - Getting Toys 
+19.5.2022, 14:11:52 - DEBUG - Getting Toys 
+19.5.2022, 14:11:52 - DEBUG - Getting Toys 
+19.5.2022, 14:11:53 - DEBUG - Getting Toys 
+19.5.2022, 14:11:53 - DEBUG - Getting Toys 
+19.5.2022, 14:11:55 - DEBUG - Getting Toys 
+19.5.2022, 14:11:56 - DEBUG - Getting Toys 
+19.5.2022, 14:11:58 - DEBUG - Getting Toys 
+19.5.2022, 14:11:58 - DEBUG - Getting Toys 
+19.5.2022, 14:11:59 - DEBUG - Getting Toys 
+19.5.2022, 14:11:59 - DEBUG - Getting Toys 
+19.5.2022, 14:11:59 - DEBUG - Getting Toys 
+19.5.2022, 14:11:59 - DEBUG - Getting Toys 
+19.5.2022, 14:12:00 - DEBUG - Getting Toys 
+19.5.2022, 14:12:00 - DEBUG - Getting Toys 
+19.5.2022, 14:12:01 - DEBUG - Getting Toys 
+19.5.2022, 14:12:28 - DEBUG - Getting Toys 
+19.5.2022, 14:12:47 - DEBUG - Getting Toys 
+19.5.2022, 14:12:53 - DEBUG - Getting Toys 
+19.5.2022, 14:13:11 - DEBUG - Getting Toys 
+19.5.2022, 14:13:27 - DEBUG - Getting Toys 
+19.5.2022, 14:13:28 - DEBUG - Getting Toys 
+19.5.2022, 14:13:44 - DEBUG - Getting Toys 
+19.5.2022, 14:13:55 - INFO - from toy.controller - addToy(req, res) | {"name":"Talking Doll","price":100,"labels":["box game"],"createdAt":1652958827357,"review":"Best ever","inStock":true,"img":""} 
+19.5.2022, 14:13:55 - INFO - from toy.controller - addToy(req, res) | {"name":"Talking Doll","price":100,"labels":["box game"],"createdAt":1652958827357,"review":"Best ever","inStock":true,"img":"","_id":"62862673bfe1ee3bb4375968"} 
+19.5.2022, 14:13:55 - DEBUG - Getting Toys 
+19.5.2022, 14:14:08 - DEBUG - Getting Toys 
+19.5.2022, 14:14:25 - DEBUG - Getting Toys 
+19.5.2022, 14:14:28 - DEBUG - Getting Toys 
+19.5.2022, 14:15:33 - DEBUG - Getting Toys 
+19.5.2022, 14:15:36 - DEBUG - Getting Toys 
+19.5.2022, 14:16:40 - INFO - Server is running on port: 3030 
+19.5.2022, 14:17:11 - INFO - Server is running on port: 3030 
+19.5.2022, 14:17:34 - INFO - Server is running on port: 3030 
+19.5.2022, 14:17:47 - INFO - Server is running on port: 3030 
+19.5.2022, 14:18:16 - INFO - Server is running on port: 3030 
+19.5.2022, 14:18:57 - INFO - Server is running on port: 3030 
+19.5.2022, 14:19:04 - DEBUG - Getting Toys 
+19.5.2022, 14:21:01 - DEBUG - Getting Toys 
+19.5.2022, 14:22:11 - DEBUG - Getting Toys 
+19.5.2022, 14:23:25 - DEBUG - Getting Toys 
+19.5.2022, 14:26:13 - DEBUG - Getting Toys 
+19.5.2022, 14:26:14 - INFO - user logged out 
+19.5.2022, 14:26:22 - DEBUG - auth.service - login with username: muki 
+19.5.2022, 14:26:22 - INFO - User login:  | {"_id":"6282958732a36c17e311f8cc","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+19.5.2022, 14:27:45 - DEBUG - Getting Toys 
+19.5.2022, 14:27:47 - INFO - user logged out 
+19.5.2022, 14:27:59 - DEBUG - auth.service - login with username: muki 
+19.5.2022, 14:27:59 - INFO - User login:  | {"_id":"6282958732a36c17e311f8cc","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+19.5.2022, 14:29:00 - DEBUG - Getting Toys 
+19.5.2022, 14:29:07 - INFO - user logged out 
+19.5.2022, 14:29:16 - DEBUG - auth.service - login with username: muki 
+19.5.2022, 14:29:16 - INFO - User login:  | {"_id":"6282958732a36c17e311f8cc","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+19.5.2022, 14:51:34 - DEBUG - Getting Toys 
+19.5.2022, 14:51:35 - DEBUG - Getting Toys 
+19.5.2022, 14:51:35 - DEBUG - Getting Toys 
+19.5.2022, 14:51:35 - DEBUG - Getting Toys 
+19.5.2022, 14:51:36 - DEBUG - Getting Toys 
+19.5.2022, 14:51:38 - DEBUG - Getting Toys 
+19.5.2022, 14:51:38 - DEBUG - Getting Toys 
+19.5.2022, 14:51:39 - DEBUG - Getting Toys 
+19.5.2022, 14:51:42 - DEBUG - Getting Toys 
+19.5.2022, 14:51:45 - DEBUG - Getting Toys 
+19.5.2022, 14:51:45 - DEBUG - Getting Toys 
+19.5.2022, 14:51:48 - DEBUG - Getting Toys 
+19.5.2022, 14:51:48 - DEBUG - Getting Toys 
+19.5.2022, 14:51:49 - DEBUG - Getting Toys 
+19.5.2022, 14:51:49 - DEBUG - Getting Toys 
+19.5.2022, 14:51:49 - DEBUG - Getting Toys 
+19.5.2022, 14:51:50 - DEBUG - Getting Toys 
+19.5.2022, 14:51:51 - DEBUG - Getting Toys 
+19.5.2022, 14:51:51 - DEBUG - Getting Toys 
+19.5.2022, 14:51:51 - DEBUG - Getting Toys 
+19.5.2022, 14:51:51 - DEBUG - Getting Toys 
+19.5.2022, 14:51:52 - DEBUG - Getting Toys 
+19.5.2022, 14:51:52 - DEBUG - Getting Toys 
+19.5.2022, 14:52:07 - DEBUG - Getting Toys 
+19.5.2022, 14:52:07 - DEBUG - Getting Toys 
+19.5.2022, 14:53:54 - DEBUG - Getting Toys 
+19.5.2022, 14:53:56 - DEBUG - Getting Toys 
+19.5.2022, 14:53:59 - DEBUG - Getting Toys 
+19.5.2022, 14:54:04 - DEBUG - Getting Toys 
+19.5.2022, 14:54:04 - DEBUG - Getting Toys 
+19.5.2022, 14:54:30 - DEBUG - Getting Toys 

@@ -32,7 +32,7 @@ export function loadToy() {
             dispatch({
                 type: 'SET_TOYS',
                 toys
-            })                    
+            })                
         } catch(err) {
             console.error('Error:', err)
             showErrorMsg('Toy was not loaded')

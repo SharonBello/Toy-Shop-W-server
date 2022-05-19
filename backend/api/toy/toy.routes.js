@@ -9,12 +9,12 @@ const router = express.Router()
 
 router.get('/', log, getToys)
 router.get('/:id', getToyById)
-// router.post('/', requireAuth, requireAdmin, addToy)
-router.post('/', addToy)
+router.post('/', requireAuth, requireAdmin, addToy)
+// router.post('/', addToy)
 router.post('/:id', requireAuth, addReview)
-router.put('/:id', updateToy)
-// router.put('/:id', requireAuth, requireAdmin, updateToy)
-router.delete('/:id', removeToy)
-// router.delete('/:id', requireAuth, requireAdmin, removeToy)
+// router.put('/:id', updateToy)
+router.put('/:id', requireAuth, requireAdmin, updateToy)
+// router.delete('/:id', removeToy)
+router.delete('/:id', requireAuth, requireAdmin, removeToy)
 
 module.exports = router
