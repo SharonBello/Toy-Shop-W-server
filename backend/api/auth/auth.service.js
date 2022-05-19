@@ -36,6 +36,7 @@ function getLoginToken(user) {
 
 function validateToken(loginToken) {
     try {
+        console.log('loginToken',loginToken )
         const json = cryptr.decrypt(loginToken)
         console.log('json in row 39', json)
         const loggedinUser = JSON.parse(json)
