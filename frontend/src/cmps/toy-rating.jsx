@@ -11,7 +11,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 export const RatingValue = ({ handleRatingChange, toy, username }) => {
     const [value, setValue] = useState(0)
     const [isFilled, setIsFilled] = useState(true)
-    
+        
     const getStyle = () => {
         return isFilled ? { '& .MuiRatingIconFilled': { color: '#ff8eb0' } } : { '& .MuiRatingIconHover': { color: '#ff004c' } }
     }
@@ -21,7 +21,7 @@ export const RatingValue = ({ handleRatingChange, toy, username }) => {
         let rateIndex = toy.rating.findIndex(r => r.username === username);
         if (rateIndex === -1) {
             toy.rating.push({ username: username, rating: newValue });
-        } else {
+            } else {
             toy.rating[rateIndex] = { username: username, rating: newValue };
         }
         handleRatingChange(toy);
@@ -37,6 +37,7 @@ export const RatingValue = ({ handleRatingChange, toy, username }) => {
     }
     const avgRating = getAvg(toy.rating)
     const rateStyle = getStyle()
+    
     return (
         <>
             <Rating
@@ -49,7 +50,7 @@ export const RatingValue = ({ handleRatingChange, toy, username }) => {
                 emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
                 onChange={(event, newValue) => handleOnChange(event, username, newValue, toy)}
             />
-            {avgRating!==undefined && avgRating !== null && <h4><h4>Avg: </h4><span>{avgRating}</span></h4>}
+            {avgRating!==undefined && avgRating !== null && <h4><h4>Avg: </h4><span>{avgRating}</span> (<span className="number-rates">{toy.rating.length}</span>)</h4>}
             {!avgRating && avgRating!==0 && <span>no ratings yet</span>}
         </>
 
