@@ -1692,3 +1692,52 @@
 19.5.2022, 15:53:10 - INFO - User login:  | {"_id":"6282958732a36c17e311f8cc","isAdmin":"true","username":"muki","fullname":"muki muki"} 
 19.5.2022, 15:53:15 - DEBUG - Getting Toys 
 19.5.2022, 15:54:12 - DEBUG - Getting Toys 
+19.5.2022, 16:32:03 - INFO - user logged out 
+19.5.2022, 16:32:03 - INFO - user logged out 
+19.5.2022, 16:32:03 - INFO - user logged out 
+19.5.2022, 16:32:03 - DEBUG - Getting Toys 
+19.5.2022, 16:32:03 - INFO - user logged out 
+19.5.2022, 16:32:03 - INFO - user logged out 
+19.5.2022, 16:32:03 - INFO - user logged out 
+19.5.2022, 16:32:03 - INFO - user logged out 
+19.5.2022, 16:32:03 - INFO - user logged out 
+19.5.2022, 16:32:46 - DEBUG - Getting Toys 
+19.5.2022, 16:33:14 - DEBUG - Getting Toys 
+19.5.2022, 16:33:16 - DEBUG - Getting Toys 
+19.5.2022, 16:33:26 - DEBUG - auth.service - login with username: muki 
+19.5.2022, 16:33:26 - INFO - User login:  | {"_id":"6282958732a36c17e311f8cc","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+19.5.2022, 16:33:42 - INFO - user logged out 
+19.5.2022, 16:33:48 - DEBUG - auth.service - login with username: ziki 
+19.5.2022, 16:33:49 - INFO - User login:  | {"_id":"6282958732a36c17e311f8d0","isAdmin":"false","username":"ziki","fullname":"ziki ziki"} 
+19.5.2022, 16:33:55 - DEBUG - Getting Toys 
+19.5.2022, 16:33:55 - DEBUG - Getting Toys 
+19.5.2022, 16:33:56 - DEBUG - Getting Toys 
+19.5.2022, 16:33:56 - DEBUG - Getting Toys 
+19.5.2022, 16:34:49 - INFO - Server is running on port: 3030 
+19.5.2022, 16:34:56 - INFO - user logged out 
+19.5.2022, 16:35:03 - DEBUG - auth.service - login with username: ziki 
+19.5.2022, 16:35:03 - INFO - User login:  | {"_id":"6282958732a36c17e311f8d0","isAdmin":"false","username":"ziki","fullname":"ziki ziki"} 
+19.5.2022, 16:36:58 - INFO - Server is running on port: 3030 
+19.5.2022, 16:39:23 - INFO - Server is running on port: 3030 
+19.5.2022, 16:39:31 - INFO - from toy.controller - addToy(req, res) | {"name":"sss","price":333,"labels":["box game"],"createdAt":1652967565113,"review":"Best ever","inStock":true,"img":""} 
+19.5.2022, 16:39:31 - INFO - from toy.controller - addToy(req, res) | {"name":"sss","price":333,"labels":["box game"],"createdAt":1652967565113,"review":"Best ever","inStock":true,"img":"","_id":"62864893aa8dfd3d6cd69f1d"} 
+19.5.2022, 16:39:31 - DEBUG - Getting Toys 
+19.5.2022, 16:39:49 - INFO - Server is running on port: 3030 
+19.5.2022, 16:39:58 - INFO - from toy.controller - addToy(req, res) | {"name":"s","price":1,"labels":["on wheels"],"createdAt":1652967591207,"review":"Best ever","inStock":true,"img":""} 
+19.5.2022, 16:39:58 - INFO - from toy.controller - addToy(req, res) | {"name":"s","price":1,"labels":["on wheels"],"createdAt":1652967591207,"review":"Best ever","inStock":true,"img":"","_id":"628648ae75cae1293ca79988"} 
+19.5.2022, 16:39:58 - DEBUG - Getting Toys 
+19.5.2022, 16:42:18 - INFO - Server is running on port: 3030 
+19.5.2022, 16:42:25 - DEBUG - Getting Toys 
+19.5.2022, 16:42:26 - INFO - user logged out 
+19.5.2022, 16:42:34 - DEBUG - auth.service - login with username: muki 
+19.5.2022, 16:42:35 - INFO - User login:  | {"_id":"6282958732a36c17e311f8cc","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+19.5.2022, 16:42:44 - INFO - from toy.controller - addToy(req, res) | {"name":"111","price":1,"labels":["on wheels"],"createdAt":1652967759104,"review":"Best ever","inStock":true,"img":""} 
+19.5.2022, 16:42:44 - INFO - from toy.controller - addToy(req, res) | {"name":"111","price":1,"labels":["on wheels"],"createdAt":1652967759104,"review":"Best ever","inStock":true,"img":"","_id":"6286495407c2116c04477177"} 
+19.5.2022, 16:42:45 - DEBUG - Getting Toys 
+19.5.2022, 16:42:51 - INFO - from toy.controller - addToy(req, res) | {"name":"2222","price":1,"labels":["art"],"createdAt":1652967766365,"review":"Best ever","inStock":true,"img":""} 
+19.5.2022, 16:42:51 - INFO - from toy.controller - addToy(req, res) | {"name":"2222","price":1,"labels":["art"],"createdAt":1652967766365,"review":"Best ever","inStock":true,"img":"","_id":"6286495b07c2116c04477178"} 
+19.5.2022, 16:42:51 - DEBUG - Getting Toys 
+19.5.2022, 16:42:58 - INFO - from toy.controller - addToy(req, res) | {"name":"3333","price":10,"labels":["art"],"createdAt":1652967772346,"review":"Best ever","inStock":true,"img":""} 
+19.5.2022, 16:42:58 - INFO - from toy.controller - addToy(req, res) | {"name":"3333","price":10,"labels":["art"],"createdAt":1652967772346,"review":"Best ever","inStock":true,"img":"","_id":"6286496207c2116c04477179"} 
+19.5.2022, 16:42:58 - DEBUG - Getting Toys 
+19.5.2022, 16:43:45 - INFO - Server is running on port: 3030 

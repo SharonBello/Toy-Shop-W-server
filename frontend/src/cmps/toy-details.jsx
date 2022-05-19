@@ -26,7 +26,7 @@ export const ToyDetails = (props) => {
         console.log('params',params )
         dispatch(getById(params.toyId))
         dispatch(loadReviews({byToyId:params.toyId}))
-    },[])
+    })
 
     // componentDidMount() {
     //     const { toyId } = this.props.match.params

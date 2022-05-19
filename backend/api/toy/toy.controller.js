@@ -67,6 +67,7 @@ async function updateToy(req, res) {
 
 // DELETE (Remove toy)
 async function removeToy(req, res) {
+  
   try {
     const toyId = req.params.id;
     const removedId = await toyService.remove(toyId)
