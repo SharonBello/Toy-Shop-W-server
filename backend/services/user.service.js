@@ -26,9 +26,8 @@ function login(credentials) {
             _handleLogin(user)
         return user
     })
-
-
 }
+
 function signup(userInfo) {
     // userInfo.balance = 1000
     // userInfo.prefs = { color: '#0000ff', bgColor: '#c1c1c1' }
@@ -50,6 +49,7 @@ function signup(userInfo) {
 //             return user.balance
 //         })
 // }
+
 function logout() {
     sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, null)
     return Promise.resolve()

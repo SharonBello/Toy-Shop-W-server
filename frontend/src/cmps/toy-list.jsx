@@ -1,6 +1,6 @@
 import { ToyPreview } from "./toy-preview.jsx"
 
-export function ToyList({ toys, onRemoveToy }) {
+export function ToyList({ toys, onRemoveToy, handleRatingChange, username }) {
     return (
 
         <ul className="toy-list clean-list">
@@ -9,7 +9,8 @@ export function ToyList({ toys, onRemoveToy }) {
                     key={toy._id}
                     toy={toy}
                     onRemoveToy={onRemoveToy}
-
+                    handleRatingChange={handleRatingChange}
+                    username={username}
                 />
             )}
         </ul>

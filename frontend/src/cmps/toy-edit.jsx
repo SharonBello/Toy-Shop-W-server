@@ -78,7 +78,8 @@ class _ToyEdit extends React.Component {
             createdAt: Date.now(),
             review: 'Best ever',
             inStock: true,
-            img: ''
+            img: '',
+            rate: [],
             // description: utilService.makeLorem()
         }
     }

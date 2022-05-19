@@ -14,7 +14,8 @@ export const toyService = {
     getAllToys,
     getNumOfPages,
     subscribe,
-    unsubscribe
+    unsubscribe,
+    saveUserRating
 }
 const PAGE_SIZE = 4
 const BASE_URL =
@@ -90,4 +91,10 @@ function subscribe(listener) {
 
 function unsubscribe(listener) {
     toyChannel.removeEventListener('message', listener)
+}
+
+async function saveUserRating(toy) {
+    const savedToy = await axios.put(BASE_URL + toy._id, toy)
+    console.log(savedToy)
+    // return savedToy
 }

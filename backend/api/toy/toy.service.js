@@ -4,12 +4,13 @@ const reviewService = require('../review/review.service')
 const ObjectId = require('mongodb').ObjectId
 
 async function query(filterBy) {
-    console.log('filterBy in toy service query', filterBy)
+    // console.log('filterBy in toy service query', filterBy)
     try {
         const criteria = _buildCriteria(filterBy)
         // const criteria = {}
 
         const collection = await dbService.getCollection('toy')
+        // console.log('toy.service - line 13 - collection', collection)
 
         let sortBy = filterBy.sortBy 
         let sortType = 1
@@ -53,13 +54,10 @@ function _buildCriteria(filterBy) {
     //     toys = toys.slice(startIdx, startIdx + PAGE_SIZE)
     // }
 
-    console.log('criteria', criteria, 'sortBy',filterBy.sortBy)
+    // console.log('criteria', criteria, 'sortBy',filterBy.sortBy)
 
     return criteria
 }
-
-
-
 
 async function getById(toyId) {
     try {
@@ -123,11 +121,26 @@ async function update(toy) {
     }
 }
 
+async function updateUserRating(toy, rating) {
+    try {
+        let id = ObjectId(toy._id)
+        const collection = await dbService.getCollection('toy')
+        const updatedToy = await collection.updateOne({ _id: id }, { $set: { ...toy, rating: rating } })
+        console.log('toy.service - 134 toy', toy)
+        console.log('toy.service - 135 updatedToy', updatedToy)
+        return updatedToy
+    } catch (err) {
+        logger.error('cannot add review', err)
+        throw err
+    }
+}
+
 module.exports = {
     remove,
     query,
     getById,
     add,
     update,
+    updateUserRating,
     addUserReview
 }

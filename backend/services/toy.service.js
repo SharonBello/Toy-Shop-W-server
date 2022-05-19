@@ -17,7 +17,7 @@ module.exports = {
 }
 
 //filter
-function query({ txt = '', pageIdx = 0, labels = [], sortBy = 'name', inStock = true }) {
+function query({ txt = '', pageIdx = 0, labels = [], sortBy = 'name', inStock = true, rating = 0 }) {
     let toys = gToys
     if (txt) {
         const regex = new RegExp(txt, 'i')
@@ -61,7 +61,6 @@ function query({ txt = '', pageIdx = 0, labels = [], sortBy = 'name', inStock = 
     return Promise.resolve(toys)
 }
 
-
 function getLabels() {
     return gLabels
 }
@@ -79,6 +78,7 @@ function save(toy) {
         gToys[idx].img = toy.img
         gToys[idx].inStock = toy.inStock
         gToys[idx].labels = toy.labels
+        gToys[idx].rating = toy.rating
     } else {
         toy._id = utilService.makeId()
         gToys.unshift(toy)
@@ -102,7 +102,8 @@ function getEmptyToy() {
         createdAt: Date.now(),
         review: 'Best ever',
         inStock: true,
-        img: ''
+        img: '',
+        rating: 0
     }
 }
 
@@ -110,8 +111,6 @@ function getNumOfPages() {
     return gToys.length / PAGE_SIZE
     // return JSON.parse(localStorage.getItem(STORAGE_KEY)).length / PAGE_SIZE
 }
-
-
 
 function _saveToysToFile() {
     return new Promise((resolve, reject) => {
