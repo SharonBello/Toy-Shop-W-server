@@ -17,7 +17,7 @@ module.exports = {
 }
 
 //filter
-function query({ txt = '', pageIdx = 0, labels = [], sortBy = 'name', inStock = true }) {
+function query({ txt = '', pageIdx = 0, labels = [], sortBy = 'name', inStock = true, rating = 0 }) {
     let toys = gToys
     if (txt) {
         const regex = new RegExp(txt, 'i')
@@ -61,7 +61,6 @@ function query({ txt = '', pageIdx = 0, labels = [], sortBy = 'name', inStock = 
 
     return Promise.resolve(toys)
 }
-
 
 function getLabels() {
     return gLabels
@@ -113,8 +112,6 @@ function getNumOfPages() {
     return gToys.length / PAGE_SIZE
     // return JSON.parse(localStorage.getItem(STORAGE_KEY)).length / PAGE_SIZE
 }
-
-
 
 function _saveToysToFile() {
     return new Promise((resolve, reject) => {

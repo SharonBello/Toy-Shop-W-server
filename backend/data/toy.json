@@ -9,7 +9,7 @@
     "review": "Best ever",
     "inStock": true,
     "img": "",
-    "rating": 0
+    "rating": []
   },
   {
     "name": "Disney Toy Story Buzz Plush",
@@ -22,7 +22,7 @@
     "inStock": true,
     "img": "",
     "review": "Best ever",
-    "rating": 0
+    "rating": []
   },
   {
     "name": "Thomas & Friends",
@@ -35,7 +35,7 @@
     "inStock": true,
     "img": "",
     "review": "Best ever",
-    "rating": 0
+    "rating": []
   },
   {
     "name": "Lego Gear Bots",
@@ -47,7 +47,7 @@
     "inStock": true,
     "img": "",
     "review": "Best ever",
-    "rating": 0
+    "rating": []
   },
   {
     "name": "Spectrum Flip Kite",
@@ -59,7 +59,7 @@
     "inStock": true,
     "img": "",
     "review": "Best ever",
-    "rating": 0
+    "rating": []
   },
   {
     "name": "Jungle Escape Puzzle",
@@ -72,7 +72,7 @@
     "inStock": true,
     "img": "",
     "review": "Best ever",
-    "rating": 0
+    "rating": []
   },
   {
     "name": "Coming soon...",
@@ -84,6 +84,6 @@
     "inStock": false,
     "img": "",
     "review": "Best ever",
-    "rating": 0
+    "rating": []
   }
 ]

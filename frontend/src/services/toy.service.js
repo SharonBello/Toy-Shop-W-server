@@ -84,4 +84,5 @@ function unsubscribe(listener) {
 async function saveUserRating(toy) {
     const savedToy = await axios.put(BASE_URL + toy._id, toy)
     console.log(savedToy)
+    // return savedToy
 }

@@ -15,7 +15,7 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import EditIcon from '@mui/icons-material/Edit';
 import RateReviewIcon from '@mui/icons-material/RateReview';
 
-export const ToyPreview = ({ toy, onRemoveToy, handleRatingChange }) => {
+export const ToyPreview = ({ toy, onRemoveToy, handleRatingChange, username }) => {
     
     return (
         <li className="toy-preview">
@@ -70,7 +70,7 @@ export const ToyPreview = ({ toy, onRemoveToy, handleRatingChange }) => {
                     </Stack>
                 </CardActions>
                 <Stack spacing={2}>
-                <RatingValue handleRatingChange={handleRatingChange} toy={toy}/>
+                <RatingValue handleRatingChange={handleRatingChange} toy={toy} username={username} />
                 </Stack>
             </Card>
         </li>
