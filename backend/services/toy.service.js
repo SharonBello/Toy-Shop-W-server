@@ -23,7 +23,6 @@ function query({ txt = '', pageIdx = 0, labels = [], sortBy = 'name', inStock = 
         const regex = new RegExp(txt, 'i')
         toys = toys.filter(toy => regex.test(toy.name) || regex.test(toy.ctg))
     }
-    console.log('labels from row 26', labels)
 
     if (labels?.length > 0) {
         toys = toys.filter(toy => {

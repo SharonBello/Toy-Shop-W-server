@@ -16,7 +16,6 @@ async function login(username, password) {
     // if (!match) return Promise.reject('Invalid username or password')
     
     delete user.password
-    console.log('user in auto service row 13',user )
     return user
 }
 
@@ -36,11 +35,9 @@ function getLoginToken(user) {
 
 function validateToken(loginToken) {
     try {
-        console.log('loginToken',loginToken )
+
         const json = cryptr.decrypt(loginToken)
-        console.log('json in row 39', json)
         const loggedinUser = JSON.parse(json)
-        console.log('loggedinUser in row 41',loggedinUser )
         return loggedinUser
     } catch(err) {
         console.log('Invalid login token')

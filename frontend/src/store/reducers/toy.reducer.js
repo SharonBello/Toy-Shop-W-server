@@ -18,7 +18,6 @@ export function toyReducer(state = initialState, action) {
 
     switch (action.type) {
         case 'SET_TOYS':
-            console.log('action.toys', action.toys)
             return { ...state, toys: action.toys }
         case 'ADD_TOY':
             toys = [action.toy, ...state.toys]

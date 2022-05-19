@@ -1,4 +1,4 @@
-import axios from 'axios'
+import Axios from 'axios'
 import { getActionRemoveToy, getActionAddToy, getActionUpdateToy } from '../store/actions/toy.action.js'
 import { httpService } from './http.service.js'
 
@@ -12,33 +12,38 @@ export const toyService = {
     save,
     remove,
     getAllToys,
+    getNumOfPages,
     subscribe,
     unsubscribe,
     saveUserRating
 }
-
+const PAGE_SIZE = 4
 const BASE_URL =
     process.env.NODE_ENV === 'production'
         ? '/api/toy/'
         : 'http://localhost:3030/api/toy/'
 
-// var axios = Axios.create({
-//     withCredentials: true,
-// })
+var axios = Axios.create({
+    withCredentials: true,
+})
 
 function getAllToys() {
     query()
         .then(toys => toys)
 }
 
-async function query(filterBy){
+async function query(filterBy = {} ){
     console.log('filter by - query -toy.service', filterBy)
-    const {txt = '', inStock = '', labels ='', pageIdx = '', sortBy = ''} = filterBy
+    
+    const {txt = '', inStock = '', labels ='', pageIdx = '', sortBy = 'createdAt'} = filterBy
     const url = `?txt=${txt}&inStock=${inStock}&labels=${labels}&pageIdx=${pageIdx}&sortBy=${sortBy}`
-
     const urlToRequest = BASE_URL+url
     const toys = await axios.get(urlToRequest)
-    return toys.data
+    if(pageIdx === '') return toys
+    let fromIdx = +filterBy.pageIdx * PAGE_SIZE
+    let toysByPage = toys.data.slice(fromIdx, fromIdx+PAGE_SIZE)
+    // return toys.data
+    return toysByPage
 }
 
 function getById(toyId) {
@@ -56,7 +61,6 @@ async function remove(toyId) {
 }
 
 async function save(toy) {
-    console.log('toy', toy)
     var savedToy
     if (toy._id) {
         console.log('BASE_URL + toy._id',BASE_URL + toy._id )
@@ -65,12 +69,20 @@ async function save(toy) {
         savedToy = savedToy.data
         toyChannel.postMessage(getActionUpdateToy(savedToy))
     } else {
-        console.log('BASE_URL',BASE_URL)
         savedToy = await axios.post(BASE_URL, toy)
         savedToy = savedToy.data
         toyChannel.postMessage(getActionAddToy(savedToy))
     }
     return savedToy
+}
+
+
+async function getNumOfPages() {
+
+    const toys = await query()    
+    const toysQty = toys.data.length / PAGE_SIZE
+    return toysQty
+    // return JSON.parse(localStorage.getItem(STORAGE_KEY)).length / PAGE_SIZE
 }
 
 function subscribe(listener) {

@@ -13,15 +13,13 @@ async function query(filterBy) {
         // console.log('toy.service - line 13 - collection', collection)
 
         let sortBy = filterBy.sortBy 
-        // console.log('sortBy',sortBy )
         let sortType = 1
         if(sortBy === 'recent') {
             sortBy = 'createdAt'
             sortType = -1
         }
-        let toys = await collection.find(criteria).sort({[sortBy]:sortType}).skip(0).toArray()
-        // createdAt
-        // console.log('toy.service - line 24 - toys', toys)
+        let toys = await collection.find(criteria).sort({[sortBy]:sortType}).toArray()
+
         return toys
     } catch (err) {
         logger.error('cannot find toys', err)
@@ -31,11 +29,9 @@ async function query(filterBy) {
 
 
 function _buildCriteria(filterBy) {
-    // console.log('filterBy in toy service line 23',filterBy )
     let criteria = {}
     if (filterBy.txt) {
         const txtCriteria = { $regex: filterBy.txt, $options: 'i' }
-        console.log('txtCriteria', txtCriteria)
         criteria.$or = [
             {
                 name: txtCriteria
@@ -76,7 +72,6 @@ async function getById(toyId) {
 
 async function remove(toyId) {
     try {
-        // console.log('toyId', toyId)
         const collection = await dbService.getCollection('toy')
         await collection.deleteOne({ _id: ObjectId(toyId) })
         return toyId
