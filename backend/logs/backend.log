@@ -1683,3 +1683,12 @@
 >>>>>>> b4e486dc1a69b8d24183d5cfed26f6977092e896
 19.5.2022, 14:56:29 - DEBUG - Getting Toys 
 19.5.2022, 14:57:07 - INFO - Server is running on port: 3030 
+19.5.2022, 14:58:14 - DEBUG - Getting Toys 
+19.5.2022, 14:59:48 - DEBUG - Getting Toys 
+19.5.2022, 14:59:53 - DEBUG - Getting Toys 
+19.5.2022, 14:59:57 - DEBUG - Getting Toys 
+19.5.2022, 15:00:02 - DEBUG - Getting Toys 
+19.5.2022, 15:53:10 - DEBUG - auth.service - login with username: muki 
+19.5.2022, 15:53:10 - INFO - User login:  | {"_id":"6282958732a36c17e311f8cc","isAdmin":"true","username":"muki","fullname":"muki muki"} 
+19.5.2022, 15:53:15 - DEBUG - Getting Toys 
+19.5.2022, 15:54:12 - DEBUG - Getting Toys 
