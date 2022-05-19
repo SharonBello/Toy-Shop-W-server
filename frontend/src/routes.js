@@ -23,9 +23,5 @@ export default [{
     {
         path: '/',
         component: HomePage,
-    },
-        // {
-    //     path: '/user',
-    //     component: UserProfile,
-    // }
+    }
 ]

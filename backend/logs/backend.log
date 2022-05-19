@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 18.5.2022, 22:50:26 - INFO - Server is running on port: 3030 
 18.5.2022, 22:50:32 - INFO - user logged out 
 18.5.2022, 22:50:38 - DEBUG - auth.service - login with username: muki 
@@ -1678,3 +1679,7 @@
 19.5.2022, 14:54:04 - DEBUG - Getting Toys 
 19.5.2022, 14:54:04 - DEBUG - Getting Toys 
 19.5.2022, 14:54:30 - DEBUG - Getting Toys 
+=======
+>>>>>>> b4e486dc1a69b8d24183d5cfed26f6977092e896
+19.5.2022, 14:56:29 - DEBUG - Getting Toys 
+19.5.2022, 14:57:07 - INFO - Server is running on port: 3030 
