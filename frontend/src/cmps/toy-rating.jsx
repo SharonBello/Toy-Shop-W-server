@@ -50,7 +50,7 @@ export const RatingValue = ({ handleRatingChange, toy, username }) => {
                 emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
                 onChange={(event, newValue) => handleOnChange(event, username, newValue, toy)}
             />
-            {avgRating!==undefined && avgRating !== null && <h4><h4>Avg: </h4><span>{avgRating}</span> (<span>{toy.rating.length}</span>)</h4>}
+            {avgRating!==undefined && avgRating !== null && <h4><h4>Avg: </h4><span>{avgRating}</span> (<span className="number-rates">{toy.rating.length}</span>)</h4>}
             {!avgRating && avgRating!==0 && <span>no ratings yet</span>}
         </>
 
