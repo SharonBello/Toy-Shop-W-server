@@ -9,6 +9,7 @@ export function getActionRemoveReview(reviewId) {
   }
 
 export function loadReviews(filterBy){
+  console.log('FILTER BY LINE 12 ACTIONS', filterBy)
   return async dispatch => {
     try {
       const reviews = await reviewService.query(filterBy)

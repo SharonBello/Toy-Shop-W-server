@@ -75,7 +75,10 @@ export const AppHeader = (props) => {
                         <ul className="main-nav clean-list flex">
                             <li className="home-link btn-light"><NavLink to="/">Home</NavLink></li>
                             <li className="btn-light"><NavLink to="/toy">Toys</NavLink></li>
-                            <li className=" btn-light"><NavLink to="/about">About</NavLink></li>
+                            <li className="btn-light"><NavLink to="/reviews-explore">Reviews</NavLink></li>
+                            <li className="btn-light"><NavLink to="/about">About</NavLink></li>
+                            {user && <li className="btn-light"><NavLink to="/user-details">User Page</NavLink></li>}
+                            <li className="btn-light"><NavLink to="/charts">Charts</NavLink></li>
                         </ul>
                     </div>
 
