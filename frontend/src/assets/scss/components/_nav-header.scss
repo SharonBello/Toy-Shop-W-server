@@ -11,7 +11,7 @@ header.header-nav {
   width: 100%;
   line-height: 20px;
   flex: 1 0 140px;
-  
+
   .main-header-nav {
     display: flex;
     flex-direction: row;
@@ -78,7 +78,7 @@ header.header-nav {
         margin: 0;
         padding: 0;
       }
-      
+
       &:focus-visible:before {
         transition: box-shadow .2s;
       }
@@ -103,13 +103,13 @@ header.header-nav {
         margin: 0;
         padding: 0;
         height: 100%;
-        
+
         & svg {
           margin: 0;
           padding: 0;
           width: 100%;
           height: 100%;
-       }
+        }
       }
 
       .logo-name {
@@ -118,7 +118,7 @@ header.header-nav {
         display: none;
         margin-left: 0.3em;
       }
-      
+
       @media (min-width: 1128px) {
         .logo-name {
           color: #ff385c;
@@ -309,17 +309,27 @@ header.header-nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+    // flex: 1 0 140px;
+    -webkit-box-pack: end !important;
+    -webkit-box-align: center !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    height: 80px !important;
+
     .sale-offers {
-      a.c1jdlqzl.c177491c.dir.dir-ltr {
+      -webkit-box-pack: end !important;
+      display: flex !important;
+      flex: auto !important;
+      justify-content: flex-end !important;
+      margin-right: 8px !important;
+
+      & button {
         appearance: none;
         background-color: transparent;
         border-width: 0;
-        box-sizing: border-box;
-        color: #222;
         cursor: pointer;
-        display: inline-block;
-        font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
         font-size: 14px;
         font-weight: 600;
         line-height: 18px;
@@ -329,16 +339,14 @@ header.header-nav {
         padding: 12px;
         position: relative;
         text-align: start;
-        text-decoration: none;
         transition: color 250ms;
         user-select: auto;
         white-space: nowrap;
-        z-index: 1;
-      
+
         &:hover:before {
           background: #f7f7f7;
         }
-      
+
         &:before {
           border-radius: 22px;
           bottom: 0;
@@ -349,44 +357,119 @@ header.header-nav {
           top: 0;
           z-index: 0;
         }
-      
+
         &:focus-visible {
           z-index: 2;
         }
-      
+
         &:focus-visible:before {
           transition: box-shadow .2s;
         }
-      
+
         &:focus[data-focus-visible-added] {
           z-index: 2;
         }
-      
+
         &:focus[data-focus-visible-added]:before {
           transition: box-shadow .2s;
         }
       }
-      
+
       @media (prefers-reduced-motion: reduce) {
-        .dir.c1jdlqzl[class][class]:focus-visible::before {
+        .sale-offers[class][class]:focus-visible::before {
           transition: none 0s;
         }
       }
-      
+
       @media (prefers-reduced-motion: reduce) {
-        .dir.c1jdlqzl[class][class]:focus[data-focus-visible-added]::before {
+        .sale-offers[class][class]:focus[data-focus-visible-added]::before {
           transition: none 0s;
         }
       }
-      
-      div.l1hgmivi.dir.dir-ltr {
+
+      .promo-btn span {
         -webkit-box-align: center;
         align-items: center;
         box-sizing: border-box;
         color: #222;
         cursor: pointer;
         display: flex;
-        font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+        font-family: roboto;
+        font-size: 14px;
+        font-weight: 400;
+        height: 100%;
+        line-height: 18px;
+        position: relative;
+        white-space: nowrap;
+        z-index: 1;
+      }
+    }
+
+    .lan-switch-container {
+      position: relative !important;
+      display: inline !important;
+
+      & button {
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        text-align: inherit;
+        padding: 12px;
+
+        &:hover:before {
+          background: #f7f7f7;
+          z-index: -5;
+        }
+
+        &:before {
+          content: "";
+          border-radius: 22px;
+          bottom: 0;
+          left: -3px;
+          position: absolute;
+          right: -3px;
+          top: 0;
+          z-index: 0;
+        }
+
+        &:focus-visible {
+          z-index: 2;
+        }
+
+        &:focus-visible:before {
+          transition: box-shadow .2s;
+        }
+
+        &:focus[data-focus-visible-added] {
+          z-index: 2;
+        }
+
+        &:focus[data-focus-visible-added]:before {
+          transition: box-shadow .2s;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .lan-switch-container[class][class]:focus-visible::before {
+          transition: none 0s;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .lan-switch-container[class][class]:focus[data-focus-visible-added]::before {
+          transition: none 0s;
+        }
+      }
+
+      .lang-switch {
+        -webkit-box-align: center;
+        align-items: center;
+        box-sizing: border-box;
+        color: #222;
+        cursor: pointer;
+        display: flex;
         font-size: 14px;
         font-weight: 600;
         height: 100%;
@@ -395,7 +478,115 @@ header.header-nav {
         white-space: nowrap;
         z-index: 1;
       }
+
+      button.lang-switch svg {
+        box-sizing: border-box;
+        display: block;
+        fill: currentcolor;
+        height: 20px;
+        width: 20px;
+
+        & path {
+          box-sizing: border-box;
+        }
+      }
+    }
+
+      .user-actions-login-out {
+        box-sizing: border-box;
+        color: #222;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-family: roboto;
+        line-height: 20px;
+        position: relative;
+        width: 10em;
+        gap: 0.5em;
+        // margin-left:1em;
+    
+      & button.user-btn {
+        -webkit-box-align: center;
+        align-items: center !important;
+        appearance: none;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-image: none 100% 1 0 stretch;
+        border-radius: 50% !important;
+        box-sizing: border-box;
+        color: #222;
+        cursor: pointer;
+        width: 42px;
+        aspect-ratio: 1/1 !important;
+        display: flex;
+        flex-direction: column;
+        justify-content:center !important;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        height: 42px;
+        line-height: inherit;
+        margin: 0;
+        outline: none;
+        overflow: visible;
+        padding: 5px;
+        margin: auto 0;
+        position: relative;
+        text-align: inherit;
+        text-decoration: none;
+        transition: box-shadow .2s;
+        user-select: auto;
+        vertical-align: middle;
+        z-index: 1;
+        
+        &:focus-visible {
+          transition-delay: 0s;
+          transition-duration: .2s;
+          transition-timing-function: ease;
+        }
+        
+        &:focus[data-focus-visible-added] {
+          transition-delay: 0s;
+          transition-duration: .2s;
+          transition-timing-function: ease;
+        }
+        
+        &:hover {
+          box-shadow: 0 2px 4px rgba(0,0,0,.18);
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+          button.user-btn {
+            transition: none 0s;
+          }
+          
+          &:focus-visible {
+            transition: none 0s;
+          }
+          
+          &:focus[data-focus-visible-added] {
+            transition: none 0s;
+          }
+        }
+      }
+      
+      .user-dot {
+        background-color: #ff385c;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1.5px #fff;
+        box-sizing: border-box;
+        color: #222;
+        cursor: pointer;
+        font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+        height: 10px;
+        line-height: 20px;
+        min-width: 10px;
+        position: absolute;
+        right: 4px;
+        top: 2px;
+        z-index: 6;
+      }
     }
   }
-
 }
