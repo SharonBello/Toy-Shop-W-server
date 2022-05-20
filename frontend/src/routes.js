@@ -5,6 +5,7 @@ import { About} from '../src/pages/about-us.jsx'
 import { HomePage } from '../src/pages/home-page.jsx'
 import { ReviewsExplore } from './pages/reviews-explore.jsx'
 import {UserDetails} from './pages/user-details.jsx'
+import {MyChart} from '../src/cmps/MyChart.jsx'
 
 
 export default [{
@@ -34,6 +35,10 @@ export default [{
     {
         path: '/reviews-explore',
         component: ReviewsExplore,
+    },
+    {
+        path: '/charts',
+        component: MyChart
     }
         // {
     //     path: '/user',
