@@ -13,6 +13,7 @@ function _App(props) {
         <div className="center-container">
       <AppTopHeader /> 
       <AppNavHeader /> 
+        <div className="filter-container"></div>
         <main className="main-content-container">
           <Switch>
           {routes.map(route => (

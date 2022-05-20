@@ -1,9 +1,25 @@
+.filter-container {
+    padding: block-start;
+    position: sticky;
+    width: 100%;
+    height: 78px;
+    background-color:green;    
+}
 .toy-filter-container {
-  align-items: center;
-  gap: rem(20px);
-  margin-left: rem(20px);
-  margin-top: rem(50px);
-    
+    color: #222;
+    display: grid;
+        font-family: circular;
+        grid-template-columns: 100%;
+        line-height: 20px;
+        margin-inline-end: auto;
+        margin-inline-start: auto;
+        max-height: 78px;
+        max-height: 78px;
+        max-width: 1760px;
+        padding-inline-end: 80px;
+        padding-inline-start: 80px;
+    }
+
   .toy-filter-no-labels {
     align-items: center;
     margin-left: rem(20px);
@@ -11,7 +27,7 @@
     .toy-label {
         flex-wrap: wrap;
     }
-}
+
 
 
 

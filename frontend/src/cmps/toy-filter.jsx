@@ -18,8 +18,9 @@ export class _ToyFilter extends React.Component {
     render() {
         const { onHandleChange, filterBy, onChangePage, labels, handleChangeLabels } = this.props
         return (
-            <div className="toy-filter-container flex flex-column">
-                <div className="toy-filter-no-labels flex flex-row">
+            <div className="toy-filter-container">
+            <div className="toy-fields-container">
+                <div className="toy-filter-no-labels">
                     <input name="txt" type="search" placeholder="Search..." value={filterBy.txt} onChange={onHandleChange} />
                     <label htmlFor='in-stock'>In stock:</label>
 
@@ -68,6 +69,7 @@ export class _ToyFilter extends React.Component {
                 {toyService.getLabels().map(label => <option key={label} value={label}>{label}</option>)}
             </select> */}
 
+            </div>
             </div>
         )
     }

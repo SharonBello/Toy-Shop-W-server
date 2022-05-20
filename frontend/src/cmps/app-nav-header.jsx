@@ -76,34 +76,27 @@ export const AppNavHeader = (props) => {
                         <button className="lang-switch"><LanguageIcon />
                         </button>
                     </div>
-                    <span className="line-sep"></span>
                     <div className="user-actions-login-out">
                         <div className="login-container">
-                            {!isSignIn && <button style={{ display: 'none' }} className="user-logout user-btn" onClick={() => onLogout()}><LogoutIcon /></button>}
-
                             <div className="login-btn-container">
                                 <button onClick={() => onOpenModal()} className="login-btn user-btn"><AccountCircleIcon /><div className="user-dot"></div></button>
-
                                 {isModalOpen && <Dialog open={true} >
                                     {!user && <LoginSignup onLogin={onLogin} onSignup={onSignup} onCloseModal={onCloseModal} />}</Dialog>}
                             </div>
                         </div>
                         <span className="line-sep"></span>
-
                         <div className="signup-btn-container ">
                             <button className="login-btn user-btn">
                                 <i className="fa-solid fa-user-plus"></i></button>
                         </div>
                         <span className="line-sep"></span>
-
                         <div className="logout-btn-container">
-                            {/* {isSignIn && <button onClick={() => onLogout()}><LogoutIcon style={{ display:'block'}}/></button>} */}
-                            {/* {!isSignIn && <button style={{ display: 'none'}} ></button>} */}
-                            {isSignIn && <button className="user-logout user-btn" onClick={() => onLogout()}><LogoutIcon /></button>}
+                            {!user && <p className="user-greet">Welcome</p>}
+                            {user && <p className="user-greet">Hello: <span>{user.username}</span></p>}
+                            {user && <button className="user-logout user-btn" onClick={() => onLogout()}><LogoutIcon /></button>}
                         </div>
+                        <span className="line-sep"></span>
                     </div>
-                    <span className="line-sep"></span>
-                    {user && <p className="user-greet">Hello: <span>{user.username}</span></p>}
                 </div>
             </section>
         </header >

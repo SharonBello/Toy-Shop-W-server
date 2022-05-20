@@ -103,3 +103,5 @@
 20.5.2022, 20:28:07 - INFO - user logged out 
 20.5.2022, 21:37:09 - DEBUG - auth.service - login with username: muki 
 20.5.2022, 21:37:09 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":true,"username":"muki","fullname":"muki muki"} 
+20.5.2022, 21:47:08 - DEBUG - auth.service - login with username: muki 
+20.5.2022, 21:47:08 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":true,"username":"muki","fullname":"muki muki"} 
