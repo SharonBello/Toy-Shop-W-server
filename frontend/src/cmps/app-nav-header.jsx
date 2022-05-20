@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 // import React from "react"
 import { NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
@@ -8,37 +8,29 @@ import { UserMsg } from './user-msg.jsx'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import Dialog from '@mui/material/Dialog'
 import LogoutIcon from '@mui/icons-material/Logout';
-import { Search, LogoFull } from "../services/svg.service.js";
+import { LogoFull } from "../services/svg.service.js";
 import LanguageIcon from '@mui/icons-material/Language';
-import { styled, alpha } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
+import { SearchSite } from "./Search.jsx";
 
 export const AppNavHeader = (props) => {
 
     const { user } = useSelector((storeState) => storeState.userModule)
     const { toys } = useSelector((storeState) => storeState.toyModule)
-    const [searchTerm, setSearchTerm] = useState('')
     const [isModalOpen, setIsModalOpen] = useState(false)
+    const [isSignIn, setIsSignIn] = useState(false)
     const dispatch = useDispatch()
 
-    const onHandleChange = ({ target }) => {
-        const field = target.name
-        let { value } = target
-        let { filterBy } = props
-        if (field === '') value = [target.value]
-        filterBy = { ...filterBy, [field]: value }
-        props.setFilter(filterBy)
+    const getSignOutBtnStyle = () => {
+        return !isSignIn ? <button style={{ display: 'block' }} onClick={() => onLogout()}><LogoutIcon /></button> : <button style={{ display: 'none' }}></button>
     }
 
-    const onLogin = (credentials) => {
-        dispatch(login(credentials))
+    const onLogin = (credentials, isSignIn) => {
+        if (isSignIn) {
+            return
+        } else {
+            dispatch(login(credentials))
+            setIsSignIn(true)
+        }
     }
 
     const onSignup = (credentials) => {
@@ -47,6 +39,7 @@ export const AppNavHeader = (props) => {
 
     const onLogout = () => {
         dispatch(logout())
+        setIsSignIn(false)
     }
 
     const onOpenModal = () => {
@@ -58,94 +51,51 @@ export const AppNavHeader = (props) => {
         ev.preventDefault()
         setIsModalOpen(false)
     }
-    const Search = styled('div')(({ theme }) => ({
-        position: 'relative',
-        borderRadius: theme.shape.borderRadius,
-        backgroundColor: alpha(theme.palette.common.white, 0.15),
-        '&:hover': {
-            backgroundColor: alpha(theme.palette.common.white, 0.25),
-        },
-        marginLeft: 0,
-        width: '100%',
-        [theme.breakpoints.up('sm')]: {
-            marginLeft: theme.spacing(1),
-            width: 'auto',
-        },
-    }));
-
-    const SearchIconWrapper = styled('div')(({ theme }) => ({
-        padding: theme.spacing(0, 2),
-        height: '100%',
-        position: 'absolute',
-        pointerEvents: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-    }));
-
-    const StyledInputBase = styled(InputBase)(({ theme }) => ({
-        color: 'inherit',
-        '& .MuiInputBase-input': {
-            padding: theme.spacing(1, 1, 1, 0),
-            // vertical padding + font size from searchIcon
-            paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-            transition: theme.transitions.create('width'),
-            width: '100%',
-            [theme.breakpoints.up('sm')]: {
-                width: '12ch',
-                '&:focus': {
-                    width: '20ch',
-                },
-            },
-        },
-    }));
-
 
     return (
+
         <header className="header-nav">
             <section className="main-header-nav">
                 <div className="logo-nav"><LogoFull /></div>
                 <div className="main-link-nav">
                     <div className="main-nav">
-                        <div className="home-link btn-light"><NavLink to="/">Home</NavLink></div>
-                        <div className="btn-light"><NavLink to="/toy">Toys</NavLink></div>
-                        <div className="btn-light"><NavLink to="/about">About</NavLink></div>
-                        <div className="search-container">
-                            <Search>
-                                <SearchIconWrapper>
-                                    <SearchIcon />
-                                </SearchIconWrapper>
-                                <StyledInputBase
-                                    placeholder="Search…"
-                                    inputProps={{ 'aria-label': 'search' }}
-                                />
-                            </Search>
-                        </div>
-                    </div>
-                    <div className="user-actions-info">
-                        <div className="sale-offers">Coupon-Code<span>SUM2022</span></div>
-                    </div>
-                    <div className="lan-switch-container">
-                        <div className="lang-switch btn-dark"><LanguageIcon />
-                        </div>
+                        <button className="home-link btn-light"><NavLink to="/">Home</NavLink></button>
+                        <span className="line-sep"></span>
+                        <button className="btn-light"><NavLink to="/toy"><div className="nav-link-txt">Toys</div></NavLink></button>
+                        <span className="line-sep"></span>
+                        <button className="btn-light"><NavLink to="/about">About</NavLink></button>
+                        <span className="line-sep"></span>
+                        <div className="search-container btn-light"><SearchSite /></div>
                     </div>
                 </div>
-
-
-                <div className="login-container">
-                    {user && <p className="user-greet">Hello: <span>{user.username}</span></p>}
-                    <div className="login-btn-container">
-                        <button onClick={() => onOpenModal()} className="login-btn"><AccountCircleIcon /></button>
-                        {isModalOpen && <Dialog open={true} >
-                            {!user && <LoginSignup onLogin={onLogin} onSignup={onSignup} onCloseModal={onCloseModal} />}</Dialog>}
+                <div className="user-actions-info">
+                    <div className="sale-offers">
+                        <button className="promo-btn">Sale <span>SUM2022</span></button>
                     </div>
-
-                    <div className="signup-btn-container ">
-                        <button className="login-btn">
-                            <i className="fa-solid fa-user-plus"></i></button>
+                    <div className="lan-switch-container">
+                        <button className="lang-switch"><LanguageIcon />
+                        </button>
                     </div>
-                    <div className="logout-btn-container">
-                        <button className="user-logout login-btn" onClick={() => onLogout()}><LogoutIcon /></button>
+                    <div className="user-actions-login-out">
+                        <div className="login-container">
+                            {!isSignIn && <button style={{ display: 'none' }} className="user-logout user-btn" onClick={() => onLogout()}><LogoutIcon /></button>}
+                            {user && <p className="user-greet">Hello: <span>{user.username}</span></p>}
+                            <div className="login-btn-container">
+                                <button onClick={() => onOpenModal()} className="login-btn user-btn"><AccountCircleIcon /></button>
+                                {isModalOpen && <Dialog open={true} >
+                                    {!user && <LoginSignup onLogin={onLogin} onSignup={onSignup} onCloseModal={onCloseModal} />}</Dialog>}
+                            </div>
+                        </div>
+
+                        <div className="signup-btn-container ">
+                            <button className="login-btn user-btn">
+                                <i className="fa-solid fa-user-plus"></i></button>
+                        </div>
+                        <div className="logout-btn-container">
+                            {/* {isSignIn && <button onClick={() => onLogout()}><LogoutIcon style={{ display:'block'}}/></button>} */}
+                            {/* {!isSignIn && <button style={{ display: 'none'}} ></button>} */}
+                            {isSignIn && <button className="user-logout user-btn" onClick={() => onLogout()}><LogoutIcon /></button>}
+                        </div>
                     </div>
                 </div>
             </section>

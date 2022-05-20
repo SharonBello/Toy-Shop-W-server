@@ -72,3 +72,32 @@
 19.5.2022, 20:09:05 - DEBUG - toy.controller 11 toys | [{"_id":"62826648d1e6dc258946156d","name":"Jungle Escape Puzzle","price":185,"labels":["puzzle","box game"],"createdAt":1652201769123,"inStock":true,"img":"","review":"Best ever","rating":[{"username":"muki","rating":1.5}]},{"_id":"62826648d1e6dc258946156b","name":"Lego Gear Bots","price":80,"labels":["box game"],"createdAt":1542107359454,"inStock":true,"img":"","review":"Best ever","rating":[{"username":"muki","rating":4.5}]},{"_id":"62826648d1e6dc258946156c","name":"Spectrum Flip Kite","price":50,"labels":["outdoor"],"createdAt":1652076934504,"inStock":true,"img":"","review":"Best ever","rating":[{"username":"tiki","rating":3}]},{"_id":"628392bbc732ec4e3835eed7","name":"blabla","price":1,"labels":["art"],"createdAt":1652789938175,"review":"Best ever","inStock":true,"img":"","rating":[{"username":"tiki","rating":4}]},{"_id":"62829a320045db3bc84e6b86","name":"fdf","price":3412,"labels":["box game"],"createdAt":1652726316540,"review":"Best ever","inStock":true,"img":"","rating":[]},{"_id":"6282a0930075df36c4bd6e89","name":"fgd","price":5443,"labels":["art"],"createdAt":1652727948405,"review":"Best ever","inStock":true,"img":"","rating":[]}] 
 20.5.2022, 2:58:37 - INFO - Server is running on port: 3030 
 20.5.2022, 10:01:13 - INFO - Server is running on port: 3030 
+20.5.2022, 20:08:40 - INFO - user logged out 
+20.5.2022, 20:08:43 - INFO - user logged out 
+20.5.2022, 20:09:03 - INFO - user logged out 
+20.5.2022, 20:10:11 - DEBUG - auth.service - login with username: muki 
+20.5.2022, 20:10:12 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":true,"username":"muki","fullname":"muki muki"} 
+20.5.2022, 20:12:23 - INFO - user logged out 
+20.5.2022, 20:15:53 - DEBUG - auth.service - login with username: muki 
+20.5.2022, 20:15:53 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":true,"username":"muki","fullname":"muki muki"} 
+20.5.2022, 20:16:50 - INFO - user logged out 
+20.5.2022, 20:17:16 - INFO - user logged out 
+20.5.2022, 20:18:19 - DEBUG - auth.service - login with username: muki 
+20.5.2022, 20:18:19 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":true,"username":"muki","fullname":"muki muki"} 
+20.5.2022, 20:18:22 - INFO - user logged out 
+20.5.2022, 20:19:12 - DEBUG - auth.service - login with username: muki 
+20.5.2022, 20:19:12 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":true,"username":"muki","fullname":"muki muki"} 
+20.5.2022, 20:19:16 - INFO - user logged out 
+20.5.2022, 20:20:19 - INFO - user logged out 
+20.5.2022, 20:23:07 - DEBUG - auth.service - login with username: muki 
+20.5.2022, 20:23:07 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":true,"username":"muki","fullname":"muki muki"} 
+20.5.2022, 20:23:12 - INFO - user logged out 
+20.5.2022, 20:25:59 - DEBUG - auth.service - login with username: muki 
+20.5.2022, 20:26:00 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":true,"username":"muki","fullname":"muki muki"} 
+20.5.2022, 20:26:03 - INFO - user logged out 
+20.5.2022, 20:27:33 - DEBUG - auth.service - login with username: muki 
+20.5.2022, 20:27:33 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":true,"username":"muki","fullname":"muki muki"} 
+20.5.2022, 20:27:57 - INFO - user logged out 
+20.5.2022, 20:28:04 - DEBUG - auth.service - login with username: muki 
+20.5.2022, 20:28:04 - INFO - User login:  | {"_id":"62826667d1e6dc2589461573","isAdmin":true,"username":"muki","fullname":"muki muki"} 
+20.5.2022, 20:28:07 - INFO - user logged out 

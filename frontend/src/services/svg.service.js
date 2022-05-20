@@ -12,7 +12,11 @@ export function LogoFull() {
 
 export function Search() {
     return (
-        <svg viewBox="0 0 21.207 21.207"><g fill="none" stroke="currentColor" strokeWidth="2" transform="translate(.477)"><circle cx="8" cy="8" r="8" stroke="none" /><circle cx="8" cy="8" r="7" /></g><path fill="none" stroke="currentColor" strokeWidth="2" d="m15.5 15.5 5 5" data-name="Line 1" /></svg>
+<svg viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false">
+  <g fill="none">
+    <path d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9" class=""></path>
+  </g>
+</svg>
     )
 }
 export function ArrowLeft() {
@@ -49,7 +53,7 @@ export function PlayVideo() {
 
 export function PauseVideo() {
     <svg viewBox="0 0 16 16" aria-hidden="true" role="presentation" focusable="false">
-        <path d="M13 1v14H9V1zM7 1v14H3V1z" class=""></path>
+        <path d="M13 1v14H9V1zM7 1v14H3V1z" className=""></path>
     </svg>
 }
 
