@@ -1,6 +1,7 @@
 import { connect } from "react-redux"
 import { Route, Switch } from "react-router-dom"
-import { AppHeader} from '../src/cmps/app-header.jsx'
+import { AppTopHeader} from '../src/cmps/app-top-header.jsx'
+import { AppNavHeader} from '../src/cmps/app-nav-header.jsx'
 import { AppFooter } from '../src/cmps/app-footer.jsx'
 import '../src/assets/scss/main.scss'
 
@@ -10,7 +11,8 @@ function _App(props) {
   return (
     <div id="app" className="with-new-header">
         <div className="center-container">
-      <AppHeader /> 
+      <AppTopHeader /> 
+      <AppNavHeader /> 
         <main className="main-content-container">
           <Switch>
           {routes.map(route => (
