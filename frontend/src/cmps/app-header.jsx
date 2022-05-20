@@ -78,6 +78,7 @@ export const AppHeader = (props) => {
                             <li className="btn-light"><NavLink to="/reviews-explore">Reviews</NavLink></li>
                             <li className="btn-light"><NavLink to="/about">About</NavLink></li>
                             {user && <li className="btn-light"><NavLink to="/user-details">User Page</NavLink></li>}
+                            <li className="btn-light"><NavLink to="/charts">Charts</NavLink></li>
                         </ul>
                     </div>
 
