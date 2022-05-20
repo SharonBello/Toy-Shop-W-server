@@ -9,6 +9,16 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import Dialog from '@mui/material/Dialog'
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Search, LogoFull } from "../services/svg.service.js";
+import LanguageIcon from '@mui/icons-material/Language';
+import { styled, alpha } from '@mui/material/styles';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import InputBase from '@mui/material/InputBase';
+import MenuIcon from '@mui/icons-material/Menu';
+import SearchIcon from '@mui/icons-material/Search';
 
 export const AppNavHeader = (props) => {
 
@@ -48,27 +58,80 @@ export const AppNavHeader = (props) => {
         ev.preventDefault()
         setIsModalOpen(false)
     }
+    const Search = styled('div')(({ theme }) => ({
+        position: 'relative',
+        borderRadius: theme.shape.borderRadius,
+        backgroundColor: alpha(theme.palette.common.white, 0.15),
+        '&:hover': {
+            backgroundColor: alpha(theme.palette.common.white, 0.25),
+        },
+        marginLeft: 0,
+        width: '100%',
+        [theme.breakpoints.up('sm')]: {
+            marginLeft: theme.spacing(1),
+            width: 'auto',
+        },
+    }));
+
+    const SearchIconWrapper = styled('div')(({ theme }) => ({
+        padding: theme.spacing(0, 2),
+        height: '100%',
+        position: 'absolute',
+        pointerEvents: 'none',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    }));
+
+    const StyledInputBase = styled(InputBase)(({ theme }) => ({
+        color: 'inherit',
+        '& .MuiInputBase-input': {
+            padding: theme.spacing(1, 1, 1, 0),
+            // vertical padding + font size from searchIcon
+            paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+            transition: theme.transitions.create('width'),
+            width: '100%',
+            [theme.breakpoints.up('sm')]: {
+                width: '12ch',
+                '&:focus': {
+                    width: '20ch',
+                },
+            },
+        },
+    }));
+
 
     return (
-        <header >
+        <header className="header-nav">
             <section className="main-header-nav">
+                <div className="logo-nav"><LogoFull /></div>
                 <div className="main-link-nav">
-                    <ul className="main-nav clean-list flex">
-                        <li className="home-link btn-light"><NavLink to="/">Home</NavLink></li>
-                        <li className="btn-light"><NavLink to="/toy">Toys</NavLink></li>
-                        <li className="btn-light"><NavLink to="/reviews-explore">Reviews</NavLink></li>
-                        <li className="btn-light"><NavLink to="/about">About</NavLink></li>
-                        {user && <li className="btn-light"><NavLink to="/user-details">User Page</NavLink></li>}
-                    </ul>
+                    <div className="main-nav">
+                        <div className="home-link btn-light"><NavLink to="/">Home</NavLink></div>
+                        <div className="btn-light"><NavLink to="/toy">Toys</NavLink></div>
+                        <div className="btn-light"><NavLink to="/about">About</NavLink></div>
+                        <div className="search-container">
+                            <Search>
+                                <SearchIconWrapper>
+                                    <SearchIcon />
+                                </SearchIconWrapper>
+                                <StyledInputBase
+                                    placeholder="Search…"
+                                    inputProps={{ 'aria-label': 'search' }}
+                                />
+                            </Search>
+                        </div>
+                    </div>
+                    <div className="user-actions-info">
+                        <div className="sale-offers">Coupon-Code<span>SUM2022</span></div>
+                    </div>
+                    <div className="lan-switch-container">
+                        <div className="lang-switch btn-dark"><LanguageIcon />
+                        </div>
+                    </div>
                 </div>
 
-                <div className="sale-offers">Coupon-Code<span>SUM2022</span></div>
 
-                <div className="lan-search-container">
-                    <a href="/" className="lang-switch btn-dark">en</a>
-                    <input type="text" className="input-search" placeholder="Search" value={searchTerm} onChange={onHandleChange}></input>
-                    <button className="main-header-search" ><Search /></button>
-                </div>
                 <div className="login-container">
                     {user && <p className="user-greet">Hello: <span>{user.username}</span></p>}
                     <div className="login-btn-container">
@@ -86,7 +149,6 @@ export const AppNavHeader = (props) => {
                     </div>
                 </div>
             </section>
-            <i className="fa-solid fa-user-plus"></i>
         </header >
     )
 }
