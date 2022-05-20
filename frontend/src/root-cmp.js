@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom"
 import { AppTopHeader} from '../src/cmps/app-top-header.jsx'
 import { AppNavHeader} from '../src/cmps/app-nav-header.jsx'
 import { AppFooter } from '../src/cmps/app-footer.jsx'
+import { ToyFilter } from '../src/cmps/toy-filter'
 import '../src/assets/scss/main.scss'
 
 import routes from "./routes"
@@ -13,7 +14,9 @@ function _App(props) {
         <div className="center-container">
       <AppTopHeader /> 
       <AppNavHeader /> 
-        <div className="filter-container"></div>
+        <div className="filter-container">
+          <ToyFilter/>
+        </div>
         <main className="main-content-container">
           <Switch>
           {routes.map(route => (

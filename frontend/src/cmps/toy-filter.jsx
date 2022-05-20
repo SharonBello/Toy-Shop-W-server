@@ -1,7 +1,18 @@
 import React from "react"
 import { connect } from 'react-redux'
 import { setFilter } from '../store/actions/toy.action.js'
-import MultiSelect from 'react-select'
+import { Doll } from '../services/svg.service.js'
+import ExtensionIcon from '@mui/icons-material/Extension';
+import ToysIcon from '@mui/icons-material/Toys';
+import CasinoIcon from '@mui/icons-material/Casino';
+import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
+import BrushIcon from '@mui/icons-material/Brush';
+import ChildFriendlyIcon from '@mui/icons-material/ChildFriendly';
+import SortByAlphaIcon from '@mui/icons-material/SortByAlpha';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
+import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
 
 const options = [
     { value: 'on wheels', label: 'On wheels' },
@@ -19,58 +30,86 @@ export class _ToyFilter extends React.Component {
         const { onHandleChange, filterBy, onChangePage, labels, handleChangeLabels } = this.props
         return (
             <div className="toy-filter-container">
-            <div className="toy-fields-container">
-                <div className="toy-filter-no-labels">
-                    <input name="txt" type="search" placeholder="Search..." value={filterBy.txt} onChange={onHandleChange} />
-                    <label htmlFor='in-stock'>In stock:</label>
+                <div className="toy-fields-container">
+                    <div className="toy-label-filter">
+                        <button onClick={() => this.handleChangeLabels('on wheels')} className="filter-onWheel filter-box">
+                            <ToysIcon />
+                            <p>On Wheels</p>
+                        </button>
+                        <button onClick={() => this.handleChangeLabels('box game')} className="filter-boxGame filter-box">
+                            <CasinoIcon />
+                            <p>Box Game</p>
+                        </button>
+                        <button onClick={() => this.handleChangeLabels('art')} className="filter-art filter-box">
+                            <BrushIcon />
+                            <p>Art</p>
+                        </button>
+                        <button onClick={() => this.handleChangeLabels('baby')} className="filter-baby filter-box">
+                            <ChildFriendlyIcon />
+                            <p>Baby</p>
+                        </button>
+                        <button onClick={() => this.handleChangeLabels('doll')} className="filter-doll filter-box">
+                            <Doll />
+                            <p>Doll</p>
+                        </button>
+                        <button onClick={() => this.handleChangeLabels('puzzle')} className="filter-puzzle filter-box">
+                            <ExtensionIcon />
+                            <p>Puzzle</p>
+                        </button>
+                        <button onClick={() => this.handleChangeLabels('outdoor')} className="filter-outdoor filter-box">
+                            <SportsSoccerIcon />
+                            <p>Outdoor</p>
+                        </button>
 
-                    <select name='inStock' id='by-stock' onChange={onHandleChange}>
-                        <option value=''>All</option>
-                        <option value='true'>In stock</option>
-                        <option value='false'>Out of stock</option>
-                    </select>
-                    {/* 
-                    <label htmlFor="toy-lbl"><h3>Labels:</h3></label>
-                <Select isMulti  value={currToyLabels} onChange={this.handleChange} options={options} /> */}
+                        {/* <div className="toy-filter-no-labels"> */}
 
-                    <label htmlFor='by-sort'>Sort Toys:</label>
-                    <select name='sortBy' id='by-sort' onChange={onHandleChange}>
-                        {/* <option value=''>All</option> */}
-                        <option value='name'>Name</option>
-                        <option value='price'>Price</option>
-                        <option value='recent'>Recently Added</option>
-                    </select>
+                        {/* <div className="toy-filter-stock-container"> */}
 
-                    <div className="pagings">
-                        <label htmlFor='by-pageIdx'>Choose Page</label>
-                        <button onClick={() => onChangePage(-1)}>-</button>
+                        <button onClick={() => this.onHandleChange('true')} className="filter-instock filter-box">
+                            <AssignmentTurnedInIcon />
+                            <p>In stock</p>
+                        </button>
 
-                        (<h3 style={{ display: 'inline' }}>
-                            -{+(+filterBy.pageIdx + 1)}-
-                        </h3>
-                        )
-                        <button onClick={() => onChangePage(1)}>+</button>
+                        <button onClick={() => this.onHandleChange('true')} className="filter-outofstock filter-box">
+                            <ReportGmailerrorredIcon />
+                            <p>Out of Stock</p>
+                        </button>
+
+                        {/* </div> */}
+
+                        {/* <div className="toy-filter-sort-container"> */}
+                        <button onClick={() => this.onHandleChange('name')} className="sortby-name filter-box">
+                            <SortByAlphaIcon />
+                            <p>By Name</p>
+                        </button>
+
+                        <button onClick={() => this.onHandleChange('price')} className="sortby-price filter-box">
+                            <AttachMoneyIcon />
+                            <p>By Price</p>
+                        </button>
+
+                        <button onClick={() => this.onHandleChange('recent')} className="sortby-date filter-box">
+                            <CalendarTodayIcon />
+                            <p>By Date</p>
+                        </button>
+                        {/* </div> */}
+                        <div className="toy-filter-search-container filter-box">
+                            <input className="search-filter" name="txt" type="search" placeholder="Search..." value={filterBy.txt} onChange={onHandleChange} />
+                        </div>
+                        <div className="pagings filter-box">
+                            <div><label htmlFor='by-pageIdx'>Choose Page</label></div>
+                            <div>(<h3 style={{ display: 'inline' }}>
+                                -{+(+filterBy.pageIdx + 1)}-
+                            </h3>
+                                )
+                            </div>
+                            <button className="btn-page" onClick={() => onChangePage(-1)}>-</button>
+                            <button className="btn-page" onClick={() => onChangePage(1)}>+</button>
+                        </div>
                     </div>
                 </div>
-                <div className="toy-label flex ">
-                    < MultiSelect
-                        value={labels}
-                        closeMenuOnSelect={false}
-                        onChange={handleChangeLabels}
-                        isMulti
-                        name="labels"
-                        options={options}
-                        className="basic-multi-select"
-                        classNamePrefix="select"
-                    />
-                </div>
-
-                {/* <select name="labels" onChange={onHandleChange} multiple size={5}>
-                {toyService.getLabels().map(label => <option key={label} value={label}>{label}</option>)}
-            </select> */}
-
             </div>
-            </div>
+            // </div>
         )
     }
 }

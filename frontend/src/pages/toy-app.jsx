@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { userService } from "../services/user.service.js"
 import { toyService } from "../services/toy.service.js"
 import { ToyList } from "../cmps/toy-list.jsx";
-import { ToyFilter } from "../cmps/toy-filter.jsx";
+import { ToyFilter } from "../cmps/_toy-filter.jsx";
 import { loadToy, removeToy, setFilter, saveToy } from '../store/actions/toy.action.js'
 
 class _ToyApp extends React.Component {
