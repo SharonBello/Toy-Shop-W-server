@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from 'react-redux'
-import home_page from "../assets/img/home_page.jpg"
+// import home_page from "../assets/img/home_page.jpg"
 
 
 class _HomePage extends React.Component {

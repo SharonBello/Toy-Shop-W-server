@@ -7,6 +7,7 @@ import { toyService } from "../services/toy.service.js"
 import { ToyList } from "../cmps/toy-list.jsx";
 import { ToyFilter } from "../cmps/toy-filter.jsx";
 import { loadToy, removeToy, setFilter, saveToy } from '../store/actions/toy.action.js'
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 class _ToyApp extends React.Component {
 
@@ -18,7 +19,7 @@ class _ToyApp extends React.Component {
         },
     }
 
-    
+
     componentDidMount() {
         this.props.loadToy()
     }
@@ -53,11 +54,11 @@ class _ToyApp extends React.Component {
     onChangePage = async (diff) => {
         let { filterBy } = this.props
         const numOfPages = await toyService.getNumOfPages()
-        
+
         const pageIdx = +filterBy.pageIdx + diff
         if (pageIdx < 0 || pageIdx >= numOfPages) return
-        console.log('pageIdx',pageIdx )
-        console.log('numOfPages',numOfPages )
+        console.log('pageIdx', pageIdx)
+        console.log('numOfPages', numOfPages)
         filterBy = { ...filterBy, pageIdx }
         this.props.setFilter(filterBy)
     }
@@ -79,8 +80,8 @@ class _ToyApp extends React.Component {
 
         let { filterBy } = this.props
         const labelsToys = labels.map(label => label.value)
-        filterBy = {...filterBy, labels: labelsToys}
-        this.setState(prevState => ({...prevState, filter: { ...this.state.filter, labels }}), () => this.props.setFilter(filterBy))
+        filterBy = { ...filterBy, labels: labelsToys }
+        this.setState(prevState => ({ ...prevState, filter: { ...this.state.filter, labels } }), () => this.props.setFilter(filterBy))
     }
 
     handleRatingChange = (toy) => {
@@ -93,11 +94,11 @@ class _ToyApp extends React.Component {
         const { toys, filterBy } = this.props
         const { user } = this.state
         return (
-            <section className="app-section">
-
+            <section className="filter-container">
                 <ToyFilter filterBy={filterBy} onHandleChange={this.onHandleChange} onChangePage={this.onChangePage} handleChangeLabels={this.handleChangeLabels} labels={this.state.filter.labels} />
-                <Link to="/toy/edit"><button className="toy-btn-add tooltip"><span className="tooltiptext">{(!user) ? 'Need to login' : ''}</span>Add Toy 📋</button></Link>
-                {(!toys || !user) ? <h1>Loading</h1> : <ToyList toys={toys} onRemoveToy={this.onRemoveToy} handleRatingChange={this.handleRatingChange} username={user.username}/>}
+                <Link to="/toy/edit"><button className="toy-btn-add tooltip filter-box">
+                    <span className="tooltiptext">{(!user) ? 'Need to login' : ''}</span><AddCircleIcon /><p>Add Toy</p></button></Link>
+                {(!toys || !user) ? <h1>Loading</h1> : <ToyList toys={toys} onRemoveToy={this.onRemoveToy} handleRatingChange={this.handleRatingChange} username={user.username} />}
 
             </section>
         )

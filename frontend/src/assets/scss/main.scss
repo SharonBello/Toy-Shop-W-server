@@ -10,13 +10,16 @@
 @import './basics/layout';
 
 // COMPONENTS
-@import './components/main-header';
+@import './components/top-header';
+@import './components/nav-header';
 @import './components/toy-cards-list';
 @import './components/footer';
 @import './components/filter';
 @import './components/toy-edit';
 @import './components/details';
 @import './components/login_signout';
+@import './components/toy-review';
+@import './components/video-modal';
 
 // PAGES
 @import './pages/home';
