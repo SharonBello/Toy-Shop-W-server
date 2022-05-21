@@ -97,12 +97,11 @@ class _ToyApp extends React.Component {
         const { toys, filterBy } = this.props
         const { user } = this.state
         return (
-            <section className="filter-container">
+            <section className="toy-app container">
                 <ToyFilter filterBy={filterBy} onHandleChange={this.onHandleChange} onChangePage={this.onChangePage} handleChangeLabels={this.handleChangeLabels} labels={this.state.filter.labels} />
                 <Link to="/toy/edit"><button className="toy-btn-add tooltip filter-box">
                     <span className="tooltiptext">{(!user) ? 'Need to login' : ''}</span><AddCircleIcon /><p>Add Toy</p></button></Link>
                 {(!toys || !user) ? <h1>Loading</h1> : <ToyList toys={toys} onRemoveToy={this.onRemoveToy} handleRatingChange={this.handleRatingChange} username={user.username} />}
-
             </section>
         )
     }
