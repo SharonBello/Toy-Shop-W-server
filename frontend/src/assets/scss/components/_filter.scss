@@ -1,12 +1,13 @@
-.filter-container {
+.toy-app-container {
     padding: block-start;
     position: sticky;
     width: 100%;
-    height: 78px;
+    height: 98px;
     background-color: $bg-clr1;
 }
 
 .toy-filter-container {
+    background-color: $bg-clr1;
     display: grid;
     font-family: circular;
     grid-template-columns: 100%;
@@ -19,6 +20,7 @@
     padding-inline-start: 80px;
     // grid-template-columns: repeat(6, 1fr); 
     grid-template-rows: 1fr;
+    margin-top: 20px;
 }
 
 .toy-fields-container {
@@ -50,7 +52,6 @@
     // align-items: center;
     justify-content: center;
     vertical-align: middle;
-    margin-top: 12%;
 
     &:nth-child(n) {
         grid-column-end: 2;
