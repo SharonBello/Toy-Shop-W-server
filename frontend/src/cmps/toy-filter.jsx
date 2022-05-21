@@ -20,7 +20,7 @@ export const ToyFilter = (props) => {
     const {filterBy} = useSelector((storeState) => storeState.toyModule)
     
   
-    
+    console.log('props', props)
     
 
         return (
@@ -61,22 +61,22 @@ export const ToyFilter = (props) => {
                             <p>In stock</p>
                         </button>
 
-                        <button onClick={() => props.onHandleChange('true')} className="filter-outofstock filter-box" name="Out of Stock">
+                        <button onClick={() => props.onHandleChange('false')} className="filter-outofstock filter-box" name="Out of Stock">
                             <ReportGmailerrorredIcon />
                             <p>Out of Stock</p>
                         </button>
 
-                        <button onClick={() => props.onHandleChange('name')} className="sortby-name filter-box">
+                        <button onClick={() => props.onHandleChange('name')} className="sortby-name filter-box" name='sortBy' value='name'>
                             <SortByAlphaIcon />
                             <p>By Name</p>
                         </button>
 
-                        <button onClick={() => props.onHandleChange('price')} className="sortby-price filter-box">
+                        <button onClick={props.onHandleChange} className="sortby-price filter-box" name='sortBy' value='price'>
                             <AttachMoneyIcon />
                             <p>By Price</p>
                         </button>
 
-                        <button onClick={() => props.onHandleChange('recent')} className="sortby-date filter-box">
+                        <button onClick={(ev) => props.onHandleChange('sortBy','recent')} className="sortby-date filter-box" name='sortBy' value='recent'>
                             <CalendarTodayIcon />
                             <p>By Date</p>
                         </button>
