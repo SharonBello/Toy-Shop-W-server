@@ -7,6 +7,7 @@
 }
 
 .toy-filter-container {
+    background-color: $bg-clr1;
     display: grid;
     font-family: circular;
     grid-template-columns: 100%;
@@ -50,7 +51,6 @@
     // align-items: center;
     justify-content: center;
     vertical-align: middle;
-    margin-top: 12%;
 
     &:nth-child(n) {
         grid-column-end: 2;
