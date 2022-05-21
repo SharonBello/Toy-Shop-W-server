@@ -63,15 +63,29 @@ class _ToyApp extends React.Component {
         this.props.setFilter(filterBy)
     }
 
-    onHandleChange = ({ target }) => {
-
-        const field = target.name
-        let { value } = target
+    onHandleChange = (name, value) => {
+console.log('ev', name, value)
+        // console.log('this.props', this.props.target)
+        const field = name
+        // let { value } = target
         let { filterBy } = this.props
-        if (field === 'labels') value = [target.value]
+        if (field === 'labels') value = [value]
         filterBy = { ...filterBy, [field]: value }
+        console.log('filterBy', filterBy)
         this.props.setFilter(filterBy)
     }
+
+    oninputHandleChange = (name, value) => {
+    console.log('ev', name, value)
+            // console.log('this.props', this.props.target)
+            const field = name
+            // let { value } = target
+            let { filterBy } = this.props
+            if (field === 'labels') value = [value]
+            filterBy = { ...filterBy, [field]: value }
+            console.log('filterBy', filterBy)
+            this.props.setFilter(filterBy)
+        }
 
 
     handleChangeLabels = (labels) => {
@@ -80,7 +94,7 @@ class _ToyApp extends React.Component {
         //     labels: labels.map(option => option.value)} }))
 
         let { filterBy } = this.props
-        console.log('labels', labels)
+        // console.log('this.props', this.props.target)
         const labelsToys = labels.value
         // const labelsToys = labels.map(label => label.value)
         filterBy = { ...filterBy, labels: labelsToys }
@@ -97,7 +111,7 @@ class _ToyApp extends React.Component {
         const { toys, filterBy } = this.props
         const { user } = this.state
         return (
-            <section className="toy-app container">
+            <section className="toy-app-container">
                 <ToyFilter filterBy={filterBy} onHandleChange={this.onHandleChange} onChangePage={this.onChangePage} handleChangeLabels={this.handleChangeLabels} labels={this.state.filter.labels} />
                 <Link to="/toy/edit"><button className="toy-btn-add tooltip filter-box">
                     <span className="tooltiptext">{(!user) ? 'Need to login' : ''}</span><AddCircleIcon /><p>Add Toy</p></button></Link>
