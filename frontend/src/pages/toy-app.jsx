@@ -64,6 +64,7 @@ class _ToyApp extends React.Component {
     }
 
     onHandleChange = ({ target }) => {
+        
         const field = target.name
         let { value } = target
         let { filterBy } = this.props
@@ -79,7 +80,9 @@ class _ToyApp extends React.Component {
         //     labels: labels.map(option => option.value)} }))
 
         let { filterBy } = this.props
-        const labelsToys = labels.map(label => label.value)
+        console.log('labels', labels)
+        const labelsToys = labels.value
+        // const labelsToys = labels.map(label => label.value)
         filterBy = { ...filterBy, labels: labelsToys }
         this.setState(prevState => ({ ...prevState, filter: { ...this.state.filter, labels } }), () => this.props.setFilter(filterBy))
     }

@@ -13,6 +13,7 @@ export const toyService = {
     getEmptyToy,
     getNumOfPages,
     getLabels,
+    getDataForCharts,
 }
 
 function query(filterBy = { txt: '', pageIdx: 0, labels: [] }) {
@@ -60,6 +61,77 @@ function query(filterBy = { txt: '', pageIdx: 0, labels: [] }) {
 
 function getLabels() {
     return gLabels
+}
+
+async function getDataForCharts() {
+    const labels = getLabels()
+    let toys = await query()
+    const pricePerType = labels.reduce((acc, label) => {
+        let sum = 0
+        let count = 0
+        toys.forEach(toy => {
+            if (toy.labels.includes(label)) {
+                count++
+                sum += +toy.price
+            }
+        })
+        acc[label] = sum / count
+        return acc
+    }, {})
+    const invPerType = labels.reduce((acc, label) => {
+        let sum = 0
+        toys.forEach(toy => {
+            if (toy.inStock && toy.labels.includes(label)) {
+                sum += 1
+            }
+        })
+        acc[label] = sum
+        return acc
+    }, {})
+
+    // })
+
+
+    return [
+        _creataDataChart(Object.keys(pricePerType), 'Avg price per category', Object.values(pricePerType), 'Price'),
+        _creataDataChart(Object.keys(invPerType), 'Amout per type', Object.values(invPerType), 'Category')
+
+    ]
+
+}
+function _creataDataChart(labels, title, data, label) {
+    return {
+        title,
+        labels,
+        datasets: [
+            {
+
+                label,
+                data,
+                backgroundColor: [
+                    'rgba(255, 20, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 45, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 69, 64, 1)',
+                    'rgba(255, 120, 120, 1)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 120, 120, 1)',
+
+                ],
+                borderWidth: 1,
+            },
+        ]
+
+    }
 }
 
 function getById(toyId) {
