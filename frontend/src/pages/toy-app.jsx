@@ -8,7 +8,7 @@ import { ToyList } from "../cmps/toy-list.jsx";
 import { ToyFilter } from "../cmps/toy-filter.jsx";
 import { loadToy, removeToy, setFilter, saveToy } from '../store/actions/toy.action.js'
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-console.log('in toy app' )
+
 class _ToyApp extends React.Component {
 
     state = {
@@ -34,87 +34,55 @@ class _ToyApp extends React.Component {
         this.props.removeToy(toyId)
     }
 
-    // pageDown = () => {
-    //     let { filterBy } = this.props
-    //     if (+filterBy.pageIdx < 1) return
-    //     console.log('filterBy.pageIdx', filterBy.pageIdx)
-    //     filterBy = { ...filterBy, pageIdx: +filterBy.pageIdx - 1 }
-    //     this.props.setFilter(filterBy)
-    // }
-
-    // pageUp = () => {
-    //     let { toys, filterBy } = this.props
-    //     console.log('toys', toys)
-    //     if (toys.length === 0) return
-    //     filterBy = { ...filterBy, pageIdx: +filterBy.pageIdx + 1 }
-    //     console.log('filterBy.pageIdx',filterBy.pageIdx)
-    //     this.props.setFilter(filterBy)
-    // }
-
     onChangePage = async (diff) => {
         let { filterBy } = this.props
         const numOfPages = await toyService.getNumOfPages()
 
         const pageIdx = +filterBy.pageIdx + diff
         if (pageIdx < 0 || pageIdx >= numOfPages) return
-        console.log('pageIdx', pageIdx)
-        console.log('numOfPages', numOfPages)
         filterBy = { ...filterBy, pageIdx }
         this.props.setFilter(filterBy)
     }
 
     onHandleChange = (name, value) => {
-console.log('ev', name, value)
-        // console.log('this.props', this.props.target)
+
         const field = name
-        // let { value } = target
         let { filterBy } = this.props
         if (field === 'labels') value = [value]
         filterBy = { ...filterBy, [field]: value }
-        console.log('filterBy', filterBy)
         this.props.setFilter(filterBy)
     }
 
-    oninputHandleChange = (name, value) => {
-    console.log('ev', name, value)
-            // console.log('this.props', this.props.target)
-            const field = name
-            // let { value } = target
-            let { filterBy } = this.props
-            if (field === 'labels') value = [value]
-            filterBy = { ...filterBy, [field]: value }
-            console.log('filterBy', filterBy)
-            this.props.setFilter(filterBy)
+    onInputHandleChange = ({target}) => {
+    const field = target.name
+    let { value } = target
+    let { filterBy } = this.props
+    if (field === 'labels') value = [target.value]
+    filterBy = { ...filterBy, [field]: value }
+    this.props.setFilter(filterBy)
         }
 
 
     handleChangeLabels = (labels) => {
-        console.log('handleChangeLabels', labels)
-        // this.setState((prevState) => ({ toy: {...prevState.toy, 
-        //     labels: labels.map(option => option.value)} }))
 
         let { filterBy } = this.props
-        // console.log('this.props', this.props.target)
         const labelsToys = labels.value
-        // const labelsToys = labels.map(label => label.value)
         filterBy = { ...filterBy, labels: labelsToys }
         this.setState(prevState => ({ ...prevState, filter: { ...this.state.filter, labels } }), () => this.props.setFilter(filterBy))
     }
 
     handleRatingChange = (toy) => {
-        console.log("handleRatingChange");
         toyService.saveUserRating(toy)
     }
-
 
     render() {
         const { toys, filterBy } = this.props
         const { user } = this.state
         return (
             <section className="toy-app-container">
-                <ToyFilter filterBy={filterBy} onHandleChange={this.onHandleChange} onChangePage={this.onChangePage} handleChangeLabels={this.handleChangeLabels} labels={this.state.filter.labels} />
+                <ToyFilter filterBy={filterBy} onHandleChange={this.onHandleChange} onChangePage={this.onChangePage} handleChangeLabels={this.handleChangeLabels} onInputHandleChange={this.onInputHandleChange} labels={this.state.filter.labels} />
                 <Link to="/toy/edit"><button className="toy-btn-add tooltip filter-box">
-                    <span className="tooltiptext">{(!user) ? 'Need to login' : ''}</span><AddCircleIcon /><p>Add Toy</p></button></Link>
+                    <span className="tooltiptext">{(!user) ? 'Need to login' : ''}</span ><AddCircleIcon  className="add-toy"/><p className="add-toy">Add Toy</p></button></Link>
                 {(!toys || !user) ? <h1>Loading</h1> : <ToyList toys={toys} onRemoveToy={this.onRemoveToy} handleRatingChange={this.handleRatingChange} username={user.username} />}
             </section>
         )
