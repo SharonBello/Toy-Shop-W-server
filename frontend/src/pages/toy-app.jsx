@@ -7,6 +7,7 @@ import { toyService } from "../services/toy.service.js"
 import { ToyList } from "../cmps/toy-list.jsx";
 import { ToyFilter } from "../cmps/toy-filter.jsx";
 import { loadToy, removeToy, setFilter, saveToy } from '../store/actions/toy.action.js'
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 class _ToyApp extends React.Component {
 
@@ -94,8 +95,9 @@ class _ToyApp extends React.Component {
         const { user } = this.state
         return (
             <section className="filter-container">
-                <Link to="/toy/edit"><button className="toy-btn-add tooltip filter-box"><span className="tooltiptext">{(!user) ? 'Need to login' : ''}</span>Add Toy 📋</button></Link>
                 <ToyFilter filterBy={filterBy} onHandleChange={this.onHandleChange} onChangePage={this.onChangePage} handleChangeLabels={this.handleChangeLabels} labels={this.state.filter.labels} />
+                <Link to="/toy/edit"><button className="toy-btn-add tooltip filter-box">
+                    <span className="tooltiptext">{(!user) ? 'Need to login' : ''}</span><AddCircleIcon /><p>Add Toy</p></button></Link>
                 {(!toys || !user) ? <h1>Loading</h1> : <ToyList toys={toys} onRemoveToy={this.onRemoveToy} handleRatingChange={this.handleRatingChange} username={user.username} />}
 
             </section>

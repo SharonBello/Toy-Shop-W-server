@@ -13,6 +13,8 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
 import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
+import AddBoxIcon from '@mui/icons-material/AddBox';
+import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox';
 
 const options = [
     { value: 'on wheels', label: 'On wheels' },
@@ -94,9 +96,11 @@ export class _ToyFilter extends React.Component {
                                 -{+(+filterBy.pageIdx + 1)}-
                             </h3>
                                 )
+                                <div className="pagings-up-down">
+                                    <div className="btn-page" onClick={() => onChangePage(-1)}><IndeterminateCheckBoxIcon /></div>
+                                    <div className="btn-page" onClick={() => onChangePage(1)}><AddBoxIcon /></div>
+                                </div>
                             </div>
-                            <button className="btn-page" onClick={() => onChangePage(-1)}>-</button>
-                            <button className="btn-page" onClick={() => onChangePage(1)}>+</button>
                         </div>
                     </div>
                 </div>
