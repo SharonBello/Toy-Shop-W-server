@@ -1,8 +1,8 @@
-.filter-container {
+.toy-app-container {
     padding: block-start;
     position: sticky;
     width: 100%;
-    height: 78px;
+    height: 98px;
     background-color: $bg-clr1;
 }
 
@@ -20,6 +20,7 @@
     padding-inline-start: 80px;
     // grid-template-columns: repeat(6, 1fr); 
     grid-template-rows: 1fr;
+    margin-top: 20px;
 }
 
 .toy-fields-container {
