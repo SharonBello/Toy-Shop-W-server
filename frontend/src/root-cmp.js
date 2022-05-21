@@ -10,6 +10,7 @@ import routes from "./routes"
 
 function _App(props) {
   return (
+    // <div className="app-container">
     <div id="app" className="with-new-header">
       <div className="center-container">
         <AppTopHeader />
@@ -26,6 +27,7 @@ function _App(props) {
 
       <AppFooter />
     </div>
+    // </div>
   )
 }
 

@@ -16,29 +16,30 @@ export default [{
         path: '/toy/:toyId',
         component: ToyDetails
     },
+   
+    {
+        path: '/about',
+        component: About
+    },   
+    {
+        path: '/user-details',
+        component: UserDetails
+    },
+    {
+        path: '/reviews-explore',
+        component: ReviewsExplore
+    },
+    {
+        path: '/charts',
+        component: MyChart
+    },
     {
         path: '/toy',
         component: ToyApp
     },
     {
-        path: '/about',
-        component: About,
-    },
-    {
         path: '/',
-        component: HomePage,
-    },
-    {
-        path: '/user-details',
-        component: UserDetails,
-    },
-    {
-        path: '/reviews-explore',
-        component: ReviewsExplore,
-    },
-    {
-        path: '/charts',
-        component: MyChart
+        component: HomePage
     }
         // {
     //     path: '/user',
