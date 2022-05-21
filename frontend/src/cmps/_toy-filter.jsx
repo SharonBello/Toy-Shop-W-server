@@ -41,7 +41,7 @@ export class _ToyFilter extends React.Component {
                         </button>
                         <button onClick={() => this.handleChangeLabels('box game')} className="filter-boxGame filter-box">
                             <CasinoIcon />
-                            <p>Box Game</p>
+                            <p>Board Game</p>
                         </button>
                         <button onClick={() => this.handleChangeLabels('art')} className="filter-art filter-box">
                             <BrushIcon />

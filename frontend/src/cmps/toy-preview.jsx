@@ -1,22 +1,18 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
-import { useEffect, useState } from "react"
-import { utilService } from '../services/util.service.js'
 import { RatingValue } from './toy-rating.jsx'
-
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions, Stack } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
-// import {Stack, Rating} from '@mui/material/Stack';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import EditIcon from '@mui/icons-material/Edit';
 import RateReviewIcon from '@mui/icons-material/RateReview';
 
 export const ToyPreview = ({ toy, onRemoveToy, handleRatingChange, username }) => {
-    
+      
     return (
         <li className="toy-preview">
             <Card sx={{ maxWidth: 345 }}>
@@ -24,7 +20,8 @@ export const ToyPreview = ({ toy, onRemoveToy, handleRatingChange, username }) =
                     <CardMedia
                         component="img"
                         height="140"
-                        // image={require(`../assets/img/${toy.name}.jpg`)}
+                        image={`../assets/img/${toy.label[0]}.jpg`}
+                        // image={require(`../assets/img/${toy.label[0]}.jpg`)}
                         alt="toys"
                     />
                     <CardContent>
