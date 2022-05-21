@@ -20,8 +20,8 @@ export const ToyPreview = ({ toy, onRemoveToy, handleRatingChange, username }) =
                     <CardMedia
                         component="img"
                         height="140"
-                        image={`../assets/img/${toy.label[0]}.jpg`}
-                        // image={require(`../assets/img/${toy.label[0]}.jpg`)}
+                        // image={`../assets/img/${toy.label[0]}.jpg`}
+                        image={require(`../assets/img/${toy.labels[0]}.jpg`)}
                         alt="toys"
                     />
                     <CardContent>
