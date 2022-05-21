@@ -3,7 +3,6 @@ import { Route, Switch } from "react-router-dom"
 import { AppTopHeader } from '../src/cmps/app-top-header.jsx'
 import { AppNavHeader } from '../src/cmps/app-nav-header.jsx'
 import { AppFooter } from '../src/cmps/app-footer.jsx'
-import { ToyApp } from '../src/pages/toy-app'
 import '../src/assets/scss/main.scss'
 
 import routes from "./routes"

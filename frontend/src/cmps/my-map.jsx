@@ -75,7 +75,9 @@ class _MyMap extends Component {
 
     return (
       <>
-        <Map
+      <div className='my-map' >
+      {/* <div className='my-map' style={{ height: '100vh', width: '100%' , marginTop: '200px' , marginLeft: '10%'}}> */}
+        <Map 
           google={this.props.google}
           zoom={10}
           initialCenter={{ lat: 32.02393895923443, lng: 34.78419219869878 }}
@@ -102,6 +104,7 @@ class _MyMap extends Component {
             </div>
           </InfoWindow>
         </Map>
+        </div>
         <Accordion allowZeroExpanded>
           {this.acordionBranchContent.map((currBranch, idx) => (
             <AccordionItem key={idx}>

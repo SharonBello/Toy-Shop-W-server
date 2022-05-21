@@ -1,6 +1,5 @@
 import React from "react"
-import { useSelector, useDispatch } from 'react-redux'
-import { setFilter } from '../store/actions/toy.action.js'
+import { useSelector} from 'react-redux'
 import { Doll } from '../services/svg.service.js'
 import ExtensionIcon from '@mui/icons-material/Extension';
 import ToysIcon from '@mui/icons-material/Toys';
@@ -18,21 +17,12 @@ import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox
 
 
 export const ToyFilter = (props) => {
-    const {toys} = useSelector((storeState) => storeState.toyModule)
     const {filterBy} = useSelector((storeState) => storeState.toyModule)
     
-    const options = [
-        { value: 'on wheels', label: 'On wheels' },
-        { value: 'box game', label: 'Box game' },
-        { value: 'art', label: 'Art' },
-        { value: 'baby', label: 'Baby' },
-        { value: 'doll', label: 'Doll' },
-        { value: 'puzzle', label: 'Puzzle' },
-        { value: 'outdoor', label: 'Outdoor' },
-    ]
+  
     
     
-        // const { onHandleChange, filterBy, onChangePage, labels, handleChangeLabels } = this.props
+
         return (
             <div className="toy-filter-container">
                 <div className="toy-fields-container">

@@ -6,7 +6,7 @@ export class About extends React.Component {
         return (
             <React.Fragment>
                 <MyMap/>
-                <section className="about-container">
+                {/* <section className="about-container">
                     <h2>Toy Song for Kids </h2>
                     <p>Do you want a new toy?
                         I know where to shop!<br></br>
@@ -43,7 +43,7 @@ export class About extends React.Component {
                         Come and see the new toys<br></br>
                         at <span className="store-name" >Treasures & Giggles</span> Stop!<br></br>
                     </p>
-                </section>
+                </section> */}
             </React.Fragment>
         )
     }
