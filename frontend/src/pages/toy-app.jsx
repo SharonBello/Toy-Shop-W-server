@@ -8,7 +8,7 @@ import { ToyList } from "../cmps/toy-list.jsx";
 import { ToyFilter } from "../cmps/toy-filter.jsx";
 import { loadToy, removeToy, setFilter, saveToy } from '../store/actions/toy.action.js'
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-
+console.log('in toy app' )
 class _ToyApp extends React.Component {
 
     state = {
@@ -64,7 +64,7 @@ class _ToyApp extends React.Component {
     }
 
     onHandleChange = ({ target }) => {
-        
+
         const field = target.name
         let { value } = target
         let { filterBy } = this.props

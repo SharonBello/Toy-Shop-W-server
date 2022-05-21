@@ -23,11 +23,7 @@ export default [{
     {
         path: '/about',
         component: About,
-    },
-    {
-        path: '/',
-        component: HomePage,
-    },
+    },   
     {
         path: '/user-details',
         component: UserDetails,
@@ -39,6 +35,10 @@ export default [{
     {
         path: '/charts',
         component: MyChart
+    },
+    {
+        path: '/',
+        component: HomePage,
     }
         // {
     //     path: '/user',

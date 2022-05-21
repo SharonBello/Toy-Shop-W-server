@@ -14,7 +14,7 @@ function _App(props) {
       <div className="center-container">
         <AppTopHeader />
         <AppNavHeader />
-        <ToyApp />
+        {/* <ToyApp /> */}
       </div>
       <main className="main-content-container">
         <Switch>

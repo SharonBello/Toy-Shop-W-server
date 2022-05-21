@@ -11,7 +11,7 @@ export const AppTopHeader = (props) => {
                     <button type="button" className="play-video">
                         <span className="toy-video">
 
-                            <video className="toy-video" width="53" height="30" autoplay>
+                            <video className="toy-video" width="53" height="30" autoPlay>
                                 <source src={require('../assets/video/girls-play.mp4')} type="video/ogg" />
                             </video>
                             <p className="video-cap">Play the film</p></span>
