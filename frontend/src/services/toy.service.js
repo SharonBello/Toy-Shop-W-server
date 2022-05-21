@@ -21,7 +21,7 @@ export const toyService = {
     getDataForCharts,
     getLabels,
 }
-const PAGE_SIZE = 4
+const PAGE_SIZE = 3
 const BASE_URL =
     process.env.NODE_ENV === 'production'
         ? '/api/toy/'
@@ -41,7 +41,6 @@ function getLabels() {
 }
 
 async function query(filterBy = {} ){
-    console.log('filter by - query -toy.service', filterBy)
     
     const {txt = '', inStock = '', labels ='', pageIdx = '', sortBy = 'createdAt'} = filterBy
     const url = `?txt=${txt}&inStock=${inStock}&labels=${labels}&pageIdx=${pageIdx}&sortBy=${sortBy}`
@@ -58,7 +57,6 @@ async function getDataForCharts() {
     const labels = getLabels()
     let toys = await query()
     toys = toys.data
-    console.log('TOYS FROM TOY SERVICE LINE 60:', toys)
     const pricePerType = labels.reduce((acc, label) => {
         let sum = 0
         let count = 0
@@ -69,7 +67,6 @@ async function getDataForCharts() {
             }
         })
         acc[label] = sum / count
-        console.log('ACC:',acc )
         return acc
     }, {})
     const invPerType = labels.reduce((acc, label) => {
@@ -145,8 +142,7 @@ async function remove(toyId) {
 async function save(toy) {
     var savedToy
     if (toy._id) {
-        console.log('BASE_URL + toy._id',BASE_URL + toy._id )
-        // savedToy = await httpService.put(`toy/${toy._id}`,toy)
+       
         savedToy = await axios.put(BASE_URL + toy._id, toy)
         savedToy = savedToy.data
         toyChannel.postMessage(getActionUpdateToy(savedToy))

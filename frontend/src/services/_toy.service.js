@@ -2,7 +2,7 @@
 import { storageService } from './async-storage.service.js'
 
 const STORAGE_KEY = 'toy'
-const PAGE_SIZE = 4
+const PAGE_SIZE = 3
 const gLabels = ["All", "On wheels", "Box game", "Art", "Baby", "Doll", "Puzzle", "Outdoor"]
 
 export const toyService = {

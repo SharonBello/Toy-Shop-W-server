@@ -19,14 +19,13 @@ import IndeterminateCheckBoxIcon from '@mui/icons-material/IndeterminateCheckBox
 export const ToyFilter = (props) => {
     const {filterBy} = useSelector((storeState) => storeState.toyModule)
     
-  
-    console.log('props', props)
     
 
         return (
             <div className="toy-filter-container">
                 <div className="toy-fields-container">
                     <div className="toy-label-filter">
+                        <div className="labels-container">
                         <button onClick={() => props.handleChangeLabels('on wheels')} className="filter-onWheel filter-box" name="On Wheels">
                             <ToysIcon />
                             <p>On Wheels</p>
@@ -55,33 +54,34 @@ export const ToyFilter = (props) => {
                             <SportsSoccerIcon />
                             <p>Outdoor</p>
                         </button>
-
-                        <button onClick={() => props.onHandleChange('true')} className="filter-instock filter-box" name="In stock">
+                        </div>
+                        <div className="action-btn-container">
+                        <button onClick={() => props.onHandleChange('inStock',true)} className="filter-instock filter-box" >
                             <AssignmentTurnedInIcon />
                             <p>In stock</p>
                         </button>
 
-                        <button onClick={() => props.onHandleChange('false')} className="filter-outofstock filter-box" name="Out of Stock">
+                        <button onClick={() => props.onHandleChange('inStock',false)} className="filter-outofstock filter-box" >
                             <ReportGmailerrorredIcon />
                             <p>Out of Stock</p>
                         </button>
 
-                        <button onClick={() => props.onHandleChange('name')} className="sortby-name filter-box" name='sortBy' value='name'>
+                        <button onClick={() => props.onHandleChange('sortBy','name')} className="sortby-name filter-box">
                             <SortByAlphaIcon />
                             <p>By Name</p>
                         </button>
 
-                        <button onClick={props.onHandleChange} className="sortby-price filter-box" name='sortBy' value='price'>
+                        <button onClick={() => props.onHandleChange('sortBy','price')} className="sortby-price filter-box">
                             <AttachMoneyIcon />
                             <p>By Price</p>
                         </button>
 
-                        <button onClick={(ev) => props.onHandleChange('sortBy','recent')} className="sortby-date filter-box" name='sortBy' value='recent'>
+                        <button onClick={() => props.onHandleChange('sortBy','recent')} className="sortby-date filter-box">
                             <CalendarTodayIcon />
                             <p>By Date</p>
                         </button>
                         <div className="toy-filter-search-container filter-box">
-                            <input className="search-filter" name="txt" type="search" placeholder="Search..." value={filterBy.txt} onChange={props.onHandleChange} />
+                            <input className="search-filter" name="txt" type="search" placeholder="Search..." value={filterBy.txt} onChange={props.onInputHandleChange} />
                         </div>
                         <div className="pagings filter-box">
                             <div><label htmlFor='by-pageIdx'>Choose Page</label></div>
@@ -94,6 +94,7 @@ export const ToyFilter = (props) => {
                                     <div className="btn-page" onClick={() => props.onChangePage(1)}><AddBoxIcon /></div>
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
