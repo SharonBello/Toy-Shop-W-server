@@ -24,6 +24,7 @@ class _MyMap extends Component {
       position: { lat: 32.09151422942391 , lng: 34.77710737828437 },
       content: 'Dizengoff/Arlozorov ',
       tel: '03-6779545',
+      web: 'www.toys.com',
       open: 'Sunday - Thursday: 8am - 8pm',
     },
     {
@@ -31,6 +32,7 @@ class _MyMap extends Component {
       position: { lat: 31.750253737063083, lng:35.178430903886834 },
       content: 'Derech Aharon Shulov 3',
       tel: '03-9436284 ',
+      web: 'www.toys.com',
       open: 'Sunday - Thursday: 8am - 5pm',
     },
     {
@@ -38,6 +40,7 @@ class _MyMap extends Component {
       position: { lat: 40.748987214564295, lng: -73.98558535070848 },
       content: 'Vornado Realty Trust, 7 W 34th St #60, New York, NY 10001',
       tel: '+1 855-698-1154',
+      web: 'www.toys.com',
       open: 'Monday - Thursday: 10am - 8pm',
     },
   ];
@@ -72,7 +75,9 @@ class _MyMap extends Component {
 
     return (
       <>
-        <Map
+      <div className='my-map' >
+      {/* <div className='my-map' style={{ height: '100vh', width: '100%' , marginTop: '200px' , marginLeft: '10%'}}> */}
+        <Map 
           google={this.props.google}
           zoom={10}
           initialCenter={{ lat: 32.02393895923443, lng: 34.78419219869878 }}
@@ -99,6 +104,7 @@ class _MyMap extends Component {
             </div>
           </InfoWindow>
         </Map>
+        </div>
         <Accordion allowZeroExpanded>
           {this.acordionBranchContent.map((currBranch, idx) => (
             <AccordionItem key={idx}>
