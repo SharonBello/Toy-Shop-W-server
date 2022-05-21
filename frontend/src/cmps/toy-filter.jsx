@@ -61,10 +61,6 @@ export class _ToyFilter extends React.Component {
                             <p>Outdoor</p>
                         </button>
 
-                        {/* <div className="toy-filter-no-labels"> */}
-
-                        {/* <div className="toy-filter-stock-container"> */}
-
                         <button onClick={() => this.onHandleChange('true')} className="filter-instock filter-box">
                             <AssignmentTurnedInIcon />
                             <p>In stock</p>
@@ -75,9 +71,6 @@ export class _ToyFilter extends React.Component {
                             <p>Out of Stock</p>
                         </button>
 
-                        {/* </div> */}
-
-                        {/* <div className="toy-filter-sort-container"> */}
                         <button onClick={() => this.onHandleChange('name')} className="sortby-name filter-box">
                             <SortByAlphaIcon />
                             <p>By Name</p>
@@ -92,7 +85,6 @@ export class _ToyFilter extends React.Component {
                             <CalendarTodayIcon />
                             <p>By Date</p>
                         </button>
-                        {/* </div> */}
                         <div className="toy-filter-search-container filter-box">
                             <input className="search-filter" name="txt" type="search" placeholder="Search..." value={filterBy.txt} onChange={onHandleChange} />
                         </div>
@@ -109,7 +101,6 @@ export class _ToyFilter extends React.Component {
                     </div>
                 </div>
             </div>
-            // </div>
         )
     }
 }
