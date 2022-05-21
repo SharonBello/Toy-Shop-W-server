@@ -6,6 +6,8 @@ import { httpService } from './http.service.js'
 // const BASE_URL = '/api/toy/'
 const toyChannel = new BroadcastChannel('toyChannel')
 
+const gLabels = ["all", "on wheels", "box game", "art", "baby", "doll", "puzzle", "outdoor"]
+
 export const toyService = {
     query,
     getById,
@@ -15,7 +17,9 @@ export const toyService = {
     getNumOfPages,
     subscribe,
     unsubscribe,
-    saveUserRating
+    saveUserRating,
+    getDataForCharts,
+    getLabels,
 }
 const PAGE_SIZE = 4
 const BASE_URL =
@@ -32,6 +36,10 @@ function getAllToys() {
         .then(toys => toys)
 }
 
+function getLabels() {
+    return gLabels
+}
+
 async function query(filterBy = {} ){
     console.log('filter by - query -toy.service', filterBy)
     
@@ -44,6 +52,80 @@ async function query(filterBy = {} ){
     let toysByPage = toys.data.slice(fromIdx, fromIdx+PAGE_SIZE)
     // return toys.data
     return toysByPage
+}
+
+async function getDataForCharts() {
+    const labels = getLabels()
+    let toys = await query()
+    toys = toys.data
+    console.log('TOYS FROM TOY SERVICE LINE 60:', toys)
+    const pricePerType = labels.reduce((acc, label) => {
+        let sum = 0
+        let count = 0
+        toys.forEach(toy => {
+            if (toy.labels.includes(label)) {
+                count++
+                sum += +toy.price
+            }
+        })
+        acc[label] = sum / count
+        console.log('ACC:',acc )
+        return acc
+    }, {})
+    const invPerType = labels.reduce((acc, label) => {
+        let sum = 0
+        toys.forEach(toy => {
+            if (toy.inStock && toy.labels.includes(label)) {
+                sum += 1
+            }
+        })
+        acc[label] = sum
+        return acc
+    }, {})
+
+    // })
+
+
+    return [
+        _creataDataChart(Object.keys(pricePerType), 'Avg price per category', Object.values(pricePerType), 'Price'),
+        _creataDataChart(Object.keys(invPerType), 'Amout per type', Object.values(invPerType), 'Category')
+
+    ]
+
+}
+function _creataDataChart(labels, title, data, label) {
+    return {
+        title,
+        labels,
+        datasets: [
+            {
+
+                label,
+                data,
+                backgroundColor: [
+                    'rgba(255, 20, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 45, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 69, 64, 1)',
+                    'rgba(255, 120, 120, 1)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 120, 120, 1)',
+
+                ],
+                borderWidth: 1,
+            },
+        ]
+
+    }
 }
 
 function getById(toyId) {
