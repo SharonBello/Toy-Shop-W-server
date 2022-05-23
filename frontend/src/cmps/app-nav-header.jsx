@@ -67,6 +67,8 @@ export const AppNavHeader = (props) => {
                         <span className="line-sep"></span>
                         <button className="btn-light"><NavLink to="/charts">Charts</NavLink></button>
                         <span className="line-sep"></span>
+                        <button className="btn-light chat"><NavLink to="/chat">Chat</NavLink></button>
+                        <span className="line-sep"></span>
                         {/* <div className="search-container btn-light"><SearchSite /></div> */}
                     </div>
                 </div>

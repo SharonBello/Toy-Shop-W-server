@@ -6,7 +6,7 @@ import { HomePage } from '../src/pages/home-page.jsx'
 import { ReviewsExplore } from './pages/reviews-explore.jsx'
 import {UserDetails} from './pages/user-details.jsx'
 import {MyChart} from '../src/cmps/MyChart.jsx'
-
+import { ChatApp } from "./pages/chat-app.jsx"
 
 export default [{
         path: '/toy/edit/:toyId?',
@@ -32,6 +32,10 @@ export default [{
     {
         path: '/charts',
         component: MyChart
+    },
+    {
+        path: '/chat',
+        component: ChatApp
     },
     {
         path: '/toy',
